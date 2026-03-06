@@ -72,10 +72,37 @@ title: Imaging Guidelines Reference
 
     ---
 
-    **Thyroid Nodules**  
+    **Thyroid Nodules**
     Ultrasound & Biopsy criteria
-    
+
     [:octicons-arrow-right-24: View](thyroid/thyroid_nodule.md)
+
+-   :material-hospital: **Breast**
+
+    ---
+
+    **BI-RADS**
+    Breast imaging reporting & data system
+
+    [:octicons-arrow-right-24: View](breast/bi_rads.md)
+
+-   :material-gender-male: **Prostate**
+
+    ---
+
+    **PI-RADS v2.1**
+    Prostate MRI reporting & data system
+
+    [:octicons-arrow-right-24: View](prostate/pi_rads.md)
+
+-   :material-shield-check: **Contrast Safety**
+
+    ---
+
+    **ACR Contrast Manual**
+    Iodinated & gadolinium contrast agents
+
+    [:octicons-arrow-right-24: View](contrast/contrast_safety.md)
 
 -   :material-brain: **Neuro & MSK**
 
@@ -137,6 +164,21 @@ title: Imaging Guidelines Reference
 | Guideline | Topic | Link |
 |-----------|-------|------|
 | **Abdominal Aortic Aneurysm** | Surveillance & Reporting | [View](vascular/aaa.md) |
+
+### :material-hospital: Breast
+| Guideline | Topic | Link |
+|-----------|-------|------|
+| **ACR BI-RADS** | Breast Imaging Reporting & Data System | [View](breast/bi_rads.md) |
+
+### :material-gender-male: Prostate
+| Guideline | Topic | Link |
+|-----------|-------|------|
+| **PI-RADS v2.1** | Prostate mpMRI Reporting | [View](prostate/pi_rads.md) |
+
+### :material-shield-check: Contrast Safety
+| Guideline | Topic | Link |
+|-----------|-------|------|
+| **ACR Contrast Manual** | Iodinated & Gadolinium Contrast Agents | [View](contrast/contrast_safety.md) |
 
 ### :material-bow-tie: Thyroid & Head/Neck
 | Guideline | Topic | Link |
