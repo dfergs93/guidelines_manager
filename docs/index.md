@@ -8,6 +8,15 @@ title: Imaging Guidelines Reference
     Evidence-based imaging guidelines and reporting standards used at our institution.  
     **Last Updated:** February 2024
 
+## Guideline Assistant
+
+<div class="search-container">
+  <input type="text" id="guideline-search-input" placeholder="e.g., 10mm solid pulmonary nodule in a smoker" />
+  <button id="guideline-search-btn">Search & Calculate</button>
+</div>
+<div id="guideline-loading" style="display: none; margin-bottom: 20px; font-style: italic;">Analyzing query and guidelines...</div>
+<div id="guideline-results-container" style="display: none;"></div>
+
 ## Quick Access by Category
 
 <div class="grid cards" markdown>
