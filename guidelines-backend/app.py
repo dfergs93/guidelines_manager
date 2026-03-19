@@ -18,6 +18,8 @@ from guideline_tools import (
 app = FastAPI()
 
 ALLOWED_ORIGINS = [
+    "http://localhost:8000",
+    "http://127.0.0.1:8000",
     "http://localhost:8002",
     "http://127.0.0.1:8002",
     "https://dfergs93.github.io",
