@@ -12,6 +12,64 @@ title: TIRADS Guidelines
 
 ---
 
+### TI-RADS Calculator
+
+<div class="calculator-form">
+  <form id="tirads-form">
+    <div class="calc-field">
+      <label for="calc-composition_pts">Composition</label>
+      <select id="calc-composition_pts" required>
+        <option value="0">Cystic or almost entirely cystic — 0 pts</option>
+        <option value="0">Spongiform (aggregation of microcysts &gt;50%) — 0 pts</option>
+        <option value="1">Mixed cystic and solid — 1 pt</option>
+        <option value="2">Solid or almost entirely solid — 2 pts</option>
+      </select>
+    </div>
+    <div class="calc-field">
+      <label for="calc-echogenicity_pts">Echogenicity</label>
+      <select id="calc-echogenicity_pts" required>
+        <option value="0">Anechoic — 0 pts</option>
+        <option value="1">Hyperechoic or isoechoic — 1 pt</option>
+        <option value="2">Hypoechoic — 2 pts</option>
+        <option value="3">Very hypoechoic (darker than strap muscles) — 3 pts</option>
+      </select>
+    </div>
+    <div class="calc-field">
+      <label for="calc-shape_pts">Shape</label>
+      <select id="calc-shape_pts" required>
+        <option value="0">Wider-than-tall — 0 pts</option>
+        <option value="3">Taller-than-wide (A-P ≥ transverse on transverse view) — 3 pts</option>
+      </select>
+    </div>
+    <div class="calc-field">
+      <label for="calc-margin_pts">Margin</label>
+      <select id="calc-margin_pts" required>
+        <option value="0">Smooth — 0 pts</option>
+        <option value="0">Ill-defined — 0 pts</option>
+        <option value="2">Lobulated or irregular — 2 pts</option>
+        <option value="3">Extra-thyroidal extension — 3 pts</option>
+      </select>
+    </div>
+    <div class="calc-field">
+      <label for="calc-echogenic_foci_pts">Echogenic Foci</label>
+      <select id="calc-echogenic_foci_pts" required>
+        <option value="0">None or large comet-tail artifacts — 0 pts</option>
+        <option value="1">Macrocalcifications — 1 pt</option>
+        <option value="2">Peripheral (rim) calcifications — 2 pts</option>
+        <option value="3">Punctate echogenic foci — 3 pts</option>
+      </select>
+    </div>
+    <div class="calc-field">
+      <label for="calc-size_cm">Maximum Nodule Diameter (cm)</label>
+      <input type="number" id="calc-size_cm" step="0.1" min="0" required placeholder="e.g., 1.8">
+    </div>
+    <button type="submit" id="tirads-form-btn" class="calc-btn">Calculate TI-RADS</button>
+  </form>
+</div>
+<div id="tirads-results" class="calc-results-container" style="display: none;"></div>
+
+---
+
 ### Quick Reference Tables
 
 === "TI-RADS Scoring"

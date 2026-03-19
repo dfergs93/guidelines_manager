@@ -25,6 +25,47 @@ title: Lung-RADS v1.1
     | **Lung-RADS 4B** | Very suspicious | 3-month PET/CT or tissue sampling | >15% |
     | **Lung-RADS 4X** | Category 3 or 4 + additional findings | See category 3 or 4 management | Variable |
 
+## Lung-RADS Calculator
+
+<div class="calculator-form">
+  <form id="lungrads-form">
+    <div class="calc-field">
+      <label for="calc-nodule_type">Nodule Type</label>
+      <select id="calc-nodule_type" required>
+        <option value="solid">Solid</option>
+        <option value="part-solid">Part-Solid</option>
+        <option value="ground-glass">Ground-Glass (Non-Solid)</option>
+      </select>
+    </div>
+    <div class="calc-field">
+      <label for="calc-size_mm">Total Nodule Diameter (mm)</label>
+      <input type="number" id="calc-size_mm" step="0.1" min="0" required placeholder="e.g., 8">
+    </div>
+    <div class="calc-field">
+      <label for="calc-solid_component_mm">Solid Component Diameter (mm) <small>— Part-solid only; leave blank if none</small></label>
+      <input type="number" id="calc-solid_component_mm" step="0.1" min="0" placeholder="e.g., 6">
+    </div>
+    <div class="calc-field">
+      <label for="calc-is_new">New nodule on this exam? <small>(not present on prior CT)</small></label>
+      <select id="calc-is_new" required>
+        <option value="no">No — Baseline or previously seen</option>
+        <option value="yes">Yes — New nodule</option>
+      </select>
+    </div>
+    <div class="calc-field">
+      <label for="calc-has_suspicious_features">Additional suspicious features? <small>(spiculation, lymphadenopathy, endobronchial lesion)</small></label>
+      <select id="calc-has_suspicious_features" required>
+        <option value="no">No</option>
+        <option value="yes">Yes — Apply 4X modifier</option>
+      </select>
+    </div>
+    <button type="submit" id="lungrads-form-btn" class="calc-btn">Calculate Lung-RADS</button>
+  </form>
+</div>
+<div id="lungrads-results" class="calc-results-container" style="display: none;"></div>
+
+---
+
 ## Detailed Classification
 
 <div class="grid cards" markdown>

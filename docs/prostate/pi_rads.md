@@ -28,6 +28,51 @@ title: PI-RADS v2.1
 
 ---
 
+## PI-RADS Calculator
+
+<div class="calculator-form">
+  <form id="pirads-form">
+    <div class="calc-field">
+      <label for="calc-zone">Lesion Zone</label>
+      <select id="calc-zone" required>
+        <option value="peripheral">Peripheral Zone (PZ) — DWI dominant</option>
+        <option value="transition">Transition Zone (TZ) — T2WI dominant</option>
+      </select>
+    </div>
+    <div class="calc-field">
+      <label for="calc-dwi_score">DWI Score (1–5) <small>— Primary for PZ; secondary for TZ</small></label>
+      <select id="calc-dwi_score" required>
+        <option value="1">1 — No abnormality</option>
+        <option value="2">2 — Indistinct hypointensity on ADC</option>
+        <option value="3">3 — Focal mild/moderate hypointensity; &lt;1.5 cm</option>
+        <option value="4">4 — Focal marked hypointensity; &lt;1.5 cm</option>
+        <option value="5">5 — As 4 but ≥1.5 cm or definite EPE</option>
+      </select>
+    </div>
+    <div class="calc-field">
+      <label for="calc-t2wi_score">T2WI Score (1–5) <small>— Primary for TZ; not used for PZ scoring</small></label>
+      <select id="calc-t2wi_score" required>
+        <option value="1">1 — Normal TZ or round well-defined BPH nodule</option>
+        <option value="2">2 — Circumscribed hypointense, well-defined margins</option>
+        <option value="3">3 — Heterogeneous, obscured margins</option>
+        <option value="4">4 — Lenticular/non-circumscribed homogeneous; &lt;1.5 cm</option>
+        <option value="5">5 — As 4 but ≥1.5 cm or definite EPE</option>
+      </select>
+    </div>
+    <div class="calc-field">
+      <label for="calc-dce_positive">DCE Positive? <small>— PZ only: focal early enhancement vs. adjacent tissue</small></label>
+      <select id="calc-dce_positive" required>
+        <option value="no">No (or not applicable)</option>
+        <option value="yes">Yes — Focal early enhancement</option>
+      </select>
+    </div>
+    <button type="submit" id="pirads-form-btn" class="calc-btn">Calculate PI-RADS</button>
+  </form>
+</div>
+<div id="pirads-results" class="calc-results-container" style="display: none;"></div>
+
+---
+
 ## MRI Sequences and Dominant Sequence by Zone
 
 !!! info "Dominant Sequence by Zone"
@@ -151,6 +196,23 @@ $$\text{PSAD} = \frac{\text{PSA (ng/mL)}}{\text{Prostate Volume (cc)}}$$
 
 !!! tip "Prostate Volume Measurement"
     Use ellipsoid formula: **V = 0.52 × AP × TR × CC** (all in cm)
+
+### PSA Density Calculator
+
+<div class="calculator-form">
+  <form id="psa-density-form">
+    <div class="calc-field">
+      <label for="calc-psa">PSA (ng/mL)</label>
+      <input type="number" id="calc-psa" step="0.01" min="0" required placeholder="e.g., 5.2">
+    </div>
+    <div class="calc-field">
+      <label for="calc-prostate_volume_cc">Prostate Volume (cc) <small>— V = 0.52 × AP × TR × CC</small></label>
+      <input type="number" id="calc-prostate_volume_cc" step="0.1" min="0" required placeholder="e.g., 35.0">
+    </div>
+    <button type="submit" id="psa-density-form-btn" class="calc-btn">Calculate PSA Density</button>
+  </form>
+</div>
+<div id="psa-density-results" class="calc-results-container" style="display: none;"></div>
 
 ---
 

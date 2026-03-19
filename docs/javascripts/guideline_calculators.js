@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Determine the API base URL
-    // radiology-agent backend serves guideline endpoints on :8002
     const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
         ? 'http://localhost:8002'
         : 'https://radiology-protocols.onrender.com';
@@ -75,7 +74,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (data.results) {
                     resultHtml += '<div class="result-inputs"><strong>Specifics:</strong><ul>';
                     for (const [key, value] of Object.entries(data.results)) {
-                        resultHtml += `<li>${key}: ${value}</li>`;
+                        if (value !== null && value !== undefined) {
+                            resultHtml += `<li>${key.replace(/_/g, ' ')}: ${value}</li>`;
+                        }
                     }
                     resultHtml += '</ul></div>';
                 }
@@ -98,13 +99,38 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Initialize Fleischner Calculator if present
+    // Fleischner Calculator
     handleCalculator('fleischner', 'fleischner-form', 'fleischner-results', [
         'size_mm', 'nodule_type', 'patient_risk', 'multiplicity'
     ]);
 
-    // Initialize Adrenal Washout Calculator if present
+    // Adrenal Washout Calculator
     handleCalculator('adrenal_washout', 'adrenal-form', 'adrenal-results', [
         'unenhanced_hu', 'venous_hu', 'delayed_hu'
+    ]);
+
+    // TI-RADS Calculator
+    handleCalculator('tirads', 'tirads-form', 'tirads-results', [
+        'composition_pts', 'echogenicity_pts', 'shape_pts', 'margin_pts', 'echogenic_foci_pts', 'size_cm'
+    ]);
+
+    // Lung-RADS Calculator
+    handleCalculator('lung_rads', 'lungrads-form', 'lungrads-results', [
+        'nodule_type', 'size_mm', 'solid_component_mm', 'is_new', 'has_suspicious_features'
+    ]);
+
+    // PI-RADS Calculator
+    handleCalculator('pirads', 'pirads-form', 'pirads-results', [
+        'zone', 'dwi_score', 't2wi_score', 'dce_positive'
+    ]);
+
+    // PSA Density Calculator
+    handleCalculator('psa_density', 'psa-density-form', 'psa-density-results', [
+        'psa', 'prostate_volume_cc'
+    ]);
+
+    // Adrenal Nodule Management Calculator
+    handleCalculator('adrenal_nodule', 'adrenal-nodule-form', 'adrenal-nodule-results', [
+        'size_cm', 'unenhanced_hu', 'cancer_history'
     ]);
 });
