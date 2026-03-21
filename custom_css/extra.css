@@ -1026,6 +1026,41 @@ html {
   text-align: right;
 }
 
+.search-result-item {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.result-description {
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color--light);
+  margin: 4px 0 2px;
+}
+
+.result-category {
+  font-size: 0.75rem;
+  color: var(--md-default-fg-color--lighter);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.result-badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 1px 7px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: var(--md-accent-fg-color);
+  color: white;
+  border-radius: 10px;
+  vertical-align: middle;
+}
+
 /* Form Styles for Calculators */
 .calculator-form {
   background: var(--md-code-bg-color);
