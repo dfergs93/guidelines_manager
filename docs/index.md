@@ -6,13 +6,13 @@ title: Imaging Guidelines Reference
 
 !!! info "Purpose"
     Evidence-based imaging guidelines and reporting standards used at our institution.
-    **Last Updated:** February 2024
+    **Last Updated:** See footer of each page
 
 ## Guideline Assistant
 
 <div class="search-container">
-  <input type="text" id="guideline-search-input" placeholder="e.g., 10mm solid pulmonary nodule in a smoker" />
-  <button id="guideline-search-btn">Search & Calculate</button>
+  <input type="text" id="guideline-search-input" placeholder="Search guidelines e.g. adrenal, lung nodule, prostate…" />
+  <button id="guideline-search-btn">Search</button>
 </div>
 <div id="guideline-loading" style="display: none; margin-bottom: 20px; font-style: italic;">Analyzing query and guidelines...</div>
 <div id="guideline-results-container" style="display: none;"></div>
@@ -103,7 +103,6 @@ title: Imaging Guidelines Reference
 | Guideline | Topic | Link |
 |-----------|-------|------|
 | **Thyroid Nodule** | General Management | [View](thyroid/thyroid_nodule.md) |
-| **Thyroid Ultrasound** | US Features & Reporting | [View](thyroid/thyroid_nodule_us.md) |
 
 ---
 

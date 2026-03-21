@@ -30,6 +30,9 @@ theme:
 plugins:
   - search
   - awesome-pages
+  - git-revision-date-localized:
+      enable_creation_date: false
+      fallback_to_build_date: true
 
 extra_css:
   - custom_css/extra.css

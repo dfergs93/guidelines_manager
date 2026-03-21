@@ -249,10 +249,6 @@ title: TIRADS Guidelines
 
 ## Related Content
 
-### Related Protocols
-- [Thyroid Ultrasound Protocol](/radiology-protocols/ultrasound/thyroid)
-- [Thyroid FNA Technique](/procedures/thyroid-fna)
-
 ### Related Guidelines
 - ATA Thyroid Nodule Management Guidelines
 - Bethesda Classification for Thyroid Cytology

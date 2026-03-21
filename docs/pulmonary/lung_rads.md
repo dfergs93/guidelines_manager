@@ -306,11 +306,6 @@ Reserved for incidental CTs in patients with known cancer.
 
 ## Additional Resources
 
-### Institutional Resources
-- [Lung Cancer Screening Program Protocol](/radiology-protocols/ct/chest/non-contrast-ct-chest-low-dose)
-- [Shared Decision-Making Tools](#)
-- [Patient Education Materials](#)
-
 ### External Links
 - [ACR Lung-RADS Official Page](https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/Lung-RADS)
 - [USPSTF Lung Cancer Screening Recommendation](https://www.uspreventiveservicestaskforce.org/)

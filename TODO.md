@@ -3,16 +3,18 @@
 ## Near-term
 
 ### Search
-- [ ] Replace the current backend-dependent search UI with a pure client-side search
+- [x] Replace the current backend-dependent search UI with a pure client-side search
   - Filter/search by guideline name and display matching calculator on the index page
   - Remove call to `/api/guideline-search` from `guidelines_search.js`
   - No backend required for this phase
 
 ### Content & Links
-- [ ] Audit all internal links across the docs site and fix broken ones
-  - Known broken: `/abdominal/adrenal/adrenal_washout/` linked from `index.md`
-- [ ] Auto-generate "Last Updated" date from git commit history (e.g. via MkDocs hook or CI step)
-  - Replace hardcoded "February 2024" on the homepage
+- [x] Audit all internal links across the docs site and fix broken ones
+  - Removed broken `thyroid_nodule_us.md` row from index (page deleted, content merged)
+  - Removed broken `/radiology-protocols/...` cross-project links from fleischner, lung_rads, tirads
+- [x] Auto-generate "Last Updated" date from git commit history (e.g. via MkDocs hook or CI step)
+  - Added `mkdocs-git-revision-date-localized-plugin`; shows last-updated date in page footer
+  - Updated CI to use `fetch-depth: 0` so git history is available during build
 
 ### Documentation
 - [ ] Write a minimal `README.md` covering:
