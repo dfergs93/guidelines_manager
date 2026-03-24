@@ -30,6 +30,7 @@ title: PI-RADS v2.1
 
 ## PI-RADS Calculator
 
+<div class="calc-layout">
 <div class="calculator-form">
   <form id="pirads-form">
     <div class="calc-field">
@@ -70,6 +71,7 @@ title: PI-RADS v2.1
   </form>
 </div>
 <div id="pirads-results" class="calc-results-container" style="display: none;"></div>
+</div>
 
 ---
 
@@ -199,6 +201,7 @@ $$\text{PSAD} = \frac{\text{PSA (ng/mL)}}{\text{Prostate Volume (cc)}}$$
 
 ### PSA Density Calculator
 
+<div class="calc-layout">
 <div class="calculator-form">
   <form id="psa-density-form">
     <div class="calc-field">
@@ -213,6 +216,7 @@ $$\text{PSAD} = \frac{\text{PSA (ng/mL)}}{\text{Prostate Volume (cc)}}$$
   </form>
 </div>
 <div id="psa-density-results" class="calc-results-container" style="display: none;"></div>
+</div>
 
 ---
 

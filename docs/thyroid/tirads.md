@@ -14,6 +14,7 @@ title: TIRADS Guidelines
 
 ### TI-RADS Calculator
 
+<div class="calc-layout">
 <div class="calculator-form">
   <form id="tirads-form">
     <div class="calc-field">
@@ -67,6 +68,7 @@ title: TIRADS Guidelines
   </form>
 </div>
 <div id="tirads-results" class="calc-results-container" style="display: none;"></div>
+</div>
 
 ---
 
