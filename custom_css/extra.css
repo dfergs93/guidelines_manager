@@ -1071,7 +1071,7 @@ html {
   }
 
   .calc-layout .calculator-form {
-    flex: 0 0 360px;
+    flex: 0 0 50%;
     margin-bottom: 0;
   }
 
@@ -1103,7 +1103,6 @@ html {
 .calc-field input,
 .calc-field select {
   width: 100%;
-  max-width: 300px;
   padding: 8px;
   border: 1px solid var(--md-default-fg-color--lighter);
   border-radius: 4px;
