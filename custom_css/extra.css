@@ -1061,11 +1061,11 @@ html {
   vertical-align: middle;
 }
 
-/* Two-column layout: results left, inputs right on desktop */
+/* Two-column layout: results right, inputs left on desktop */
 @media screen and (min-width: 960px) {
   .calc-layout {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     gap: 20px;
     align-items: flex-start;
   }
