@@ -14,6 +14,7 @@ title: Fleischner Society Guidelines 2017
 
 ### Fleischner Calculator
 
+<div class="calc-layout">
 <div class="calculator-form">
   <form id="fleischner-form">
     <div class="calc-field">
@@ -46,6 +47,7 @@ title: Fleischner Society Guidelines 2017
   </form>
 </div>
 <div id="fleischner-results" class="calc-results-container" style="display: none;"></div>
+</div>
 
 ---
 

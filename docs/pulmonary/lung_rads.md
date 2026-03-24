@@ -27,6 +27,7 @@ title: Lung-RADS v1.1
 
 ## Lung-RADS Calculator
 
+<div class="calc-layout">
 <div class="calculator-form">
   <form id="lungrads-form">
     <div class="calc-field">
@@ -63,6 +64,7 @@ title: Lung-RADS v1.1
   </form>
 </div>
 <div id="lungrads-results" class="calc-results-container" style="display: none;"></div>
+</div>
 
 ---
 
