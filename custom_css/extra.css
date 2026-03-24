@@ -1061,6 +1061,26 @@ html {
   vertical-align: middle;
 }
 
+/* Two-column layout: results left, inputs right on desktop */
+@media screen and (min-width: 960px) {
+  .calc-layout {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .calc-layout .calculator-form {
+    flex: 0 0 360px;
+    margin-bottom: 0;
+  }
+
+  .calc-layout .calc-results-container {
+    flex: 1;
+    margin-bottom: 0;
+  }
+}
+
 /* Form Styles for Calculators */
 .calculator-form {
   background: var(--md-code-bg-color);
