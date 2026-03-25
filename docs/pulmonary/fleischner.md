@@ -53,13 +53,6 @@ title: Fleischner Society Guidelines 2017
 
 ### Quick Reference Tables
 
-!!! info "Original Guideline"
-    [:octicons-file-pdf-24: Download Original PDF](assets/fleischner_clickable.pdf)
-
-![FleischnerTable.jpg](assets/FleischnerTable.jpg)
-
-![PulmonaryNodulesTable.jpg](assets/PulmonaryNodulesTable.jpg)
-
 === "Solid nodules"
     | Nodule type | Risk | <6 mm | 6–8 mm | >8 mm | Comments |
     |---|---|---|---|---|---|
@@ -132,6 +125,13 @@ title: Fleischner Society Guidelines 2017
 
 ---
 ## Related Content
+
+!!! info "Original Guideline"
+    [:octicons-file-pdf-24: Download Original PDF](assets/fleischner_clickable.pdf)
+
+![FleischnerTable.jpg](assets/FleischnerTable.jpg)
+
+![PulmonaryNodulesTable.jpg](assets/PulmonaryNodulesTable.jpg)
 
 ### Related Guidelines
 - [Lung-RADS v1.1](./lung_rads.md) - For lung cancer screening

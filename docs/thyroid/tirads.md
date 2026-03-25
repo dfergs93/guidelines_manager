@@ -269,34 +269,22 @@ title: TIRADS Guidelines
 
 ## Visual Reference Guide
 
-??? example "Image Examples by Category"
-    
-    **Composition:**
-    
-    - Cystic: Anechoic with posterior enhancement
-    - Spongiform: Swiss cheese appearance
-    - Mixed: Both cystic and solid areas
-    - Solid: Uniformly solid tissue
-    
-    **Echogenicity:**
-    
-    - Compare to normal thyroid parenchyma
-    - Very hypoechoic: Compare to strap muscles
-    
-    **Shape:**
-    
-    - Measure A-P and transverse on same image
-    - Taller-than-wide seen on transverse view
-    
-    **Margin:**
-    
-    - Smooth: Regular border
-    - Lobulated: 3+ undulations
-    - ETE: Disruption of thyroid capsule
-    
-    **Echogenic Foci:**
-    
-    - Comet-tail: V-shaped artifact (benign)
-    - Macrocalc: >1mm with shadowing
-    - Rim calc: Peripheral eggshell pattern
-    - Punctate: Microcalcifications, may shadow
+!!! info "Original Guideline"
+    [:octicons-file-pdf-24: Download Original PDF](assets/thyroid_nodule.pdf)
+
+## Reference Images
+
+![Thyroid Nodule Flowchart.jpg](assets/Thyroid Nodule Flowchart.jpg)
+
+## US Reference Images
+
+!!! info "Original Guideline"
+    [:octicons-file-pdf-24: Download Original PDF](assets/thyroid_nodule_us.pdf)
+
+![ACR TI-RADS Chart.jpg](assets/ACR TI-RADS Chart.jpg)
+
+![Thyroid.jpg](assets/Thyroid.jpg)
+
+![EchogenicFoci.jpg](assets/EchogenicFoci.jpg)
+
+![TIRADSGraphicTable.jpg](assets/TIRADSGraphicTable.jpg)

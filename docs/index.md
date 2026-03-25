@@ -39,10 +39,10 @@ title: Imaging Guidelines Reference
 
     ---
 
-    **Thyroid Nodules**
+    **TIRADS**
     Ultrasound & Biopsy criteria
 
-    [:octicons-arrow-right-24: View](thyroid/thyroid_nodule.md)
+    [:octicons-arrow-right-24: View](thyroid/tirads.md)
 
 -   :material-hospital: **Breast**
 
@@ -102,7 +102,7 @@ title: Imaging Guidelines Reference
 ### :material-bow-tie: Thyroid & Head/Neck
 | Guideline | Topic | Link |
 |-----------|-------|------|
-| **Thyroid Nodule** | General Management | [View](thyroid/thyroid_nodule.md) |
+| **TIRADS** | General Management | [View](thyroid/tirads.md) |
 
 ---
 

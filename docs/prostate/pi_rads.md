@@ -17,17 +17,6 @@ title: PI-RADS v2.1
 
 ---
 
-???+ abstract "PI-RADS Quick Reference"
-    | Score | Probability of csPCa | Action |
-    |-------|----------------------|--------|
-    | **PI-RADS 1** | Very low (essentially no csPCa) | No biopsy |
-    | **PI-RADS 2** | Low | No biopsy (consider in context) |
-    | **PI-RADS 3** | Intermediate | Biopsy at clinician discretion (consider PSA density, clinical risk) |
-    | **PI-RADS 4** | High | Targeted biopsy recommended |
-    | **PI-RADS 5** | Very high | Targeted biopsy strongly recommended |
-
----
-
 ## PI-RADS Calculator
 
 <div class="calc-layout">
@@ -72,6 +61,17 @@ title: PI-RADS v2.1
 </div>
 <div id="pirads-results" class="calc-results-container" style="display: none;"></div>
 </div>
+
+---
+
+???+ abstract "PI-RADS Quick Reference"
+    | Score | Probability of csPCa | Action |
+    |-------|----------------------|--------|
+    | **PI-RADS 1** | Very low (essentially no csPCa) | No biopsy |
+    | **PI-RADS 2** | Low | No biopsy (consider in context) |
+    | **PI-RADS 3** | Intermediate | Biopsy at clinician discretion (consider PSA density, clinical risk) |
+    | **PI-RADS 4** | High | Targeted biopsy recommended |
+    | **PI-RADS 5** | Very high | Targeted biopsy strongly recommended |
 
 ---
 
