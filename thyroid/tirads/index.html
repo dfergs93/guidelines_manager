@@ -951,28 +951,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#quick-reference-tables" class="md-nav__link">
+  <a href="#detailed-classification" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Quick Reference Tables
+        Detailed Classification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Detailed Classification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#feature-scoring-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature Scoring Reference
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#scoring-instructions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Scoring Instructions
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#special-considerations" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -982,8 +983,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#common-pitfalls" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -991,6 +992,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1166,8 +1172,147 @@
 </div>
 
 <hr />
-<h3 id="quick-reference-tables">Quick Reference Tables</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">TI-RADS Scoring</label><label for="__tabbed_1_2">TI-RADS Categories</label><label for="__tabbed_1_3">Management Algorithm</label></div>
+<details class="abstract" open="open">
+<summary>TI-RADS Quick Reference</summary>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Points</th>
+<th>Malignancy Risk</th>
+<th>FNA Threshold</th>
+<th>Follow-up Threshold</th>
+<th>Follow-up Interval</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TR1</strong></td>
+<td>0</td>
+<td>~0.3%</td>
+<td>No FNA</td>
+<td>No follow-up</td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>TR2</strong></td>
+<td>2</td>
+<td>~1.5%</td>
+<td>No FNA</td>
+<td>No follow-up</td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>TR3</strong></td>
+<td>3</td>
+<td>~4.8%</td>
+<td>≥2.5 cm</td>
+<td>≥1.5 cm</td>
+<td>1, 3, 5 years</td>
+</tr>
+<tr>
+<td><strong>TR4</strong></td>
+<td>4–6</td>
+<td>~9.1%</td>
+<td>≥1.5 cm</td>
+<td>≥1.0 cm</td>
+<td>1, 2, 3, 5 years</td>
+</tr>
+<tr>
+<td><strong>TR5</strong></td>
+<td>≥7</td>
+<td>~35%</td>
+<td>≥1.0 cm</td>
+<td>≥0.5 cm</td>
+<td>1, 2, 3, 5 years</td>
+</tr>
+</tbody>
+</table>
+</details>
+<hr />
+<h2 id="detailed-classification">Detailed Classification</h2>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>TR1: Benign</strong></p>
+<hr />
+<div class="admonition success">
+<p class="admonition-title">No Action Required</p>
+<p>No sonographic features of malignancy. Essentially benign nodule.</p>
+<p><strong>Typical findings:</strong></p>
+<ul>
+<li>Simple cysts (completely anechoic, no solid component)</li>
+<li>Spongiform nodules (&gt;50% microcystic composition)</li>
+</ul>
+</div>
+<p><strong>Management:</strong> No FNA, no follow-up
+<strong>Malignancy Risk:</strong> ~0.3%
+<strong>Points:</strong> 0</p>
+</li>
+<li>
+<p><strong>TR2: Not Suspicious</strong></p>
+<hr />
+<div class="admonition success">
+<p class="admonition-title">No Action Required</p>
+<p>Not suspicious. Sonographic features suggest a benign etiology.</p>
+<p><strong>Typical findings:</strong></p>
+<ul>
+<li>Predominantly cystic with thin internal septa</li>
+<li>Isoechoic or hyperechoic nodules without suspicious features</li>
+<li>Colloid nodules with comet-tail artifacts</li>
+</ul>
+</div>
+<p><strong>Management:</strong> No FNA, no follow-up
+<strong>Malignancy Risk:</strong> ~1.5%
+<strong>Points:</strong> 2</p>
+</li>
+<li>
+<p><strong>TR3: Mildly Suspicious</strong></p>
+<hr />
+<div class="admonition info">
+<p class="admonition-title">Size-Based Follow-up</p>
+<p>Mildly suspicious features. Management is determined by size thresholds.</p>
+<p><strong>FNA if:</strong> ≥2.5 cm
+<strong>Follow-up if:</strong> ≥1.5 cm (at 1, 3, 5 years)
+<strong>No action if:</strong> &lt;1.5 cm</p>
+</div>
+<p><strong>Management:</strong> Observation or FNA based on size
+<strong>Malignancy Risk:</strong> ~4.8%
+<strong>Points:</strong> 3</p>
+</li>
+<li>
+<p><strong>TR4: Moderately Suspicious</strong></p>
+<hr />
+<div class="admonition warning">
+<p class="admonition-title">Biopsy Consideration</p>
+<p>Moderately suspicious features. Lower size thresholds than TR3.</p>
+<p><strong>FNA if:</strong> ≥1.5 cm
+<strong>Follow-up if:</strong> ≥1.0 cm (at 1, 2, 3, 5 years)
+<strong>No action if:</strong> &lt;1.0 cm</p>
+</div>
+<p><strong>Management:</strong> Follow-up or FNA based on size
+<strong>Malignancy Risk:</strong> ~9.1%
+<strong>Points:</strong> 4–6</p>
+</li>
+<li>
+<p><strong>TR5: Highly Suspicious</strong></p>
+<hr />
+<div class="admonition danger">
+<p class="admonition-title">FNA Recommended</p>
+<p>Highly suspicious features. FNA is recommended above size threshold.</p>
+<p><strong>FNA if:</strong> ≥1.0 cm
+<strong>Follow-up if:</strong> ≥0.5 cm (at 1, 2, 3, 5 years)
+<strong>No action if:</strong> &lt;0.5 cm</p>
+</div>
+<p><strong>Management:</strong> FNA recommended
+<strong>Malignancy Risk:</strong> ~35%
+<strong>Points:</strong> ≥7</p>
+</li>
+</ul>
+</div>
+<hr />
+<h3 id="feature-scoring-reference">Feature Scoring Reference</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">TI-RADS Scoring</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <table>
@@ -1297,156 +1442,7 @@
 </tbody>
 </table>
 </div>
-<div class="tabbed-block">
-<table>
-<thead>
-<tr>
-<th>Level</th>
-<th>Points</th>
-<th>Risk</th>
-<th>FNA Size Threshold</th>
-<th>Follow-up Size Threshold</th>
-<th>Follow-up Interval</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>TR1</strong></td>
-<td>0</td>
-<td>0.3%</td>
-<td>No FNA</td>
-<td>No follow-up</td>
-<td>None</td>
-</tr>
-<tr>
-<td><strong>TR2</strong></td>
-<td>2</td>
-<td>1.5%</td>
-<td>No FNA</td>
-<td>No follow-up</td>
-<td>None</td>
-</tr>
-<tr>
-<td><strong>TR3</strong></td>
-<td>3</td>
-<td>4.8%</td>
-<td>≥2.5 cm</td>
-<td>≥1.5 cm</td>
-<td>1, 3, 5 years</td>
-</tr>
-<tr>
-<td><strong>TR4</strong></td>
-<td>4-6</td>
-<td>9.1%</td>
-<td>≥1.5 cm</td>
-<td>≥1.0 cm</td>
-<td>1, 2, 3, 5 years</td>
-</tr>
-<tr>
-<td><strong>TR5</strong></td>
-<td>≥7</td>
-<td>35%</td>
-<td>≥1.0 cm</td>
-<td>≥0.5 cm</td>
-<td>1, 2, 3, 5 years</td>
-</tr>
-</tbody>
-</table>
 </div>
-<div class="tabbed-block">
-<table>
-<thead>
-<tr>
-<th>TI-RADS</th>
-<th>Size</th>
-<th>Recommendation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>TR1</strong></td>
-<td>Any</td>
-<td>No FNA, no follow-up</td>
-</tr>
-<tr>
-<td><strong>TR2</strong></td>
-<td>Any</td>
-<td>No FNA, no follow-up</td>
-</tr>
-<tr>
-<td><strong>TR3</strong></td>
-<td>&lt;1.5 cm</td>
-<td>No FNA, no follow-up</td>
-</tr>
-<tr>
-<td><strong>TR3</strong></td>
-<td>≥1.5 cm</td>
-<td>Consider follow-up US at 1, 3, 5 years</td>
-</tr>
-<tr>
-<td><strong>TR3</strong></td>
-<td>≥2.5 cm</td>
-<td>Consider FNA</td>
-</tr>
-<tr>
-<td><strong>TR4</strong></td>
-<td>&lt;1.0 cm</td>
-<td>No FNA, no follow-up</td>
-</tr>
-<tr>
-<td><strong>TR4</strong></td>
-<td>≥1.0 cm</td>
-<td>Consider follow-up US at 1, 2, 3, 5 years</td>
-</tr>
-<tr>
-<td><strong>TR4</strong></td>
-<td>≥1.5 cm</td>
-<td>Consider FNA</td>
-</tr>
-<tr>
-<td><strong>TR5</strong></td>
-<td>&lt;0.5 cm</td>
-<td>No FNA, no follow-up</td>
-</tr>
-<tr>
-<td><strong>TR5</strong></td>
-<td>≥0.5 cm</td>
-<td>Consider follow-up US at 1, 2, 3, 5 years</td>
-</tr>
-<tr>
-<td><strong>TR5</strong></td>
-<td>≥1.0 cm</td>
-<td>FNA recommended</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<hr />
-<h3 id="scoring-instructions">Scoring Instructions</h3>
-<div class="grid cards">
-<ul>
-<li>
-<p><strong>How to Score</strong></p>
-<ul>
-<li>Evaluate all five categories</li>
-<li>Assign points for each feature</li>
-<li>Sum total points</li>
-<li>Determine TI-RADS level</li>
-<li>Apply size-based recommendations</li>
-</ul>
-</li>
-<li>
-<p><strong>Key Principles</strong></p>
-<ul>
-<li>Score the most suspicious features</li>
-<li>If multiple features in one category, choose highest points</li>
-<li>Measure maximum diameter in any plane</li>
-<li>Consider clinical context</li>
-</ul>
-</li>
-</ul>
 </div>
 <hr />
 <details class="tip">
@@ -1599,7 +1595,7 @@ Recommendation: FNA is recommended.
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 25, 2026 23:44:37 UTC">March 25, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 26, 2026 00:39:48 UTC">March 26, 2026</span>
   </span>
 
     
