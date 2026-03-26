@@ -15,6 +15,7 @@
 - [x] Auto-generate "Last Updated" date from git commit history (e.g. via MkDocs hook or CI step)
   - Added `mkdocs-git-revision-date-localized-plugin`; shows last-updated date in page footer
   - Updated CI to use `fetch-depth: 0` so git history is available during build
+- [ ] Fix TIRADS Quick reference table, make it more inline with BIRADS reference view (with grid cards rather than a table)
 
 ### Documentation
 - [ ] Write a minimal `README.md` covering:
