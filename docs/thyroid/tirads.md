@@ -72,7 +72,104 @@ title: TIRADS Guidelines
 
 ---
 
-### Quick Reference Tables
+???+ abstract "TI-RADS Quick Reference"
+    | Level | Points | Malignancy Risk | FNA Threshold | Follow-up Threshold | Follow-up Interval |
+    |-------|--------|-----------------|--------------|---------------------|-------------------|
+    | **TR1** | 0 | ~0.3% | No FNA | No follow-up | None |
+    | **TR2** | 2 | ~1.5% | No FNA | No follow-up | None |
+    | **TR3** | 3 | ~4.8% | ≥2.5 cm | ≥1.5 cm | 1, 3, 5 years |
+    | **TR4** | 4–6 | ~9.1% | ≥1.5 cm | ≥1.0 cm | 1, 2, 3, 5 years |
+    | **TR5** | ≥7 | ~35% | ≥1.0 cm | ≥0.5 cm | 1, 2, 3, 5 years |
+
+---
+
+## Detailed Classification
+
+<div class="grid cards" markdown>
+
+-   **TR1: Benign**
+
+    ---
+
+    !!! success "No Action Required"
+        No sonographic features of malignancy. Essentially benign nodule.
+
+        **Typical findings:**
+
+        - Simple cysts (completely anechoic, no solid component)
+        - Spongiform nodules (>50% microcystic composition)
+
+    **Management:** No FNA, no follow-up
+    **Malignancy Risk:** ~0.3%
+    **Points:** 0
+
+-   **TR2: Not Suspicious**
+
+    ---
+
+    !!! success "No Action Required"
+        Not suspicious. Sonographic features suggest a benign etiology.
+
+        **Typical findings:**
+
+        - Predominantly cystic with thin internal septa
+        - Isoechoic or hyperechoic nodules without suspicious features
+        - Colloid nodules with comet-tail artifacts
+
+    **Management:** No FNA, no follow-up
+    **Malignancy Risk:** ~1.5%
+    **Points:** 2
+
+-   **TR3: Mildly Suspicious**
+
+    ---
+
+    !!! info "Size-Based Follow-up"
+        Mildly suspicious features. Management is determined by size thresholds.
+
+        **FNA if:** ≥2.5 cm
+        **Follow-up if:** ≥1.5 cm (at 1, 3, 5 years)
+        **No action if:** <1.5 cm
+
+    **Management:** Observation or FNA based on size
+    **Malignancy Risk:** ~4.8%
+    **Points:** 3
+
+-   **TR4: Moderately Suspicious**
+
+    ---
+
+    !!! warning "Biopsy Consideration"
+        Moderately suspicious features. Lower size thresholds than TR3.
+
+        **FNA if:** ≥1.5 cm
+        **Follow-up if:** ≥1.0 cm (at 1, 2, 3, 5 years)
+        **No action if:** <1.0 cm
+
+    **Management:** Follow-up or FNA based on size
+    **Malignancy Risk:** ~9.1%
+    **Points:** 4–6
+
+-   **TR5: Highly Suspicious**
+
+    ---
+
+    !!! danger "FNA Recommended"
+        Highly suspicious features. FNA is recommended above size threshold.
+
+        **FNA if:** ≥1.0 cm
+        **Follow-up if:** ≥0.5 cm (at 1, 2, 3, 5 years)
+        **No action if:** <0.5 cm
+
+    **Management:** FNA recommended
+    **Malignancy Risk:** ~35%
+    **Points:** ≥7
+
+</div>
+
+---
+
+### Feature Scoring Reference
 
 === "TI-RADS Scoring"
     | Feature | Points | Description |
@@ -100,51 +197,6 @@ title: TIRADS Guidelines
     | Macrocalcifications | 1 | Large calcific foci with shadowing |
     | Peripheral (rim) calcifications | 2 | Calcifications along nodule margin |
     | Punctate echogenic foci | 3 | Tiny bright spots ± shadowing/comet-tail |
-
-=== "TI-RADS Categories"
-    | Level | Points | Risk | FNA Size Threshold | Follow-up Size Threshold | Follow-up Interval |
-    |-------|--------|------|-------------------|-------------------------|-------------------|
-    | **TR1** | 0 | 0.3% | No FNA | No follow-up | None |
-    | **TR2** | 2 | 1.5% | No FNA | No follow-up | None |
-    | **TR3** | 3 | 4.8% | ≥2.5 cm | ≥1.5 cm | 1, 3, 5 years |
-    | **TR4** | 4-6 | 9.1% | ≥1.5 cm | ≥1.0 cm | 1, 2, 3, 5 years |
-    | **TR5** | ≥7 | 35% | ≥1.0 cm | ≥0.5 cm | 1, 2, 3, 5 years |
-
-=== "Management Algorithm"
-    | TI-RADS | Size | Recommendation |
-    |---------|------|----------------|
-    | **TR1** | Any | No FNA, no follow-up |
-    | **TR2** | Any | No FNA, no follow-up |
-    | **TR3** | <1.5 cm | No FNA, no follow-up |
-    | **TR3** | ≥1.5 cm | Consider follow-up US at 1, 3, 5 years |
-    | **TR3** | ≥2.5 cm | Consider FNA |
-    | **TR4** | <1.0 cm | No FNA, no follow-up |
-    | **TR4** | ≥1.0 cm | Consider follow-up US at 1, 2, 3, 5 years |
-    | **TR4** | ≥1.5 cm | Consider FNA |
-    | **TR5** | <0.5 cm | No FNA, no follow-up |
-    | **TR5** | ≥0.5 cm | Consider follow-up US at 1, 2, 3, 5 years |
-    | **TR5** | ≥1.0 cm | FNA recommended |
-
----
-
-### Scoring Instructions
-
-<div class="grid cards" markdown>
-
--   **How to Score**
-    - Evaluate all five categories
-    - Assign points for each feature
-    - Sum total points
-    - Determine TI-RADS level
-    - Apply size-based recommendations
-
--   **Key Principles**
-    - Score the most suspicious features
-    - If multiple features in one category, choose highest points
-    - Measure maximum diameter in any plane
-    - Consider clinical context
-
-</div>
 
 ---
 
