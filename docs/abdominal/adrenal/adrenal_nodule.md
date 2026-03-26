@@ -3,6 +3,29 @@
 !!! info "Original Guideline"
     [:octicons-file-pdf-24: Download Original PDF](assets/adrenal_nodule.pdf)
 
+## Adrenal Washout Calculator
+
+<div class="calculator-form">
+  <form id="adrenal-form">
+    <div class="calc-field">
+      <label for="calc-washout_unenhanced_hu">Unenhanced CT Attenuation (HU)</label>
+      <input type="number" id="calc-washout_unenhanced_hu" step="0.1" required placeholder="e.g., 28">
+    </div>
+    <div class="calc-field">
+      <label for="calc-washout_venous_hu">Portal Venous Phase Attenuation (HU)</label>
+      <input type="number" id="calc-washout_venous_hu" step="0.1" required placeholder="e.g., 110">
+    </div>
+    <div class="calc-field">
+      <label for="calc-washout_delayed_hu">Delayed Phase Attenuation (HU) <small>— 10–15 min delay</small></label>
+      <input type="number" id="calc-washout_delayed_hu" step="0.1" required placeholder="e.g., 55">
+    </div>
+    <button type="submit" id="adrenal-form-btn" class="calc-btn">Calculate Washout</button>
+  </form>
+</div>
+<div id="adrenal-results" class="calc-results-container" style="display: none;"></div>
+
+---
+
 ## Adrenal Nodule Management Calculator
 
 <div class="calculator-form">

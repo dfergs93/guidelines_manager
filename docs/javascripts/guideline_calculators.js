@@ -324,7 +324,7 @@ function adrenal_nodule_calculator(size_cm, unenhanced_hu, cancer_history) {
 
 const CALCULATORS = {
     fleischner:      (p) => fleischner_calculator(p.size_mm, p.nodule_type, p.patient_risk, p.multiplicity),
-    adrenal_washout: (p) => adrenal_washout_calculator(p.unenhanced_hu, p.venous_hu, p.delayed_hu),
+    adrenal_washout: (p) => adrenal_washout_calculator(p.washout_unenhanced_hu, p.washout_venous_hu, p.washout_delayed_hu),
     tirads:          (p) => tirads_calculator(p.composition_pts, p.echogenicity_pts, p.shape_pts, p.margin_pts, p.echogenic_foci_pts, p.size_cm),
     lung_rads:       (p) => lung_rads_calculator(p.nodule_type, p.size_mm, p.solid_component_mm, p.is_new, p.has_suspicious_features),
     pirads:          (p) => pirads_calculator(p.zone, p.dwi_score, p.t2wi_score, p.dce_positive),
@@ -405,7 +405,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Register all calculators
     handleCalculator('fleischner',      'fleischner-form',      'fleischner-results',      ['size_mm', 'nodule_type', 'patient_risk', 'multiplicity']);
-    handleCalculator('adrenal_washout', 'adrenal-form',         'adrenal-results',         ['unenhanced_hu', 'venous_hu', 'delayed_hu']);
+    handleCalculator('adrenal_washout', 'adrenal-form',         'adrenal-results',         ['washout_unenhanced_hu', 'washout_venous_hu', 'washout_delayed_hu']);
     handleCalculator('tirads',          'tirads-form',          'tirads-results',          ['composition_pts', 'echogenicity_pts', 'shape_pts', 'margin_pts', 'echogenic_foci_pts', 'size_cm']);
     handleCalculator('lung_rads',       'lungrads-form',        'lungrads-results',        ['nodule_type', 'size_mm', 'solid_component_mm', 'is_new', 'has_suspicious_features']);
     handleCalculator('pirads',          'pirads-form',          'pirads-results',          ['zone', 'dwi_score', 't2wi_score', 'dce_positive']);
