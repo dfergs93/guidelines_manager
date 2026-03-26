@@ -36,22 +36,6 @@ const GUIDELINES = [
         category: "Thyroid",
         hasCalculator: true,
     },
-    {
-        name: "Thyroid Nodule",
-        description: "General thyroid nodule management guidelines",
-        url: "thyroid/thyroid_nodule/",
-        keywords: ["thyroid", "nodule", "management"],
-        category: "Thyroid",
-        hasCalculator: false,
-    },
-    {
-        name: "Thyroid Nodule Ultrasound",
-        description: "Thyroid nodule ultrasound features and reporting",
-        url: "thyroid/thyroid_nodule_us/",
-        keywords: ["thyroid", "nodule", "ultrasound", "us", "features", "reporting"],
-        category: "Thyroid",
-        hasCalculator: false,
-    },
 
     // Prostate
     {
@@ -82,14 +66,6 @@ const GUIDELINES = [
         category: "Abdominal",
         hasCalculator: true,
     },
-    {
-        name: "Adrenal Washout Calculator",
-        description: "CT adrenal washout protocol for adenoma characterisation",
-        url: "abdominal/adrenal/adrenal_washout/",
-        keywords: ["adrenal", "washout", "adenoma", "ct", "hu", "hounsfield", "lipid", "pheochromocytoma"],
-        category: "Abdominal",
-        hasCalculator: true,
-    },
 
     // Liver
     {
@@ -100,30 +76,6 @@ const GUIDELINES = [
         category: "Abdominal",
         hasCalculator: true,
     },
-    {
-        name: "Liver Lesion Workup (ACR 2017)",
-        description: "ACR incidental liver lesion workup recommendations",
-        url: "abdominal/liver/liver_lesion_workup/",
-        keywords: ["liver", "lesion", "incidental", "workup", "acr", "cyst", "hemangioma"],
-        category: "Abdominal",
-        hasCalculator: false,
-    },
-    {
-        name: "Hepatic Trauma Grading",
-        description: "AAST hepatic trauma injury grading scale",
-        url: "abdominal/liver/hepatic_trauma/",
-        keywords: ["liver", "hepatic", "trauma", "injury", "aast", "grading", "laceration"],
-        category: "Trauma",
-        hasCalculator: false,
-    },
-    {
-        name: "Gallbladder and Biliary Tract",
-        description: "Gallbladder and biliary tract guidelines",
-        url: "abdominal/liver/gallbladder/",
-        keywords: ["gallbladder", "biliary", "cholecystitis", "bile duct", "cholelithiasis"],
-        category: "Abdominal",
-        hasCalculator: false,
-    },
 
     // Renal
     {
@@ -133,132 +85,6 @@ const GUIDELINES = [
         keywords: ["bosniak", "renal", "kidney", "cyst", "cystic", "mass", "rcc", "carcinoma", "enhancement", "septa"],
         category: "Abdominal",
         hasCalculator: true,
-    },
-    {
-        name: "Renal Lesion",
-        description: "Renal lesion characterisation and management",
-        url: "abdominal/renal/renal_lesion/",
-        keywords: ["renal", "kidney", "lesion", "cyst", "mass", "rcc", "carcinoma", "bosniak"],
-        category: "Abdominal",
-        hasCalculator: false,
-    },
-    {
-        name: "Renal Injury Grading",
-        description: "AAST renal trauma injury grading scale",
-        url: "abdominal/renal/renal_injury/",
-        keywords: ["renal", "kidney", "trauma", "injury", "aast", "grading"],
-        category: "Trauma",
-        hasCalculator: false,
-    },
-
-    // Pancreas
-    {
-        name: "Pancreatic Cysts — Incidental",
-        description: "Management of incidentally discovered pancreatic cystic lesions",
-        url: "abdominal/pancreas/pancreatic_cysts/",
-        keywords: ["pancreas", "pancreatic", "cyst", "ipmn", "incidental", "mucinous"],
-        category: "Abdominal",
-        hasCalculator: false,
-    },
-    {
-        name: "Pancreatic Injury Grading",
-        description: "AAST pancreatic trauma injury grading scale",
-        url: "abdominal/pancreas/pancreatic_injury/",
-        keywords: ["pancreas", "pancreatic", "trauma", "injury", "aast", "grading"],
-        category: "Trauma",
-        hasCalculator: false,
-    },
-
-    // Spleen
-    {
-        name: "Splenic Injury Grading",
-        description: "AAST splenic trauma injury grading scale",
-        url: "abdominal/spleen/splenic_injury/",
-        keywords: ["spleen", "splenic", "trauma", "injury", "aast", "grading", "laceration"],
-        category: "Trauma",
-        hasCalculator: false,
-    },
-
-    // GI
-    {
-        name: "Rectal Cancer",
-        description: "Rectal cancer MRI staging and reporting",
-        url: "abdominal/gastrointestinal/rectal_cancer/",
-        keywords: ["rectal", "rectum", "cancer", "staging", "mri", "emvi", "mrf"],
-        category: "Abdominal",
-        hasCalculator: false,
-    },
-
-    // Gynaecology
-    {
-        name: "Adnexal Mass",
-        description: "Characterisation and management of adnexal masses",
-        url: "gyn/adnexal/adnexal_mass/",
-        keywords: ["adnexal", "ovarian", "mass", "ultrasound", "gyn", "gynaecology", "ovary"],
-        category: "Gynaecology",
-        hasCalculator: false,
-    },
-    {
-        name: "Adnexal Cyst Ultrasound",
-        description: "Ultrasound assessment of adnexal cysts",
-        url: "gyn/adnexal/adnexal_cyst/",
-        keywords: ["adnexal", "cyst", "ovarian", "ultrasound", "gyn"],
-        category: "Gynaecology",
-        hasCalculator: false,
-    },
-    {
-        name: "Pregnancy Unknown Location",
-        description: "Management of pregnancy of unknown location (PUL)",
-        url: "gyn/pregnancy/pregnancy_unknown_location/",
-        keywords: ["pregnancy", "pul", "ectopic", "unknown location", "hcg"],
-        category: "Gynaecology",
-        hasCalculator: false,
-    },
-    {
-        name: "Pregnancy Viability — Initial",
-        description: "Initial assessment of pregnancy viability",
-        url: "gyn/pregnancy/pregnancy_viability_initial/",
-        keywords: ["pregnancy", "viability", "first trimester", "miscarriage", "fetal heart"],
-        category: "Gynaecology",
-        hasCalculator: false,
-    },
-    {
-        name: "Pregnancy Viability — Follow-up",
-        description: "Follow-up assessment of pregnancy viability",
-        url: "gyn/pregnancy/pregnancy_viability_followup/",
-        keywords: ["pregnancy", "viability", "follow-up", "first trimester", "miscarriage"],
-        category: "Gynaecology",
-        hasCalculator: false,
-    },
-
-    // MSK
-    {
-        name: "Scoliosis",
-        description: "Scoliosis imaging assessment and Cobb angle measurement",
-        url: "msk/scoliosis/",
-        keywords: ["scoliosis", "spine", "cobb", "msk", "musculoskeletal"],
-        category: "MSK",
-        hasCalculator: false,
-    },
-
-    // Neuro
-    {
-        name: "Pituitary",
-        description: "Pituitary gland imaging guidelines",
-        url: "neuro/pituitary/",
-        keywords: ["pituitary", "adenoma", "microadenoma", "macroadenoma", "neuro", "sella"],
-        category: "Neuro",
-        hasCalculator: false,
-    },
-
-    // Vascular
-    {
-        name: "Abdominal Aortic Aneurysm",
-        description: "AAA surveillance and management thresholds",
-        url: "vascular/aaa/",
-        keywords: ["aaa", "aortic", "aneurysm", "abdominal", "vascular", "surveillance"],
-        category: "Vascular",
-        hasCalculator: false,
     },
 
     // Contrast

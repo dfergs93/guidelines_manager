@@ -71,6 +71,25 @@ title: Imaging Guidelines Reference
 
     [:octicons-arrow-right-24: View](contrast/contrast_safety.md)
 
+-   :material-stomach: **Abdominal**
+
+    ---
+
+    **Adrenal Nodule**
+    Incidental adrenal nodule management
+
+    [:octicons-arrow-right-24: View](abdominal/adrenal/adrenal_nodule.md)
+
+    **LI-RADS v2018**
+    Liver imaging & HCC
+
+    [:octicons-arrow-right-24: View](abdominal/liver/li_rads.md)
+
+    **Bosniak v2019**
+    Renal cystic mass classification
+
+    [:octicons-arrow-right-24: View](abdominal/renal/bosniak.md)
+
 </div>
 
 ---
@@ -103,6 +122,13 @@ title: Imaging Guidelines Reference
 | Guideline | Topic | Link |
 |-----------|-------|------|
 | **TIRADS** | General Management | [View](thyroid/tirads.md) |
+
+### :material-stomach: Abdominal
+| Guideline | Topic | Link |
+|-----------|-------|------|
+| **Adrenal Nodule (ACR 2017)** | Incidental Adrenal Nodule Management | [View](abdominal/adrenal/adrenal_nodule.md) |
+| **LI-RADS v2018** | Liver Imaging & HCC | [View](abdominal/liver/li_rads.md) |
+| **Bosniak v2019** | Renal Cystic Mass Classification | [View](abdominal/renal/bosniak.md) |
 
 ---
 
