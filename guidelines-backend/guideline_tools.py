@@ -122,7 +122,7 @@ def adrenal_washout_calculator(unenhanced_hu: float, venous_hu: float, delayed_h
             "finding": diagnosis
         },
         "recommendation": diagnosis,
-        "link": "/abdominal/adrenal/adrenal_washout/"
+        "link": "/abdominal/adrenal/adrenal_nodule/"
     }
 
 
