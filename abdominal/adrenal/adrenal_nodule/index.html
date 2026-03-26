@@ -620,6 +620,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#adrenal-washout-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adrenal Washout Calculator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#adrenal-nodule-management-calculator" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1455,6 +1466,27 @@
 <p class="admonition-title">Original Guideline</p>
 <p><a href="assets/adrenal_nodule.pdf">:octicons-file-pdf-24: Download Original PDF</a></p>
 </div>
+<h2 id="adrenal-washout-calculator">Adrenal Washout Calculator</h2>
+<div class="calculator-form">
+  <form id="adrenal-form">
+    <div class="calc-field">
+      <label for="calc-washout_unenhanced_hu">Unenhanced CT Attenuation (HU)</label>
+      <input type="number" id="calc-washout_unenhanced_hu" step="0.1" required placeholder="e.g., 28">
+    </div>
+    <div class="calc-field">
+      <label for="calc-washout_venous_hu">Portal Venous Phase Attenuation (HU)</label>
+      <input type="number" id="calc-washout_venous_hu" step="0.1" required placeholder="e.g., 110">
+    </div>
+    <div class="calc-field">
+      <label for="calc-washout_delayed_hu">Delayed Phase Attenuation (HU) <small>— 10–15 min delay</small></label>
+      <input type="number" id="calc-washout_delayed_hu" step="0.1" required placeholder="e.g., 55">
+    </div>
+    <button type="submit" id="adrenal-form-btn" class="calc-btn">Calculate Washout</button>
+  </form>
+</div>
+<div id="adrenal-results" class="calc-results-container" style="display: none;"></div>
+
+<hr />
 <h2 id="adrenal-nodule-management-calculator">Adrenal Nodule Management Calculator</h2>
 <div class="calculator-form">
   <form id="adrenal-nodule-form">
@@ -1534,7 +1566,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 26, 2026 15:23:14 UTC">March 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 26, 2026 17:02:49 UTC">March 26, 2026</span>
   </span>
 
     
