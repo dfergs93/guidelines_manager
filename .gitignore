@@ -4,3 +4,15 @@ docs/gyn/
 docs/msk/
 docs/neuro/
 docs/vascular/
+docs/abdominal/*/assets/
+docs/abdominal/gastrointestinal/
+docs/abdominal/spleen/
+docs/abdominal/pancreas/
+docs/abdominal/renal/renal_injury.md
+docs/abdominal/renal/renal_lesion_2017.md
+docs/abdominal/renal/renal_lesion.md
+docs/abdominal/liver/liver_lesion_2017.md
+docs/abdominal/liver/liver_lesion_workup.md
+docs/abdominal/liver/hepatic_trauma.md
+docs/abdominal/liver/gallbladder.md
+docs/abdominal/adrenal/adrenal_washout.md
