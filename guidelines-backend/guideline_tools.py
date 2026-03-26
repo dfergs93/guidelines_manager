@@ -389,6 +389,264 @@ def psa_density_calculator(psa: float, prostate_volume_cc: float) -> Dict[str, A
     }
 
 
+def lirads_calculator(
+    size_mm: float,
+    aphe: bool,
+    washout: bool,
+    enhancing_capsule: bool,
+    threshold_growth: bool,
+    lrm_features: bool = False,
+    tumor_in_vein: bool = False
+) -> Dict[str, Any]:
+    """
+    Calculates LI-RADS v2018 category for liver observations in patients at risk for HCC
+    (cirrhosis, chronic HBV, or prior HCC history).
+    """
+    size_mm = float(size_mm)
+    aphe = _to_bool(aphe)
+    washout = _to_bool(washout)
+    enhancing_capsule = _to_bool(enhancing_capsule)
+    threshold_growth = _to_bool(threshold_growth)
+    lrm_features = _to_bool(lrm_features)
+    tumor_in_vein = _to_bool(tumor_in_vein)
+
+    # Priority overrides
+    if tumor_in_vein:
+        category = "LR-TIV"
+        hcc_risk = "N/A"
+        recommendation = (
+            "LR-TIV: Definite tumor in vein. Multidisciplinary review required. "
+            "Staging and treatment per oncology/hepatology team."
+        )
+        return {
+            "guideline": "LI-RADS v2018",
+            "inputs": {
+                "size_mm": size_mm, "aphe": aphe, "washout": washout,
+                "enhancing_capsule": enhancing_capsule, "threshold_growth": threshold_growth,
+                "lrm_features": lrm_features, "tumor_in_vein": tumor_in_vein,
+            },
+            "results": {"lirads_category": category, "hcc_risk": hcc_risk},
+            "recommendation": recommendation,
+            "link": "/abdominal/liver/li_rads/",
+        }
+
+    if lrm_features:
+        category = "LR-M"
+        hcc_risk = "N/A (non-HCC malignancy suspected)"
+        recommendation = (
+            "LR-M: Probably or definitely malignant, not HCC-specific. "
+            "Biopsy recommended to determine malignancy type. Multidisciplinary review."
+        )
+        return {
+            "guideline": "LI-RADS v2018",
+            "inputs": {
+                "size_mm": size_mm, "aphe": aphe, "washout": washout,
+                "enhancing_capsule": enhancing_capsule, "threshold_growth": threshold_growth,
+                "lrm_features": lrm_features, "tumor_in_vein": tumor_in_vein,
+            },
+            "results": {"lirads_category": category, "hcc_risk": hcc_risk},
+            "recommendation": recommendation,
+            "link": "/abdominal/liver/li_rads/",
+        }
+
+    # Count additional major features (washout, enhancing capsule, threshold growth)
+    additional = int(washout) + int(enhancing_capsule) + int(threshold_growth)
+
+    # Categorize by size + APHE + additional major features
+    if size_mm < 10:
+        if not aphe:
+            category = "LR-4" if additional >= 2 else "LR-3"
+        else:  # APHE present
+            category = "LR-4" if additional >= 1 else "LR-3"
+    elif size_mm < 20:
+        if not aphe:
+            category = "LR-4" if additional >= 1 else "LR-3"
+        else:  # APHE present
+            category = "LR-5" if additional >= 1 else "LR-4"
+    else:  # >= 20mm
+        if not aphe:
+            category = "LR-4" if additional >= 1 else "LR-3"
+        else:  # APHE present
+            category = "LR-5" if additional >= 1 else "LR-4"
+
+    hcc_risks = {
+        "LR-3": "~38%",
+        "LR-4": "~74%",
+        "LR-5": "≥95%",
+    }
+
+    recommendations = {
+        "LR-3": (
+            "LR-3: Intermediate probability of HCC. Continue HCC surveillance per local protocol. "
+            "Consider multidisciplinary review. Alternative or follow-up imaging in 3–6 months."
+        ),
+        "LR-4": (
+            "LR-4: Probably HCC. Multidisciplinary review recommended. "
+            "Consider additional imaging (MRI if CT used, or vice versa), diagnostic biopsy, or treatment per HCC protocol."
+        ),
+        "LR-5": (
+            "LR-5: Definitely HCC. Proceed with HCC treatment per multidisciplinary team — "
+            "options include resection, transplantation, ablation, or TACE depending on staging and liver function."
+        ),
+    }
+
+    return {
+        "guideline": "LI-RADS v2018",
+        "inputs": {
+            "size_mm": size_mm,
+            "aphe": aphe,
+            "washout": washout,
+            "enhancing_capsule": enhancing_capsule,
+            "threshold_growth": threshold_growth,
+            "lrm_features": lrm_features,
+            "tumor_in_vein": tumor_in_vein,
+        },
+        "results": {
+            "lirads_category": category,
+            "additional_major_features": additional,
+            "hcc_risk": hcc_risks.get(category, "N/A"),
+        },
+        "recommendation": recommendations.get(category, "See LI-RADS guidelines."),
+        "link": "/abdominal/liver/li_rads/",
+    }
+
+
+def bosniak_calculator(
+    enhancement: str,
+    wall_septa: str,
+    septa_count: str,
+    calcification: str,
+    high_attenuation_non_enhancing: bool = False,
+    size_cm: float = 0.0
+) -> Dict[str, Any]:
+    """
+    Classifies renal cysts per the Bosniak Classification v2019.
+
+    enhancement: 'none' | 'perceived' | 'measurable'
+    wall_septa:  'thin_smooth' | 'smooth_thick' | 'irregular_thick'
+    septa_count: 'none' | '1_to_3' | '4_plus'  (relevant when enhancement is none/perceived)
+    calcification: 'none' | 'fine' | 'thick_nodular'
+    high_attenuation_non_enhancing: True if homogeneous >20 HU (non-enhancing high-density cyst)
+    size_cm: lesion size in cm (relevant for high-attenuation non-enhancing cysts)
+    """
+    enhancement = str(enhancement).lower()
+    wall_septa = str(wall_septa).lower()
+    septa_count = str(septa_count).lower()
+    calcification = str(calcification).lower()
+    high_attenuation_non_enhancing = _to_bool(high_attenuation_non_enhancing)
+    size_cm = float(size_cm) if size_cm else 0.0
+
+    category = None
+    risk = None
+    management = None
+
+    if enhancement == "measurable":
+        if wall_septa == "irregular_thick":
+            category = "IV"
+            risk = ">75%"
+            management = (
+                "Bosniak IV: Surgical excision or ablation recommended. "
+                "Malignant until proven otherwise. Urology/oncology referral."
+            )
+        elif wall_septa == "smooth_thick":
+            category = "III"
+            risk = "~50%"
+            management = (
+                "Bosniak III: Indeterminate. Surgical excision or nephron-sparing surgery generally recommended. "
+                "Multidisciplinary urology review. Active surveillance may be considered for poor surgical candidates."
+            )
+        else:
+            # thin smooth wall with measurable enhancement - consider III (rare, likely misclassified)
+            category = "III"
+            risk = "~50%"
+            management = (
+                "Bosniak III: Measurable enhancement with thin smooth wall — indeterminate. "
+                "Urology review recommended."
+            )
+
+    elif enhancement == "perceived":
+        # Equivocal enhancement; most fall into IIF, some III depending on morphology
+        if wall_septa == "irregular_thick":
+            category = "IIF"
+            risk = "~5–15%"
+            management = (
+                "Bosniak IIF: Perceived enhancement with complex morphology. "
+                "Follow-up CT/MRI in 6 months, then annually for 5 years. "
+                "Upgrade to III if measurable enhancement develops."
+            )
+        else:
+            category = "IIF"
+            risk = "~5–15%"
+            management = (
+                "Bosniak IIF: Equivocal/perceived enhancement. "
+                "Follow-up CT/MRI in 6 months, then annually for 5 years. "
+                "Upgrade category if enhancement becomes measurable."
+            )
+
+    else:  # no enhancement
+        if high_attenuation_non_enhancing:
+            if size_cm > 3.0:
+                category = "IIF"
+                risk = "~5–15%"
+                management = (
+                    "Bosniak IIF: Non-enhancing high-attenuation cyst >3 cm. "
+                    "Follow-up CT/MRI in 6 months, then annually for 5 years."
+                )
+            else:
+                category = "II"
+                risk = "~2%"
+                management = (
+                    "Bosniak II: Non-enhancing high-attenuation cyst ≤3 cm. "
+                    "No follow-up required."
+                )
+        elif wall_septa == "irregular_thick" or calcification == "thick_nodular":
+            category = "IIF"
+            risk = "~5–15%"
+            management = (
+                "Bosniak IIF: Moderately complex non-enhancing cyst. "
+                "Follow-up CT/MRI in 6 months, then annually for 5 years."
+            )
+        elif wall_septa == "smooth_thick" or septa_count == "4_plus":
+            category = "IIF"
+            risk = "~5–15%"
+            management = (
+                "Bosniak IIF: Multiple or thickened non-enhancing septa/wall. "
+                "Follow-up CT/MRI in 6 months, then annually for 5 years."
+            )
+        elif septa_count == "1_to_3" or calcification == "fine":
+            category = "II"
+            risk = "~2%"
+            management = (
+                "Bosniak II: Minimally complex benign cyst. "
+                "No follow-up required."
+            )
+        else:
+            category = "I"
+            risk = "<1%"
+            management = (
+                "Bosniak I: Simple benign cyst. "
+                "No follow-up required."
+            )
+
+    return {
+        "guideline": "Bosniak Classification v2019",
+        "inputs": {
+            "enhancement": enhancement,
+            "wall_septa": wall_septa,
+            "septa_count": septa_count,
+            "calcification": calcification,
+            "high_attenuation_non_enhancing": high_attenuation_non_enhancing,
+            "size_cm": size_cm,
+        },
+        "results": {
+            "bosniak_category": f"Bosniak {category}",
+            "malignancy_risk": risk,
+        },
+        "recommendation": management,
+        "link": "/abdominal/renal/bosniak/",
+    }
+
+
 def adrenal_nodule_calculator(
     size_cm: float,
     unenhanced_hu=None,
@@ -544,6 +802,45 @@ GUIDELINE_TOOLS = [
     {
         "type": "function",
         "function": {
+            "name": "lirads_calculator",
+            "description": "Calculates LI-RADS v2018 category for liver observations in at-risk patients (cirrhosis, chronic HBV, or prior HCC).",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "size_mm": {"type": "number", "description": "Lesion diameter in millimeters."},
+                    "aphe": {"type": "boolean", "description": "Non-rim arterial phase hyperenhancement (APHE) present."},
+                    "washout": {"type": "boolean", "description": "Non-peripheral washout appearance present."},
+                    "enhancing_capsule": {"type": "boolean", "description": "Enhancing capsule appearance present."},
+                    "threshold_growth": {"type": "boolean", "description": "Threshold growth (≥50% diameter increase in ≤6 months)."},
+                    "lrm_features": {"type": "boolean", "description": "Features suggesting non-HCC malignancy (targetoid, infiltrative, etc.)."},
+                    "tumor_in_vein": {"type": "boolean", "description": "Definite tumor in vein (LR-TIV)."}
+                },
+                "required": ["size_mm", "aphe", "washout", "enhancing_capsule", "threshold_growth"]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "bosniak_calculator",
+            "description": "Classifies renal cysts per Bosniak Classification v2019.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "enhancement": {"type": "string", "enum": ["none", "perceived", "measurable"], "description": "Enhancement type: none, perceived (equivocal), or measurable (definite ≥20 HU)."},
+                    "wall_septa": {"type": "string", "enum": ["thin_smooth", "smooth_thick", "irregular_thick"], "description": "Morphology of wall and/or septa."},
+                    "septa_count": {"type": "string", "enum": ["none", "1_to_3", "4_plus"], "description": "Number of septa (relevant for non-enhancing lesions)."},
+                    "calcification": {"type": "string", "enum": ["none", "fine", "thick_nodular"], "description": "Calcification type."},
+                    "high_attenuation_non_enhancing": {"type": "boolean", "description": "Homogeneous non-enhancing high-attenuation cyst (>20 HU on unenhanced CT)."},
+                    "size_cm": {"type": "number", "description": "Lesion size in centimeters (relevant for high-attenuation non-enhancing cysts)."}
+                },
+                "required": ["enhancement", "wall_septa", "septa_count", "calcification"]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
             "name": "adrenal_nodule_calculator",
             "description": "Provides management recommendations for incidental adrenal masses per ACR 2017.",
             "parameters": {
@@ -573,6 +870,8 @@ def execute_tool(tool_call) -> Dict[str, Any]:
         "pirads_calculator": pirads_calculator,
         "psa_density_calculator": psa_density_calculator,
         "adrenal_nodule_calculator": adrenal_nodule_calculator,
+        "lirads_calculator": lirads_calculator,
+        "bosniak_calculator": bosniak_calculator,
     }
 
     fn = calculators.get(function_name)

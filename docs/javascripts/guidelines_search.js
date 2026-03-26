@@ -93,12 +93,12 @@ const GUIDELINES = [
 
     // Liver
     {
-        name: "LI-RADS",
+        name: "LI-RADS v2018",
         description: "Liver imaging reporting and data system for hepatocellular carcinoma",
         url: "abdominal/liver/li_rads/",
-        keywords: ["li-rads", "lirads", "liver", "hcc", "hepatocellular", "carcinoma", "cirrhosis", "mri", "ct"],
+        keywords: ["li-rads", "lirads", "liver", "hcc", "hepatocellular", "carcinoma", "cirrhosis", "mri", "ct", "aphe", "washout"],
         category: "Abdominal",
-        hasCalculator: false,
+        hasCalculator: true,
     },
     {
         name: "Liver Lesion Workup (ACR 2017)",
@@ -126,6 +126,14 @@ const GUIDELINES = [
     },
 
     // Renal
+    {
+        name: "Bosniak Renal Cyst Classification",
+        description: "Bosniak v2019 classification of renal cystic masses with malignancy risk and management",
+        url: "abdominal/renal/bosniak/",
+        keywords: ["bosniak", "renal", "kidney", "cyst", "cystic", "mass", "rcc", "carcinoma", "enhancement", "septa"],
+        category: "Abdominal",
+        hasCalculator: true,
+    },
     {
         name: "Renal Lesion",
         description: "Renal lesion characterisation and management",

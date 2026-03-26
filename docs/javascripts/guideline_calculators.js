@@ -189,6 +189,110 @@ function psa_density_calculator(psa, prostate_volume_cc) {
     };
 }
 
+function lirads_calculator(size_mm, aphe, washout, enhancing_capsule, threshold_growth, lrm_features, tumor_in_vein) {
+    size_mm = Number(size_mm);
+    aphe = ['yes', 'true', '1'].includes(String(aphe).toLowerCase());
+    washout = ['yes', 'true', '1'].includes(String(washout).toLowerCase());
+    enhancing_capsule = ['yes', 'true', '1'].includes(String(enhancing_capsule).toLowerCase());
+    threshold_growth = ['yes', 'true', '1'].includes(String(threshold_growth).toLowerCase());
+    lrm_features = ['yes', 'true', '1'].includes(String(lrm_features).toLowerCase());
+    tumor_in_vein = ['yes', 'true', '1'].includes(String(tumor_in_vein).toLowerCase());
+
+    if (tumor_in_vein) {
+        return {
+            recommendation: "LR-TIV: Definite tumor in vein. Multidisciplinary review required. Staging and treatment per oncology/hepatology team.",
+            results: { "LI-RADS Category": "LR-TIV", "HCC Risk": "N/A" }
+        };
+    }
+
+    if (lrm_features) {
+        return {
+            recommendation: "LR-M: Probably or definitely malignant, not HCC-specific. Biopsy recommended to determine malignancy type. Multidisciplinary review.",
+            results: { "LI-RADS Category": "LR-M", "HCC Risk": "N/A (non-HCC malignancy)" }
+        };
+    }
+
+    const additional = (washout ? 1 : 0) + (enhancing_capsule ? 1 : 0) + (threshold_growth ? 1 : 0);
+
+    let category;
+    if (size_mm < 10) {
+        category = (!aphe && additional < 2) ? "LR-3" : (aphe && additional === 0) ? "LR-3" : "LR-4";
+    } else if (size_mm < 20) {
+        if (!aphe) category = additional >= 1 ? "LR-4" : "LR-3";
+        else        category = additional >= 1 ? "LR-5" : "LR-4";
+    } else {
+        if (!aphe) category = additional >= 1 ? "LR-4" : "LR-3";
+        else        category = additional >= 1 ? "LR-5" : "LR-4";
+    }
+
+    const hccRisks = { "LR-3": "~38%", "LR-4": "~74%", "LR-5": "≥95%" };
+    const recommendations = {
+        "LR-3": "LR-3: Intermediate probability of HCC. Continue HCC surveillance. Consider follow-up imaging in 3–6 months.",
+        "LR-4": "LR-4: Probably HCC. Multidisciplinary review recommended. Consider additional imaging, biopsy, or treatment.",
+        "LR-5": "LR-5: Definitely HCC. Proceed with HCC treatment per multidisciplinary team (resection, transplant, ablation, or TACE).",
+    };
+
+    return {
+        recommendation: recommendations[category],
+        results: {
+            "LI-RADS Category": category,
+            "HCC Risk": hccRisks[category],
+            "Additional major features": additional
+        }
+    };
+}
+
+function bosniak_calculator(enhancement, wall_septa, septa_count, calcification, high_attenuation_non_enhancing, size_cm) {
+    enhancement = (enhancement || '').toLowerCase();
+    wall_septa = (wall_septa || '').toLowerCase();
+    septa_count = (septa_count || '').toLowerCase();
+    calcification = (calcification || '').toLowerCase();
+    high_attenuation_non_enhancing = ['yes', 'true', '1'].includes(String(high_attenuation_non_enhancing).toLowerCase());
+    size_cm = size_cm !== '' && size_cm != null ? Number(size_cm) : 0;
+
+    let category, risk, management;
+
+    if (enhancement === 'measurable') {
+        if (wall_septa === 'irregular_thick') {
+            category = "IV"; risk = ">75%";
+            management = "Bosniak IV: Surgical excision or ablation recommended. Malignant until proven otherwise. Urology/oncology referral.";
+        } else {
+            category = "III"; risk = "~50%";
+            management = "Bosniak III: Indeterminate. Surgical excision or nephron-sparing surgery generally recommended. Multidisciplinary urology review.";
+        }
+    } else if (enhancement === 'perceived') {
+        category = "IIF"; risk = "~5–15%";
+        management = "Bosniak IIF: Equivocal/perceived enhancement. Follow-up CT/MRI in 6 months, then annually for 5 years.";
+    } else {
+        if (high_attenuation_non_enhancing) {
+            if (size_cm > 3.0) {
+                category = "IIF"; risk = "~5–15%";
+                management = "Bosniak IIF: Non-enhancing high-attenuation cyst >3 cm. Follow-up CT/MRI in 6 months, then annually for 5 years.";
+            } else {
+                category = "II"; risk = "~2%";
+                management = "Bosniak II: Non-enhancing high-attenuation cyst ≤3 cm. No follow-up required.";
+            }
+        } else if (wall_septa === 'irregular_thick' || calcification === 'thick_nodular') {
+            category = "IIF"; risk = "~5–15%";
+            management = "Bosniak IIF: Moderately complex non-enhancing cyst. Follow-up CT/MRI in 6 months, then annually for 5 years.";
+        } else if (wall_septa === 'smooth_thick' || septa_count === '4_plus') {
+            category = "IIF"; risk = "~5–15%";
+            management = "Bosniak IIF: Multiple or thickened non-enhancing septa/wall. Follow-up CT/MRI in 6 months, then annually for 5 years.";
+        } else if (septa_count === '1_to_3' || calcification === 'fine') {
+            category = "II"; risk = "~2%";
+            management = "Bosniak II: Minimally complex benign cyst. No follow-up required.";
+        } else {
+            category = "I"; risk = "<1%";
+            management = "Bosniak I: Simple benign cyst. No follow-up required.";
+        }
+    }
+
+    return {
+        recommendation: management,
+        results: { "Bosniak Category": `Bosniak ${category}`, "Malignancy Risk": risk }
+    };
+}
+
 function adrenal_nodule_calculator(size_cm, unenhanced_hu, cancer_history) {
     size_cm = Number(size_cm);
     const hu = (unenhanced_hu !== '' && unenhanced_hu != null) ? Number(unenhanced_hu) : null;
@@ -226,6 +330,8 @@ const CALCULATORS = {
     pirads:          (p) => pirads_calculator(p.zone, p.dwi_score, p.t2wi_score, p.dce_positive),
     psa_density:     (p) => psa_density_calculator(p.psa, p.prostate_volume_cc),
     adrenal_nodule:  (p) => adrenal_nodule_calculator(p.size_cm, p.unenhanced_hu, p.cancer_history),
+    lirads:          (p) => lirads_calculator(p.size_mm, p.aphe, p.washout, p.enhancing_capsule, p.threshold_growth, p.lrm_features, p.tumor_in_vein),
+    bosniak:         (p) => bosniak_calculator(p.enhancement, p.wall_septa, p.septa_count, p.calcification, p.high_attenuation_non_enhancing, p.size_cm),
 };
 
 
@@ -305,4 +411,6 @@ document.addEventListener('DOMContentLoaded', () => {
     handleCalculator('pirads',          'pirads-form',          'pirads-results',          ['zone', 'dwi_score', 't2wi_score', 'dce_positive']);
     handleCalculator('psa_density',     'psa-density-form',     'psa-density-results',     ['psa', 'prostate_volume_cc']);
     handleCalculator('adrenal_nodule',  'adrenal-nodule-form',  'adrenal-nodule-results',  ['size_cm', 'unenhanced_hu', 'cancer_history']);
+    handleCalculator('lirads',          'lirads-form',          'lirads-results',          ['size_mm', 'aphe', 'washout', 'enhancing_capsule', 'threshold_growth', 'lrm_features', 'tumor_in_vein']);
+    handleCalculator('bosniak',         'bosniak-form',         'bosniak-results',         ['enhancement', 'wall_septa', 'septa_count', 'calcification', 'high_attenuation_non_enhancing', 'size_cm']);
 });
