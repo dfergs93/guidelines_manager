@@ -24,8 +24,16 @@ title: LI-RADS v2018
 <div class="calculator-form">
   <form id="lirads-form">
     <div class="calc-field">
+      <label for="calc-benign_features">Observation Type</label>
+      <select id="calc-benign_features">
+        <option value="none">No definite/probable benign features — apply major criteria</option>
+        <option value="definitely_benign">Definitely benign — cyst, haemangioma, vascular anomaly (LR-1)</option>
+        <option value="probably_benign">Probably benign — no malignant features (LR-2)</option>
+      </select>
+    </div>
+    <div class="calc-field">
       <label for="calc-size_mm">Observation Size (mm)</label>
-      <input type="number" id="calc-size_mm" step="0.1" required placeholder="e.g., 18">
+      <input type="number" id="calc-size_mm" step="0.1" placeholder="e.g., 18">
     </div>
     <div class="calc-field">
       <label for="calc-aphe">Non-rim Arterial Phase Hyperenhancement (APHE)</label>
@@ -109,18 +117,28 @@ title: LI-RADS v2018
     *Additional major features = washout + enhancing capsule + threshold growth (count of present features)*
 
 === "Special Categories"
-    | Category | Criteria | Management |
-    |----------|----------|------------|
-    | **LR-1** | Definitely benign (cyst, hemangioma, etc.) | No action / routine surveillance |
-    | **LR-2** | Probably benign | Routine HCC surveillance |
-    | **LR-TIV** | Definite tumor in vein | Multidisciplinary review; staging |
-    | **LR-M** | Probably/definitely malignant, not HCC-specific | Biopsy to determine type |
+    | Category | HCC Risk | Criteria | Management |
+    |----------|----------|----------|------------|
+    | **LR-1** | ~0% | Definitely benign: cyst, haemangioma, vascular anomaly, hepatic fat, post-treatment complete response | No HCC workup; routine surveillance if at-risk |
+    | **LR-2** | <10% | Probably benign: no malignant features, likely benign entity, or small (<10 mm) indeterminate | Routine HCC surveillance only |
+    | **LR-TIV** | N/A | Definite tumor in vein (neoplastic thrombus) | Multidisciplinary review; staging and treatment |
+    | **LR-M** | N/A | Probably/definitely malignant, not HCC-specific (targetoid, infiltrative) | Biopsy to determine malignancy type |
 
 ---
 
 ### Category Descriptions
 
 <div class="grid cards" markdown>
+
+-   **LR-1 — Definitely Benign (~0% HCC risk)**
+
+    Imaging features diagnostic of a benign entity: definite cyst, definite haemangioma, vascular anomaly/shunt, perfusion alteration, hepatic fat deposition/sparing, post-treatment change showing complete response, or other definitely benign diagnosis.
+    **No HCC workup required. Continue routine surveillance if patient remains at risk.**
+
+-   **LR-2 — Probably Benign (<10% HCC risk)**
+
+    Probably benign — does not meet LR-1 criteria but has no features suggesting malignancy. Includes small (<10 mm) observations with no malignant features or observations that probably represent a benign entity.
+    **Continue routine HCC surveillance. No additional workup required.**
 
 -   **LR-3 — Intermediate (~38% HCC risk)**
 
