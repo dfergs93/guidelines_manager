@@ -189,7 +189,7 @@ function psa_density_calculator(psa, prostate_volume_cc) {
     };
 }
 
-function lirads_calculator(size_mm, aphe, washout, enhancing_capsule, threshold_growth, lrm_features, tumor_in_vein) {
+function lirads_calculator(size_mm, aphe, washout, enhancing_capsule, threshold_growth, lrm_features, tumor_in_vein, benign_features) {
     size_mm = Number(size_mm);
     aphe = ['yes', 'true', '1'].includes(String(aphe).toLowerCase());
     washout = ['yes', 'true', '1'].includes(String(washout).toLowerCase());
@@ -197,6 +197,20 @@ function lirads_calculator(size_mm, aphe, washout, enhancing_capsule, threshold_
     threshold_growth = ['yes', 'true', '1'].includes(String(threshold_growth).toLowerCase());
     lrm_features = ['yes', 'true', '1'].includes(String(lrm_features).toLowerCase());
     tumor_in_vein = ['yes', 'true', '1'].includes(String(tumor_in_vein).toLowerCase());
+    benign_features = (benign_features || 'none').toLowerCase();
+
+    if (benign_features === 'definitely_benign') {
+        return {
+            recommendation: "LR-1: Definitely benign (e.g., cyst, haemangioma, vascular anomaly). No HCC workup required. Continue routine HCC surveillance if patient remains at risk.",
+            results: { "LI-RADS Category": "LR-1", "HCC Risk": "~0%" }
+        };
+    }
+    if (benign_features === 'probably_benign') {
+        return {
+            recommendation: "LR-2: Probably benign. No additional workup required. Continue routine HCC surveillance per local protocol.",
+            results: { "LI-RADS Category": "LR-2", "HCC Risk": "<10%" }
+        };
+    }
 
     if (tumor_in_vein) {
         return {
@@ -330,7 +344,7 @@ const CALCULATORS = {
     pirads:          (p) => pirads_calculator(p.zone, p.dwi_score, p.t2wi_score, p.dce_positive),
     psa_density:     (p) => psa_density_calculator(p.psa, p.prostate_volume_cc),
     adrenal_nodule:  (p) => adrenal_nodule_calculator(p.size_cm, p.unenhanced_hu, p.cancer_history),
-    lirads:          (p) => lirads_calculator(p.size_mm, p.aphe, p.washout, p.enhancing_capsule, p.threshold_growth, p.lrm_features, p.tumor_in_vein),
+    lirads:          (p) => lirads_calculator(p.size_mm, p.aphe, p.washout, p.enhancing_capsule, p.threshold_growth, p.lrm_features, p.tumor_in_vein, p.benign_features),
     bosniak:         (p) => bosniak_calculator(p.enhancement, p.wall_septa, p.septa_count, p.calcification, p.high_attenuation_non_enhancing, p.size_cm),
 };
 
@@ -411,6 +425,6 @@ document.addEventListener('DOMContentLoaded', () => {
     handleCalculator('pirads',          'pirads-form',          'pirads-results',          ['zone', 'dwi_score', 't2wi_score', 'dce_positive']);
     handleCalculator('psa_density',     'psa-density-form',     'psa-density-results',     ['psa', 'prostate_volume_cc']);
     handleCalculator('adrenal_nodule',  'adrenal-nodule-form',  'adrenal-nodule-results',  ['size_cm', 'unenhanced_hu', 'cancer_history']);
-    handleCalculator('lirads',          'lirads-form',          'lirads-results',          ['size_mm', 'aphe', 'washout', 'enhancing_capsule', 'threshold_growth', 'lrm_features', 'tumor_in_vein']);
+    handleCalculator('lirads',          'lirads-form',          'lirads-results',          ['benign_features', 'size_mm', 'aphe', 'washout', 'enhancing_capsule', 'threshold_growth', 'lrm_features', 'tumor_in_vein']);
     handleCalculator('bosniak',         'bosniak-form',         'bosniak-results',         ['enhancement', 'wall_septa', 'septa_count', 'calcification', 'high_attenuation_non_enhancing', 'size_cm']);
 });
