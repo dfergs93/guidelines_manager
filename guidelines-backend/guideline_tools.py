@@ -396,11 +396,14 @@ def lirads_calculator(
     enhancing_capsule: bool,
     threshold_growth: bool,
     lrm_features: bool = False,
-    tumor_in_vein: bool = False
+    tumor_in_vein: bool = False,
+    benign_features: str = "none"
 ) -> Dict[str, Any]:
     """
     Calculates LI-RADS v2018 category for liver observations in patients at risk for HCC
     (cirrhosis, chronic HBV, or prior HCC history).
+
+    benign_features: 'none' | 'definitely_benign' | 'probably_benign'
     """
     size_mm = float(size_mm)
     aphe = _to_bool(aphe)
@@ -409,72 +412,74 @@ def lirads_calculator(
     threshold_growth = _to_bool(threshold_growth)
     lrm_features = _to_bool(lrm_features)
     tumor_in_vein = _to_bool(tumor_in_vein)
+    benign_features = str(benign_features).lower()
 
-    # Priority overrides
+    def _result(category, hcc_risk, recommendation, additional=None):
+        res = {"lirads_category": category, "hcc_risk": hcc_risk}
+        if additional is not None:
+            res["additional_major_features"] = additional
+        return {
+            "guideline": "LI-RADS v2018",
+            "inputs": {
+                "size_mm": size_mm, "aphe": aphe, "washout": washout,
+                "enhancing_capsule": enhancing_capsule, "threshold_growth": threshold_growth,
+                "lrm_features": lrm_features, "tumor_in_vein": tumor_in_vein,
+                "benign_features": benign_features,
+            },
+            "results": res,
+            "recommendation": recommendation,
+            "link": "/abdominal/liver/li_rads/",
+        }
+
+    # LR-1 / LR-2 — evaluated before all other criteria
+    if benign_features == "definitely_benign":
+        return _result(
+            "LR-1", "~0%",
+            "LR-1: Definitely benign (e.g., cyst, haemangioma, vascular anomaly). "
+            "No HCC workup required. Continue routine HCC surveillance if patient remains at risk."
+        )
+    if benign_features == "probably_benign":
+        return _result(
+            "LR-2", "<10%",
+            "LR-2: Probably benign. No additional workup required. "
+            "Continue routine HCC surveillance per local protocol."
+        )
+
+    # LR-TIV and LR-M take priority over major feature scoring
     if tumor_in_vein:
-        category = "LR-TIV"
-        hcc_risk = "N/A"
-        recommendation = (
+        return _result(
+            "LR-TIV", "N/A",
             "LR-TIV: Definite tumor in vein. Multidisciplinary review required. "
             "Staging and treatment per oncology/hepatology team."
         )
-        return {
-            "guideline": "LI-RADS v2018",
-            "inputs": {
-                "size_mm": size_mm, "aphe": aphe, "washout": washout,
-                "enhancing_capsule": enhancing_capsule, "threshold_growth": threshold_growth,
-                "lrm_features": lrm_features, "tumor_in_vein": tumor_in_vein,
-            },
-            "results": {"lirads_category": category, "hcc_risk": hcc_risk},
-            "recommendation": recommendation,
-            "link": "/abdominal/liver/li_rads/",
-        }
-
     if lrm_features:
-        category = "LR-M"
-        hcc_risk = "N/A (non-HCC malignancy suspected)"
-        recommendation = (
+        return _result(
+            "LR-M", "N/A (non-HCC malignancy suspected)",
             "LR-M: Probably or definitely malignant, not HCC-specific. "
             "Biopsy recommended to determine malignancy type. Multidisciplinary review."
         )
-        return {
-            "guideline": "LI-RADS v2018",
-            "inputs": {
-                "size_mm": size_mm, "aphe": aphe, "washout": washout,
-                "enhancing_capsule": enhancing_capsule, "threshold_growth": threshold_growth,
-                "lrm_features": lrm_features, "tumor_in_vein": tumor_in_vein,
-            },
-            "results": {"lirads_category": category, "hcc_risk": hcc_risk},
-            "recommendation": recommendation,
-            "link": "/abdominal/liver/li_rads/",
-        }
 
     # Count additional major features (washout, enhancing capsule, threshold growth)
     additional = int(washout) + int(enhancing_capsule) + int(threshold_growth)
 
-    # Categorize by size + APHE + additional major features
+    # Categorise by size + APHE + additional major features
     if size_mm < 10:
         if not aphe:
             category = "LR-4" if additional >= 2 else "LR-3"
-        else:  # APHE present
+        else:
             category = "LR-4" if additional >= 1 else "LR-3"
     elif size_mm < 20:
         if not aphe:
             category = "LR-4" if additional >= 1 else "LR-3"
-        else:  # APHE present
+        else:
             category = "LR-5" if additional >= 1 else "LR-4"
     else:  # >= 20mm
         if not aphe:
             category = "LR-4" if additional >= 1 else "LR-3"
-        else:  # APHE present
+        else:
             category = "LR-5" if additional >= 1 else "LR-4"
 
-    hcc_risks = {
-        "LR-3": "~38%",
-        "LR-4": "~74%",
-        "LR-5": "≥95%",
-    }
-
+    hcc_risks = {"LR-3": "~38%", "LR-4": "~74%", "LR-5": "≥95%"}
     recommendations = {
         "LR-3": (
             "LR-3: Intermediate probability of HCC. Continue HCC surveillance per local protocol. "
@@ -490,25 +495,7 @@ def lirads_calculator(
         ),
     }
 
-    return {
-        "guideline": "LI-RADS v2018",
-        "inputs": {
-            "size_mm": size_mm,
-            "aphe": aphe,
-            "washout": washout,
-            "enhancing_capsule": enhancing_capsule,
-            "threshold_growth": threshold_growth,
-            "lrm_features": lrm_features,
-            "tumor_in_vein": tumor_in_vein,
-        },
-        "results": {
-            "lirads_category": category,
-            "additional_major_features": additional,
-            "hcc_risk": hcc_risks.get(category, "N/A"),
-        },
-        "recommendation": recommendations.get(category, "See LI-RADS guidelines."),
-        "link": "/abdominal/liver/li_rads/",
-    }
+    return _result(category, hcc_risks[category], recommendations[category], additional)
 
 
 def bosniak_calculator(
@@ -813,7 +800,8 @@ GUIDELINE_TOOLS = [
                     "enhancing_capsule": {"type": "boolean", "description": "Enhancing capsule appearance present."},
                     "threshold_growth": {"type": "boolean", "description": "Threshold growth (≥50% diameter increase in ≤6 months)."},
                     "lrm_features": {"type": "boolean", "description": "Features suggesting non-HCC malignancy (targetoid, infiltrative, etc.)."},
-                    "tumor_in_vein": {"type": "boolean", "description": "Definite tumor in vein (LR-TIV)."}
+                    "tumor_in_vein": {"type": "boolean", "description": "Definite tumor in vein (LR-TIV)."},
+                    "benign_features": {"type": "string", "enum": ["none", "definitely_benign", "probably_benign"], "description": "LR-1/LR-2 designation: 'definitely_benign' (cyst, haemangioma) or 'probably_benign'; defaults to 'none'."}
                 },
                 "required": ["size_mm", "aphe", "washout", "enhancing_capsule", "threshold_growth"]
             }
