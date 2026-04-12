@@ -16,4 +16,6 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install mkdocs-material pymdown-extensions mkdocs-awesome-pages-plugin mkdocs-git-revision-date-localized-plugin
+      - run: pip install pyyaml
+      - run: python scripts/generate-sitemap.py
       - run: mkdocs gh-deploy --force

@@ -1,5 +1,6 @@
 clinical_guidelines_database/
-scripts/
+scripts/*.py
+!scripts/generate-sitemap.py
 docs/gyn/
 docs/msk/
 docs/neuro/

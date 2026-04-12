@@ -1,0 +1,73 @@
+#!/usr/bin/env python3
+"""Generate docs/javascripts/sitemap.json for guidelines_manager GitHub Pages."""
+import json
+import re
+import sys
+from pathlib import Path
+
+try:
+    import yaml
+except ImportError:
+    sys.exit("Install PyYAML: pip install pyyaml")
+
+ROOT = Path(__file__).parent.parent
+DOCS_DIR = ROOT / "docs"
+OUTPUT_PATH = DOCS_DIR / "javascripts" / "sitemap.json"
+
+class IgnoreLoader(yaml.SafeLoader):
+    pass
+IgnoreLoader.add_multi_constructor("", lambda loader, tag, node: None)
+
+# Read site_url from mkdocs.yml
+with open(ROOT / "mkdocs.yml") as f:
+    mkdocs = yaml.load(f, Loader=IgnoreLoader)
+BASE_URL = mkdocs.get("site_url", "").rstrip("/") + "/"
+
+
+def extract_titles(md_file):
+    try:
+        text = md_file.read_text(encoding="utf-8")
+    except Exception:
+        return None, None
+    fm_title = None
+    if text.startswith("---"):
+        end = text.find("\n---", 3)
+        if end != -1:
+            try:
+                fm = yaml.load(text[3:end], Loader=IgnoreLoader)
+                if isinstance(fm, dict) and fm.get("title"):
+                    fm_title = str(fm["title"])
+            except Exception:
+                pass
+    h1_title = None
+    for line in text.splitlines():
+        if line.startswith("# "):
+            h1_title = line[2:].strip()
+            break
+    return fm_title, h1_title
+
+
+entries = []
+for md_file in sorted(DOCS_DIR.rglob("*.md")):
+    if md_file.stem == "index":
+        continue
+    rel = md_file.relative_to(DOCS_DIR)
+    url_path = "/".join(rel.with_suffix("").parts) + "/"
+    url = BASE_URL + url_path
+    name = md_file.stem
+    slug = re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
+    fm_title, h1_title = extract_titles(md_file)
+    titles = [t for t in [fm_title, h1_title] if t]
+    if titles:
+        keywords = titles[:]
+        for t in titles:
+            keywords += [w for w in re.split(r"[\s\-/]+", t) if len(w) > 2]
+        keywords = list(dict.fromkeys(keywords))
+    else:
+        fallback = " ".join(w.capitalize() for w in re.split(r"[_\-]+", name))
+        keywords = [fallback]
+    entries.append({"slug": slug, "keywords": keywords, "url": url})
+
+OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+OUTPUT_PATH.write_text(json.dumps(entries, indent=2))
+print(f"Wrote {OUTPUT_PATH} — {len(entries)} entries")
