@@ -1,0 +1,146 @@
+[
+  {
+    "slug": "adrenal-nodule",
+    "keywords": [
+      "Adrenal Nodule (ACR 2017)",
+      "Adrenal",
+      "Nodule",
+      "(ACR",
+      "2017)"
+    ],
+    "url": "https://dfergs93.github.io/guidelines-manager/abdominal/adrenal/adrenal_nodule/"
+  },
+  {
+    "slug": "li-rads",
+    "keywords": [
+      "LI-RADS v2018",
+      "LI-RADS \u2014 Liver Imaging Reporting and Data System",
+      "RADS",
+      "v2018",
+      "Liver",
+      "Imaging",
+      "Reporting",
+      "and",
+      "Data",
+      "System"
+    ],
+    "url": "https://dfergs93.github.io/guidelines-manager/abdominal/liver/li_rads/"
+  },
+  {
+    "slug": "bosniak",
+    "keywords": [
+      "Bosniak Renal Cyst Classification",
+      "Bosniak Classification of Renal Cystic Masses",
+      "Bosniak",
+      "Renal",
+      "Cyst",
+      "Classification",
+      "Cystic",
+      "Masses"
+    ],
+    "url": "https://dfergs93.github.io/guidelines-manager/abdominal/renal/bosniak/"
+  },
+  {
+    "slug": "bi-rads",
+    "keywords": [
+      "ACR BI-RADS",
+      "ACR BI-RADS \u2014 Breast Imaging Reporting & Data System",
+      "ACR",
+      "RADS",
+      "Breast",
+      "Imaging",
+      "Reporting",
+      "Data",
+      "System"
+    ],
+    "url": "https://dfergs93.github.io/guidelines-manager/breast/bi_rads/"
+  },
+  {
+    "slug": "contrast-safety",
+    "keywords": [
+      "ACR Contrast Safety",
+      "ACR Contrast Safety \u2014 Iodinated & Gadolinium Contrast Agents",
+      "ACR",
+      "Contrast",
+      "Safety",
+      "Iodinated",
+      "Gadolinium",
+      "Agents"
+    ],
+    "url": "https://dfergs93.github.io/guidelines-manager/contrast/contrast_safety/"
+  },
+  {
+    "slug": "pi-rads",
+    "keywords": [
+      "PI-RADS v2.1",
+      "PI-RADS v2.1 \u2014 Prostate MRI Reporting & Data System",
+      "RADS",
+      "v2.1",
+      "Prostate",
+      "MRI",
+      "Reporting",
+      "Data",
+      "System"
+    ],
+    "url": "https://dfergs93.github.io/guidelines-manager/prostate/pi_rads/"
+  },
+  {
+    "slug": "fleischner",
+    "keywords": [
+      "Fleischner Society Guidelines 2017",
+      "Fleischner Society Guidelines for Incidental Pulmonary Nodules",
+      "Fleischner",
+      "Society",
+      "Guidelines",
+      "2017",
+      "for",
+      "Incidental",
+      "Pulmonary",
+      "Nodules"
+    ],
+    "url": "https://dfergs93.github.io/guidelines-manager/pulmonary/fleischner/"
+  },
+  {
+    "slug": "lung-cancer-staging",
+    "keywords": [
+      "Lung Cancer Staging",
+      "Lung",
+      "Cancer",
+      "Staging"
+    ],
+    "url": "https://dfergs93.github.io/guidelines-manager/pulmonary/lung_cancer_staging/"
+  },
+  {
+    "slug": "lung-rads",
+    "keywords": [
+      "Lung-RADS v1.1",
+      "Lung-RADS\u2122 v1.1 - Lung Cancer Screening Reporting",
+      "Lung",
+      "RADS",
+      "v1.1",
+      "RADS\u2122",
+      "Cancer",
+      "Screening",
+      "Reporting"
+    ],
+    "url": "https://dfergs93.github.io/guidelines-manager/pulmonary/lung_rads/"
+  },
+  {
+    "slug": "tirads",
+    "keywords": [
+      "TIRADS Guidelines",
+      "ACR TI-RADS: Thyroid Imaging Reporting and Data System",
+      "TIRADS",
+      "Guidelines",
+      "ACR",
+      "RADS:",
+      "Thyroid",
+      "Imaging",
+      "Reporting",
+      "and",
+      "Data",
+      "System"
+    ],
+    "url": "https://dfergs93.github.io/guidelines-manager/thyroid/tirads/"
+  }
+]
