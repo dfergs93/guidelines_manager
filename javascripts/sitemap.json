@@ -8,7 +8,12 @@
       "(ACR",
       "2017)"
     ],
-    "url": "https://dfergs93.github.io/guidelines_manager/abdominal/adrenal/adrenal_nodule/"
+    "url": "https://dfergs93.github.io/guidelines_manager/abdominal/adrenal/adrenal_nodule/",
+    "params": [
+      "washout_unenhanced_hu",
+      "washout_venous_hu",
+      "washout_delayed_hu"
+    ]
   },
   {
     "slug": "li-rads",
@@ -24,7 +29,17 @@
       "Data",
       "System"
     ],
-    "url": "https://dfergs93.github.io/guidelines_manager/abdominal/liver/li_rads/"
+    "url": "https://dfergs93.github.io/guidelines_manager/abdominal/liver/li_rads/",
+    "params": [
+      "size_mm",
+      "aphe",
+      "washout",
+      "enhancing_capsule",
+      "threshold_growth",
+      "lrm_features",
+      "tumor_in_vein",
+      "benign_features"
+    ]
   },
   {
     "slug": "bosniak",
@@ -38,7 +53,15 @@
       "Cystic",
       "Masses"
     ],
-    "url": "https://dfergs93.github.io/guidelines_manager/abdominal/renal/bosniak/"
+    "url": "https://dfergs93.github.io/guidelines_manager/abdominal/renal/bosniak/",
+    "params": [
+      "enhancement",
+      "wall_septa",
+      "septa_count",
+      "calcification",
+      "high_attenuation_non_enhancing",
+      "size_cm"
+    ]
   },
   {
     "slug": "bi-rads",
@@ -82,7 +105,13 @@
       "Data",
       "System"
     ],
-    "url": "https://dfergs93.github.io/guidelines_manager/prostate/pi_rads/"
+    "url": "https://dfergs93.github.io/guidelines_manager/prostate/pi_rads/",
+    "params": [
+      "zone",
+      "dwi_score",
+      "t2wi_score",
+      "dce_positive"
+    ]
   },
   {
     "slug": "fleischner",
@@ -98,7 +127,13 @@
       "Pulmonary",
       "Nodules"
     ],
-    "url": "https://dfergs93.github.io/guidelines_manager/pulmonary/fleischner/"
+    "url": "https://dfergs93.github.io/guidelines_manager/pulmonary/fleischner/",
+    "params": [
+      "size_mm",
+      "nodule_type",
+      "patient_risk",
+      "multiplicity"
+    ]
   },
   {
     "slug": "lung-cancer-staging",
@@ -123,7 +158,14 @@
       "Screening",
       "Reporting"
     ],
-    "url": "https://dfergs93.github.io/guidelines_manager/pulmonary/lung_rads/"
+    "url": "https://dfergs93.github.io/guidelines_manager/pulmonary/lung_rads/",
+    "params": [
+      "nodule_type",
+      "size_mm",
+      "solid_component_mm",
+      "is_new",
+      "has_suspicious_features"
+    ]
   },
   {
     "slug": "tirads",
@@ -141,6 +183,14 @@
       "Data",
       "System"
     ],
-    "url": "https://dfergs93.github.io/guidelines_manager/thyroid/tirads/"
+    "url": "https://dfergs93.github.io/guidelines_manager/thyroid/tirads/",
+    "params": [
+      "composition_pts",
+      "echogenicity_pts",
+      "shape_pts",
+      "margin_pts",
+      "echogenic_foci_pts",
+      "size_cm"
+    ]
   }
 ]
