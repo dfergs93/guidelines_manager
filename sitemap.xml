@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://dfergs93.github.io/guidelines-manager/</loc>
+         <loc>https://dfergs93.github.io/guidelines_manager/</loc>
          <lastmod>2026-04-13</lastmod>
     </url>
     <url>
-         <loc>https://dfergs93.github.io/guidelines-manager/abdominal/adrenal/adrenal_nodule/</loc>
+         <loc>https://dfergs93.github.io/guidelines_manager/abdominal/adrenal/adrenal_nodule/</loc>
          <lastmod>2026-04-13</lastmod>
     </url>
     <url>
-         <loc>https://dfergs93.github.io/guidelines-manager/abdominal/liver/li_rads/</loc>
+         <loc>https://dfergs93.github.io/guidelines_manager/abdominal/liver/li_rads/</loc>
          <lastmod>2026-04-13</lastmod>
     </url>
     <url>
-         <loc>https://dfergs93.github.io/guidelines-manager/abdominal/renal/bosniak/</loc>
+         <loc>https://dfergs93.github.io/guidelines_manager/abdominal/renal/bosniak/</loc>
          <lastmod>2026-04-13</lastmod>
     </url>
     <url>
-         <loc>https://dfergs93.github.io/guidelines-manager/breast/bi_rads/</loc>
+         <loc>https://dfergs93.github.io/guidelines_manager/breast/bi_rads/</loc>
          <lastmod>2026-04-13</lastmod>
     </url>
     <url>
-         <loc>https://dfergs93.github.io/guidelines-manager/contrast/contrast_safety/</loc>
+         <loc>https://dfergs93.github.io/guidelines_manager/contrast/contrast_safety/</loc>
          <lastmod>2026-04-13</lastmod>
     </url>
     <url>
-         <loc>https://dfergs93.github.io/guidelines-manager/prostate/pi_rads/</loc>
+         <loc>https://dfergs93.github.io/guidelines_manager/prostate/pi_rads/</loc>
          <lastmod>2026-04-13</lastmod>
     </url>
     <url>
-         <loc>https://dfergs93.github.io/guidelines-manager/pulmonary/fleischner/</loc>
+         <loc>https://dfergs93.github.io/guidelines_manager/pulmonary/fleischner/</loc>
          <lastmod>2026-04-13</lastmod>
     </url>
     <url>
-         <loc>https://dfergs93.github.io/guidelines-manager/pulmonary/lung_cancer_staging/</loc>
+         <loc>https://dfergs93.github.io/guidelines_manager/pulmonary/lung_cancer_staging/</loc>
          <lastmod>2026-04-13</lastmod>
     </url>
     <url>
-         <loc>https://dfergs93.github.io/guidelines-manager/pulmonary/lung_rads/</loc>
+         <loc>https://dfergs93.github.io/guidelines_manager/pulmonary/lung_rads/</loc>
          <lastmod>2026-04-13</lastmod>
     </url>
     <url>
-         <loc>https://dfergs93.github.io/guidelines-manager/thyroid/tirads/</loc>
+         <loc>https://dfergs93.github.io/guidelines_manager/thyroid/tirads/</loc>
          <lastmod>2026-04-13</lastmod>
     </url>
 </urlset>
