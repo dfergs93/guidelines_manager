@@ -47,6 +47,18 @@ def extract_titles(md_file):
     return fm_title, h1_title
 
 
+# URL params accepted by each guideline's calculator for pre-fill via query string.
+# Keyed by slug (matches the slug generated below). Source of truth: guideline_calculators.js.
+PARAMS: dict[str, list[str]] = {
+    "adrenal-nodule": ["washout_unenhanced_hu", "washout_venous_hu", "washout_delayed_hu"],
+    "bosniak":        ["enhancement", "wall_septa", "septa_count", "calcification", "high_attenuation_non_enhancing", "size_cm"],
+    "fleischner":     ["size_mm", "nodule_type", "patient_risk", "multiplicity"],
+    "li-rads":        ["size_mm", "aphe", "washout", "enhancing_capsule", "threshold_growth", "lrm_features", "tumor_in_vein", "benign_features"],
+    "lung-rads":      ["nodule_type", "size_mm", "solid_component_mm", "is_new", "has_suspicious_features"],
+    "pi-rads":        ["zone", "dwi_score", "t2wi_score", "dce_positive"],
+    "tirads":         ["composition_pts", "echogenicity_pts", "shape_pts", "margin_pts", "echogenic_foci_pts", "size_cm"],
+}
+
 entries = []
 for md_file in sorted(DOCS_DIR.rglob("*.md")):
     if md_file.stem == "index":
@@ -66,7 +78,10 @@ for md_file in sorted(DOCS_DIR.rglob("*.md")):
     else:
         fallback = " ".join(w.capitalize() for w in re.split(r"[_\-]+", name))
         keywords = [fallback]
-    entries.append({"slug": slug, "keywords": keywords, "url": url})
+    entry: dict = {"slug": slug, "keywords": keywords, "url": url}
+    if slug in PARAMS:
+        entry["params"] = PARAMS[slug]
+    entries.append(entry)
 
 OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
 OUTPUT_PATH.write_text(json.dumps(entries, indent=2))
