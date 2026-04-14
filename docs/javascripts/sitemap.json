@@ -113,7 +113,7 @@
       "O-RADS",
       "ORADS"
     ],
-    "url": "https://dfergs93.github.io/guidelines_manager/gyn/o_rads/"
+    "url": "https://dfergs93.github.io/guidelines_manager/gynecologic/o_rads/"
   },
   {
     "slug": "gallbladder-lesions-car-2025",
@@ -170,7 +170,7 @@
       "Incidental MSK Findings",
       "MSK"
     ],
-    "url": "https://dfergs93.github.io/guidelines_manager/msk/msk_findings_car_2023/"
+    "url": "https://dfergs93.github.io/guidelines_manager/musculoskeletal/msk_findings_car_2023/"
   },
   {
     "slug": "pituitary",
