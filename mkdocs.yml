@@ -45,6 +45,8 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - javascripts/guidelines_search.js
   - javascripts/guideline_calculators.js
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.2/tablesort.min.js
+  - javascripts/tablesort.js
 
 markdown_extensions:
   - admonition

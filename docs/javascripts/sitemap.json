@@ -1,14 +1,12 @@
 [
   {
-    "slug": "adrenal-nodule",
+    "slug": "adrenal-nodule-acr-2017",
     "keywords": [
       "Adrenal Nodule (ACR 2017)",
       "Adrenal",
-      "Nodule",
-      "(ACR",
-      "2017)"
+      "Nodule"
     ],
-    "url": "https://dfergs93.github.io/guidelines_manager/abdominal/adrenal/adrenal_nodule/",
+    "url": "https://dfergs93.github.io/guidelines_manager/adrenal/adrenal_nodule_acr_2017/",
     "params": [
       "washout_unenhanced_hu",
       "washout_venous_hu",
@@ -16,49 +14,144 @@
     ]
   },
   {
-    "slug": "rectal-cancer",
+    "slug": "bi-rads",
     "keywords": [
-      "Rectal CA",
-      "Rectal"
+      "ACR BI-RADS",
+      "ACR BI-RADS \u2014 Breast Imaging Reporting & Data System",
+      "BI-RADS",
+      "BIRADS"
     ],
-    "url": "https://dfergs93.github.io/guidelines_manager/abdominal/gastrointestinal/rectal_cancer/"
+    "url": "https://dfergs93.github.io/guidelines_manager/breast/bi_rads/"
   },
   {
-    "slug": "gallbladder",
+    "slug": "aortic-aneurysm",
+    "keywords": [
+      "Abdominal Aortic Aneurysm"
+    ],
+    "url": "https://dfergs93.github.io/guidelines_manager/cardiovascular/aortic_aneurysm/"
+  },
+  {
+    "slug": "arvc-2019",
+    "keywords": [
+      "ARVC 2019",
+      "ARVC"
+    ],
+    "url": "https://dfergs93.github.io/guidelines_manager/cardiovascular/arvc_2019/"
+  },
+  {
+    "slug": "thoracic-aortic-aneurysm",
+    "keywords": [
+      "Thoracic Aortic Aneurysm"
+    ],
+    "url": "https://dfergs93.github.io/guidelines_manager/cardiovascular/thoracic_aortic_aneurysm/"
+  },
+  {
+    "slug": "contrast-safety",
+    "keywords": [
+      "ACR Contrast Safety",
+      "ACR Contrast Safety \u2014 Iodinated & Gadolinium Contrast Agents",
+      "Contrast safety"
+    ],
+    "url": "https://dfergs93.github.io/guidelines_manager/contrast/contrast_safety/"
+  },
+  {
+    "slug": "bosniak",
+    "keywords": [
+      "Bosniak Renal Cyst Classification",
+      "Bosniak Classification of Renal Cystic Masses",
+      "Bosniak"
+    ],
+    "url": "https://dfergs93.github.io/guidelines_manager/genitourinary/bosniak/",
+    "params": [
+      "enhancement",
+      "wall_septa",
+      "septa_count",
+      "calcification",
+      "high_attenuation_non_enhancing",
+      "size_cm"
+    ]
+  },
+  {
+    "slug": "pi-rads",
+    "keywords": [
+      "PI-RADS v2.1",
+      "PI-RADS v2.1 \u2014 Prostate MRI Reporting & Data System",
+      "PI-RADS",
+      "PIRADS"
+    ],
+    "url": "https://dfergs93.github.io/guidelines_manager/genitourinary/pi_rads/",
+    "params": [
+      "zone",
+      "dwi_score",
+      "t2wi_score",
+      "dce_positive"
+    ]
+  },
+  {
+    "slug": "renal-lesion-acr-2017",
+    "keywords": [
+      "Renal Lesion 2017",
+      "Renal"
+    ],
+    "url": "https://dfergs93.github.io/guidelines_manager/genitourinary/renal_lesion_acr_2017/"
+  },
+  {
+    "slug": "renal-mass-car-2019",
+    "keywords": [
+      "Incidental Renal Mass CAR 2019",
+      "Incidental renal mass",
+      "Renal mass",
+      "Renal lesion"
+    ],
+    "url": "https://dfergs93.github.io/guidelines_manager/genitourinary/renal_mass_car_2019/"
+  },
+  {
+    "slug": "o-rads",
+    "keywords": [
+      "Adnexal Cyst US",
+      "Adnexal",
+      "O-RADS",
+      "ORADS"
+    ],
+    "url": "https://dfergs93.github.io/guidelines_manager/gyn/o_rads/"
+  },
+  {
+    "slug": "gallbladder-lesions-car-2025",
+    "keywords": [
+      "Incidental Gallbladder Lesions CAR 2025",
+      "Incidental gallbladder lesions"
+    ],
+    "url": "https://dfergs93.github.io/guidelines_manager/hepatobiliary/gallbladder_lesions_car_2025/"
+  },
+  {
+    "slug": "gallbladder-polyp-acr-2017",
     "keywords": [
       "Gallbladder and Biliary Tract",
-      "Gallbladder",
-      "and",
-      "Biliary",
-      "Tract"
+      "Gallbladder polyp",
+      "Gallbladder"
     ],
-    "url": "https://dfergs93.github.io/guidelines_manager/abdominal/liver/gallbladder/"
+    "url": "https://dfergs93.github.io/guidelines_manager/hepatobiliary/gallbladder_polyp_acr_2017/"
   },
   {
-    "slug": "hepatic-trauma",
+    "slug": "hepatobiliary-lesions-car-2020",
     "keywords": [
-      "Hepatic Trauma Grading",
-      "Hepatic",
-      "Trauma",
-      "Grading"
+      "Incidental Hepatobiliary Lesions CAR 2020",
+      "Incidental Hepatobiliary Lesions",
+      "Hepatobiliary Lesions",
+      "Incidental liver"
     ],
-    "url": "https://dfergs93.github.io/guidelines_manager/abdominal/liver/hepatic_trauma/"
+    "url": "https://dfergs93.github.io/guidelines_manager/hepatobiliary/hepatobiliary_lesions_car_2020/"
   },
   {
     "slug": "li-rads",
     "keywords": [
       "LI-RADS v2018",
       "LI-RADS \u2014 Liver Imaging Reporting and Data System",
-      "RADS",
-      "v2018",
-      "Liver",
-      "Imaging",
-      "Reporting",
-      "and",
-      "Data",
-      "System"
+      "LI-RADS",
+      "LIRADS",
+      "Liver"
     ],
-    "url": "https://dfergs93.github.io/guidelines_manager/abdominal/liver/li_rads/",
+    "url": "https://dfergs93.github.io/guidelines_manager/hepatobiliary/li_rads/",
     "params": [
       "size_mm",
       "aphe",
@@ -71,193 +164,13 @@
     ]
   },
   {
-    "slug": "liver-lesion-2017",
+    "slug": "msk-findings-car-2023",
     "keywords": [
-      "Liver Lesion 2017",
-      "Liver",
-      "Lesion",
-      "2017"
+      "Incidental MSK Findings CAR 2023",
+      "Incidental MSK Findings",
+      "MSK"
     ],
-    "url": "https://dfergs93.github.io/guidelines_manager/abdominal/liver/liver_lesion_2017/"
-  },
-  {
-    "slug": "liver-lesion-workup",
-    "keywords": [
-      "Liver Lesion Workup (ACR 2017)",
-      "Liver",
-      "Lesion",
-      "Workup",
-      "(ACR",
-      "2017)"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/abdominal/liver/liver_lesion_workup/"
-  },
-  {
-    "slug": "pancreatic-cysts",
-    "keywords": [
-      "Pancreatic Cysts - Incidental",
-      "Pancreatic",
-      "Cysts",
-      "Incidental"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/abdominal/pancreas/pancreatic_cysts/"
-  },
-  {
-    "slug": "pancreatic-injury",
-    "keywords": [
-      "Pancreatic Injury Grading",
-      "Pancreatic",
-      "Injury",
-      "Grading"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/abdominal/pancreas/pancreatic_injury/"
-  },
-  {
-    "slug": "bosniak",
-    "keywords": [
-      "Bosniak Renal Cyst Classification",
-      "Bosniak Classification of Renal Cystic Masses",
-      "Bosniak",
-      "Renal",
-      "Cyst",
-      "Classification",
-      "Cystic",
-      "Masses"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/abdominal/renal/bosniak/",
-    "params": [
-      "enhancement",
-      "wall_septa",
-      "septa_count",
-      "calcification",
-      "high_attenuation_non_enhancing",
-      "size_cm"
-    ]
-  },
-  {
-    "slug": "renal-injury",
-    "keywords": [
-      "Renal Injury Grading",
-      "Renal",
-      "Injury",
-      "Grading"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/abdominal/renal/renal_injury/"
-  },
-  {
-    "slug": "renal-lesion",
-    "keywords": [
-      "Renal Lesion",
-      "Renal",
-      "Lesion"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/abdominal/renal/renal_lesion/"
-  },
-  {
-    "slug": "renal-lesion-2017",
-    "keywords": [
-      "Renal Lesion 2017",
-      "Renal",
-      "Lesion",
-      "2017"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/abdominal/renal/renal_lesion_2017/"
-  },
-  {
-    "slug": "splenic-injury",
-    "keywords": [
-      "Splenic Injury Grading",
-      "Splenic",
-      "Injury",
-      "Grading"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/abdominal/spleen/splenic_injury/"
-  },
-  {
-    "slug": "bi-rads",
-    "keywords": [
-      "ACR BI-RADS",
-      "ACR BI-RADS \u2014 Breast Imaging Reporting & Data System",
-      "ACR",
-      "RADS",
-      "Breast",
-      "Imaging",
-      "Reporting",
-      "Data",
-      "System"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/breast/bi_rads/"
-  },
-  {
-    "slug": "contrast-safety",
-    "keywords": [
-      "ACR Contrast Safety",
-      "ACR Contrast Safety \u2014 Iodinated & Gadolinium Contrast Agents",
-      "ACR",
-      "Contrast",
-      "Safety",
-      "Iodinated",
-      "Gadolinium",
-      "Agents"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/contrast/contrast_safety/"
-  },
-  {
-    "slug": "adnexal-cyst",
-    "keywords": [
-      "Adnexal Cyst US",
-      "Adnexal",
-      "Cyst"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/gyn/adnexal/adnexal_cyst/"
-  },
-  {
-    "slug": "adnexal-mass",
-    "keywords": [
-      "Adnexal Mass",
-      "Adnexal",
-      "Mass"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/gyn/adnexal/adnexal_mass/"
-  },
-  {
-    "slug": "pregnancy-unknown-location",
-    "keywords": [
-      "Pregnancy Unknown Location",
-      "Pregnancy",
-      "Unknown",
-      "Location"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/gyn/pregnancy/pregnancy_unknown_location/"
-  },
-  {
-    "slug": "pregnancy-viability-followup",
-    "keywords": [
-      "Pregnancy Unknown Viability FollowUp",
-      "Pregnancy",
-      "Unknown",
-      "Viability",
-      "FollowUp"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/gyn/pregnancy/pregnancy_viability_followup/"
-  },
-  {
-    "slug": "pregnancy-viability-initial",
-    "keywords": [
-      "Pregnancy Unknown Viability Initial",
-      "Pregnancy",
-      "Unknown",
-      "Viability",
-      "Initial"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/gyn/pregnancy/pregnancy_viability_initial/"
-  },
-  {
-    "slug": "scoliosis",
-    "keywords": [
-      "Scoliosis"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/msk/scoliosis/"
+    "url": "https://dfergs93.github.io/guidelines_manager/msk/msk_findings_car_2023/"
   },
   {
     "slug": "pituitary",
@@ -267,25 +180,38 @@
     "url": "https://dfergs93.github.io/guidelines_manager/neuro/pituitary/"
   },
   {
-    "slug": "pi-rads",
+    "slug": "lung-cancer-staging",
     "keywords": [
-      "PI-RADS v2.1",
-      "PI-RADS v2.1 \u2014 Prostate MRI Reporting & Data System",
-      "RADS",
-      "v2.1",
-      "Prostate",
-      "MRI",
-      "Reporting",
-      "Data",
-      "System"
+      "Lung Cancer Staging",
+      "Lung Cancer"
     ],
-    "url": "https://dfergs93.github.io/guidelines_manager/prostate/pi_rads/",
-    "params": [
-      "zone",
-      "dwi_score",
-      "t2wi_score",
-      "dce_positive"
-    ]
+    "url": "https://dfergs93.github.io/guidelines_manager/oncology/lung_cancer_staging/"
+  },
+  {
+    "slug": "rectal-cancer-staging",
+    "keywords": [
+      "Rectal CA",
+      "Rectal Cancer Staging",
+      "Rectal Cancer"
+    ],
+    "url": "https://dfergs93.github.io/guidelines_manager/oncology/rectal_cancer_staging/"
+  },
+  {
+    "slug": "pancreatic-cyst-acr-2017",
+    "keywords": [
+      "Pancreatic Cysts - ACR",
+      "Pancreatic Cysts"
+    ],
+    "url": "https://dfergs93.github.io/guidelines_manager/pancreatic/pancreatic_cyst_acr_2017/"
+  },
+  {
+    "slug": "pancreatic-cysts-car-2021",
+    "keywords": [
+      "Incidental Pancreatic Cysts CAR 2021",
+      "Incidental Pancreatic Cysts",
+      "Pancreatic Cysts CAR"
+    ],
+    "url": "https://dfergs93.github.io/guidelines_manager/pancreatic/pancreatic_cysts_car_2021/"
   },
   {
     "slug": "fleischner",
@@ -293,13 +219,7 @@
       "Fleischner Society Guidelines 2017",
       "Fleischner Society Guidelines for Incidental Pulmonary Nodules",
       "Fleischner",
-      "Society",
-      "Guidelines",
-      "2017",
-      "for",
-      "Incidental",
-      "Pulmonary",
-      "Nodules"
+      "Incidental Pulmonary Nodule"
     ],
     "url": "https://dfergs93.github.io/guidelines_manager/pulmonary/fleischner/",
     "params": [
@@ -310,27 +230,11 @@
     ]
   },
   {
-    "slug": "lung-cancer-staging",
-    "keywords": [
-      "Lung Cancer Staging",
-      "Lung",
-      "Cancer",
-      "Staging"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/pulmonary/lung_cancer_staging/"
-  },
-  {
     "slug": "lung-rads",
     "keywords": [
       "Lung-RADS v1.1",
-      "Lung-RADS\u2122 v1.1 - Lung Cancer Screening Reporting",
-      "Lung",
-      "RADS",
-      "v1.1",
-      "RADS\u2122",
-      "Cancer",
-      "Screening",
-      "Reporting"
+      "Lung-RADS",
+      "LungRADS"
     ],
     "url": "https://dfergs93.github.io/guidelines_manager/pulmonary/lung_rads/",
     "params": [
@@ -342,20 +246,21 @@
     ]
   },
   {
+    "slug": "splenic-lesions-car-2025",
+    "keywords": [
+      "Incidental Splenic Lesions CAR 2025",
+      "Splenic"
+    ],
+    "url": "https://dfergs93.github.io/guidelines_manager/spleen/splenic_lesions_car_2025/"
+  },
+  {
     "slug": "tirads",
     "keywords": [
       "TIRADS Guidelines",
       "ACR TI-RADS: Thyroid Imaging Reporting and Data System",
       "TIRADS",
-      "Guidelines",
-      "ACR",
-      "RADS:",
-      "Thyroid",
-      "Imaging",
-      "Reporting",
-      "and",
-      "Data",
-      "System"
+      "TI-RADS",
+      "Thyroid"
     ],
     "url": "https://dfergs93.github.io/guidelines_manager/thyroid/tirads/",
     "params": [
@@ -366,15 +271,5 @@
       "echogenic_foci_pts",
       "size_cm"
     ]
-  },
-  {
-    "slug": "aaa",
-    "keywords": [
-      "Abdominal Aortic Aneurysm",
-      "Abdominal",
-      "Aortic",
-      "Aneurysm"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/vascular/aaa/"
   }
 ]

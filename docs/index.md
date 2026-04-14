@@ -21,46 +21,65 @@ title: Imaging Guidelines Reference
 
 <div class="grid cards" markdown>
 
+-   :material-stomach: **Hepatobiliary**
+
+    ---
+
+    **LI-RADS v2023**
+    Liver imaging & HCC
+
+    [:octicons-arrow-right-24: View](hepatobiliary/li_rads.md)
+
+    **Gallbladder Polyp ACR 2017**
+    Incidental gallbladder polyps
+
+    [:octicons-arrow-right-24: View](hepatobiliary/gallbladder_polyp_acr_2017.md)
+
 -   :material-lungs: **Pulmonary**
 
     ---
 
-    **Fleischner Society**
+    **Fleischner Society 2017**
     Incidental pulmonary nodules
 
     [:octicons-arrow-right-24: View](pulmonary/fleischner.md)
 
-    **Lung-RADS**
+    **LUNG-RADS v1.1**
     Lung cancer screening
 
     [:octicons-arrow-right-24: View](pulmonary/lung_rads.md)
 
--   :material-bow-tie: **Thyroid**
+-   :material-gender-male: **Genitourinary**
 
     ---
 
-    **TIRADS**
-    Ultrasound & Biopsy criteria
+    **PI-RADS v2.1**
+    Prostate MRI reporting
 
-    [:octicons-arrow-right-24: View](thyroid/tirads.md)
+    [:octicons-arrow-right-24: View](genitourinary/pi_rads.md)
+
+    **Bosniak v2019**
+    Renal cystic mass classification
+
+    [:octicons-arrow-right-24: View](genitourinary/bosniak.md)
 
 -   :material-hospital: **Breast**
 
     ---
 
-    **BI-RADS**
+    **BI-RADS v2023**
     Breast imaging reporting & data system
 
     [:octicons-arrow-right-24: View](breast/bi_rads.md)
 
--   :material-gender-male: **Prostate**
+-   :material-bow-tie: **Thyroid**
 
     ---
 
-    **PI-RADS v2.1**
-    Prostate MRI reporting & data system
+    **ACR TI-RADS**
+    Ultrasound & biopsy criteria
 
-    [:octicons-arrow-right-24: View](prostate/pi_rads.md)
+    [:octicons-arrow-right-24: View](thyroid/tirads.md)
 
 -   :material-shield-check: **Contrast Safety**
 
@@ -71,74 +90,37 @@ title: Imaging Guidelines Reference
 
     [:octicons-arrow-right-24: View](contrast/contrast_safety.md)
 
--   :material-stomach: **Abdominal**
-
-    ---
-
-    **Adrenal Nodule**
-    Incidental adrenal nodule management
-
-    [:octicons-arrow-right-24: View](abdominal/adrenal/adrenal_nodule.md)
-
-    **LI-RADS v2018**
-    Liver imaging & HCC
-
-    [:octicons-arrow-right-24: View](abdominal/liver/li_rads.md)
-
-    **Bosniak v2019**
-    Renal cystic mass classification
-
-    [:octicons-arrow-right-24: View](abdominal/renal/bosniak.md)
-
 </div>
 
 ---
 
 ## Complete Guideline Index
 
-### :material-lungs: Pulmonary
-| Guideline | Topic | Link |
-|-----------|-------|------|
-| **Fleischner Society 2017** | Incidental Nodules | [View](pulmonary/fleischner.md) |
-| **Lung-RADS** | Lung Cancer Screening | [View](pulmonary/lung_rads.md) |
-| **TN Lung Cancer Staging** | Staging | [View](pulmonary/lung_cancer_staging.md) |
+| Category | Guideline | Topic | Link |
+|----------|-----------|-------|------|
+| :material-stomach: Hepatobiliary | **LI-RADS v2023** | Liver Imaging & HCC | [View](hepatobiliary/li_rads.md) |
+| :material-stomach: Hepatobiliary | **Gallbladder Polyp ACR 2017** | Incidental Gallbladder Polyps | [View](hepatobiliary/gallbladder_polyp_acr_2017.md) |
+| :material-stomach: Hepatobiliary | **Gallbladder Lesions CAR 2025** | Incidental Gallbladder Lesions | [View](hepatobiliary/gallbladder_lesions_car_2025.md) |
+| :material-stomach: Hepatobiliary | **Hepatobiliary Lesions CAR 2020** | Incidental Hepatobiliary Findings | [View](hepatobiliary/hepatobiliary_lesions_car_2020.md) |
+| :material-water: Spleen | **Splenic Lesions CAR 2025** | Incidental Splenic Lesions | [View](spleen/splenic_lesions_car_2025.md) |
+| :material-pill: Adrenal | **Adrenal Nodule ACR 2017** | Incidental Adrenal Nodule Management | [View](adrenal/adrenal_nodule_acr_2017.md) |
+| :material-stomach: Pancreatic | **Pancreatic Cyst ACR 2017** | Incidental Pancreatic Cyst Management | [View](pancreatic/pancreatic_cyst_acr_2017.md) |
+| :material-stomach: Pancreatic | **Pancreatic Cysts CAR 2021** | Incidental Pancreatic Cysts | [View](pancreatic/pancreatic_cysts_car_2021.md) |
+| :material-gender-male: Genitourinary | **PI-RADS v2.1** | Prostate mpMRI Reporting | [View](genitourinary/pi_rads.md) |
+| :material-gender-male: Genitourinary | **Bosniak v2019** | Renal Cystic Mass Classification | [View](genitourinary/bosniak.md) |
+| :material-gender-male: Genitourinary | **Renal Mass CAR 2019** | Incidental Renal Mass | [View](genitourinary/renal_mass_car_2019.md) |
+| :material-gender-male: Genitourinary | **Renal Lesion ACR 2017** | Incidental Renal Lesions | [View](genitourinary/renal_lesion_acr_2017.md) |
+| :material-lungs: Pulmonary | **Fleischner Society 2017** | Incidental Pulmonary Nodules | [View](pulmonary/fleischner.md) |
+| :material-lungs: Pulmonary | **LUNG-RADS v1.1** | Lung Cancer Screening | [View](pulmonary/lung_rads.md) |
+| :material-hospital: Breast | **BI-RADS v2023** | Breast Imaging Reporting & Data System | [View](breast/bi_rads.md) |
+| :material-brain: Neuro | **Incidental Pituitary Lesions** | Pituitary Finding Management | [View](neuro/pituitary.md) |
+| :material-bone: MSK | **Incidental MSK Findings CAR 2023** | Incidental MSK Findings | [View](msk/msk_findings_car_2023.md) |
+| :material-heart-pulse: Cardiovascular | **ARVC 2019** | Arrhythmogenic RV Cardiomyopathy | [View](cardiovascular/arvc_2019.md) |
+| :material-heart-pulse: Cardiovascular | **Thoracic Aortic Aneurysm** | TAA Surveillance | [View](cardiovascular/thoracic_aortic_aneurysm.md) |
+| :material-gender-female: Gyn | **O-RADS v2023** | Ovarian-Adnexal Reporting | [View](gyn/o_rads.md) |
+| :material-bow-tie: Thyroid | **ACR TI-RADS** | Thyroid Nodule Management | [View](thyroid/tirads.md) |
+| :material-microscope: Oncology | **TN Lung Cancer Staging** | TNM Lung Cancer Staging | [View](oncology/lung_cancer_staging.md) |
+| :material-microscope: Oncology | **Rectal Cancer Staging** | Rectal Cancer T-Staging | [View](oncology/rectal_cancer_staging.md) |
+| :material-shield-check: Contrast Safety | **ACR Contrast Manual** | Iodinated & Gadolinium Contrast Agents | [View](contrast/contrast_safety.md) |
 
-### :material-hospital: Breast
-| Guideline | Topic | Link |
-|-----------|-------|------|
-| **ACR BI-RADS** | Breast Imaging Reporting & Data System | [View](breast/bi_rads.md) |
 
-### :material-gender-male: Prostate
-| Guideline | Topic | Link |
-|-----------|-------|------|
-| **PI-RADS v2.1** | Prostate mpMRI Reporting | [View](prostate/pi_rads.md) |
-
-### :material-shield-check: Contrast Safety
-| Guideline | Topic | Link |
-|-----------|-------|------|
-| **ACR Contrast Manual** | Iodinated & Gadolinium Contrast Agents | [View](contrast/contrast_safety.md) |
-
-### :material-bow-tie: Thyroid & Head/Neck
-| Guideline | Topic | Link |
-|-----------|-------|------|
-| **TIRADS** | General Management | [View](thyroid/tirads.md) |
-
-### :material-stomach: Abdominal
-| Guideline | Topic | Link |
-|-----------|-------|------|
-| **Adrenal Nodule (ACR 2017)** | Incidental Adrenal Nodule Management | [View](abdominal/adrenal/adrenal_nodule.md) |
-| **LI-RADS v2018** | Liver Imaging & HCC | [View](abdominal/liver/li_rads.md) |
-| **Bosniak v2019** | Renal Cystic Mass Classification | [View](abdominal/renal/bosniak.md) |
-
----
-
-## Contributing
-
-!!! tip "Suggest a Guideline"
-    Have a guideline you'd like added? Contact the Radiology QI Committee.
-
-    **Email:** radiology_qi@institution.edu
-
----
-
-*Maintained by: Radiology Quality Improvement Committee*
