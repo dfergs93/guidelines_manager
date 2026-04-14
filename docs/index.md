@@ -1,5 +1,7 @@
 ---
 title: Imaging Guidelines Reference
+hide:
+    - navigation
 ---
 
 # Imaging Guidelines & Decision Tools
