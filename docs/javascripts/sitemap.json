@@ -31,21 +31,6 @@
     "url": "https://dfergs93.github.io/guidelines_manager/cardiovascular/aortic_aneurysm/"
   },
   {
-    "slug": "arvc-2019",
-    "keywords": [
-      "ARVC 2019",
-      "ARVC"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/cardiovascular/arvc_2019/"
-  },
-  {
-    "slug": "thoracic-aortic-aneurysm",
-    "keywords": [
-      "Thoracic Aortic Aneurysm"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/cardiovascular/thoracic_aortic_aneurysm/"
-  },
-  {
     "slug": "contrast-safety",
     "keywords": [
       "ACR Contrast Safety",
@@ -88,61 +73,6 @@
     ]
   },
   {
-    "slug": "renal-lesion-acr-2017",
-    "keywords": [
-      "Renal Lesion 2017",
-      "Renal"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/genitourinary/renal_lesion_acr_2017/"
-  },
-  {
-    "slug": "renal-mass-car-2019",
-    "keywords": [
-      "Incidental Renal Mass CAR 2019",
-      "Incidental renal mass",
-      "Renal mass",
-      "Renal lesion"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/genitourinary/renal_mass_car_2019/"
-  },
-  {
-    "slug": "o-rads",
-    "keywords": [
-      "Adnexal Cyst US",
-      "Adnexal",
-      "O-RADS",
-      "ORADS"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/gynecologic/o_rads/"
-  },
-  {
-    "slug": "gallbladder-lesions-car-2025",
-    "keywords": [
-      "Incidental Gallbladder Lesions CAR 2025",
-      "Incidental gallbladder lesions"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/hepatobiliary/gallbladder_lesions_car_2025/"
-  },
-  {
-    "slug": "gallbladder-polyp-acr-2017",
-    "keywords": [
-      "Gallbladder and Biliary Tract",
-      "Gallbladder polyp",
-      "Gallbladder"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/hepatobiliary/gallbladder_polyp_acr_2017/"
-  },
-  {
-    "slug": "hepatobiliary-lesions-car-2020",
-    "keywords": [
-      "Incidental Hepatobiliary Lesions CAR 2020",
-      "Incidental Hepatobiliary Lesions",
-      "Hepatobiliary Lesions",
-      "Incidental liver"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/hepatobiliary/hepatobiliary_lesions_car_2020/"
-  },
-  {
     "slug": "li-rads",
     "keywords": [
       "LI-RADS v2018",
@@ -162,56 +92,6 @@
       "tumor_in_vein",
       "benign_features"
     ]
-  },
-  {
-    "slug": "msk-findings-car-2023",
-    "keywords": [
-      "Incidental MSK Findings CAR 2023",
-      "Incidental MSK Findings",
-      "MSK"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/musculoskeletal/msk_findings_car_2023/"
-  },
-  {
-    "slug": "pituitary",
-    "keywords": [
-      "Pituitary"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/neuro/pituitary/"
-  },
-  {
-    "slug": "lung-cancer-staging",
-    "keywords": [
-      "Lung Cancer Staging",
-      "Lung Cancer"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/oncology/lung_cancer_staging/"
-  },
-  {
-    "slug": "rectal-cancer-staging",
-    "keywords": [
-      "Rectal CA",
-      "Rectal Cancer Staging",
-      "Rectal Cancer"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/oncology/rectal_cancer_staging/"
-  },
-  {
-    "slug": "pancreatic-cyst-acr-2017",
-    "keywords": [
-      "Pancreatic Cysts - ACR",
-      "Pancreatic Cysts"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/pancreatic/pancreatic_cyst_acr_2017/"
-  },
-  {
-    "slug": "pancreatic-cysts-car-2021",
-    "keywords": [
-      "Incidental Pancreatic Cysts CAR 2021",
-      "Incidental Pancreatic Cysts",
-      "Pancreatic Cysts CAR"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/pancreatic/pancreatic_cysts_car_2021/"
   },
   {
     "slug": "fleischner",
@@ -244,14 +124,6 @@
       "is_new",
       "has_suspicious_features"
     ]
-  },
-  {
-    "slug": "splenic-lesions-car-2025",
-    "keywords": [
-      "Incidental Splenic Lesions CAR 2025",
-      "Splenic"
-    ],
-    "url": "https://dfergs93.github.io/guidelines_manager/spleen/splenic_lesions_car_2025/"
   },
   {
     "slug": "tirads",
