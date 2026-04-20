@@ -1,5 +1,16 @@
 ---
 title: Fleischner Society Guidelines 2017
+keywords:
+  - nodule
+  - pulmonary nodule
+  - lung nodule
+  - solid nodule
+  - subsolid nodule
+  - ground glass nodule
+  - part-solid nodule
+  - incidental nodule
+  - nodule follow-up
+  - nodule management
 ---
 
 # Fleischner Society Guidelines for Incidental Pulmonary Nodules

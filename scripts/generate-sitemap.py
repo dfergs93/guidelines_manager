@@ -25,18 +25,23 @@ BASE_URL = mkdocs.get("site_url", "").rstrip("/") + "/"
 
 
 def extract_titles(md_file):
+    """Return (fm_title, h1_title, fm_keywords) from a markdown file."""
     try:
         text = md_file.read_text(encoding="utf-8")
     except Exception:
-        return None, None
+        return None, None, []
     fm_title = None
+    fm_keywords: list[str] = []
     if text.startswith("---"):
         end = text.find("\n---", 3)
         if end != -1:
             try:
                 fm = yaml.load(text[3:end], Loader=IgnoreLoader)
-                if isinstance(fm, dict) and fm.get("title"):
-                    fm_title = str(fm["title"])
+                if isinstance(fm, dict):
+                    if fm.get("title"):
+                        fm_title = str(fm["title"])
+                    if isinstance(fm.get("keywords"), list):
+                        fm_keywords = [str(k) for k in fm["keywords"] if k]
             except Exception:
                 pass
     h1_title = None
@@ -44,7 +49,7 @@ def extract_titles(md_file):
         if line.startswith("# "):
             h1_title = line[2:].strip()
             break
-    return fm_title, h1_title
+    return fm_title, h1_title, fm_keywords
 
 
 # URL params accepted by each guideline's calculator for pre-fill via query string.
@@ -68,7 +73,7 @@ for md_file in sorted(DOCS_DIR.rglob("*.md")):
     url = BASE_URL + url_path
     name = md_file.stem
     slug = re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
-    fm_title, h1_title = extract_titles(md_file)
+    fm_title, h1_title, fm_keywords = extract_titles(md_file)
     titles = [t for t in [fm_title, h1_title] if t]
     if titles:
         keywords = titles[:]
@@ -78,6 +83,9 @@ for md_file in sorted(DOCS_DIR.rglob("*.md")):
     else:
         fallback = " ".join(w.capitalize() for w in re.split(r"[_\-]+", name))
         keywords = [fallback]
+    for kw in fm_keywords:
+        if kw not in keywords:
+            keywords.append(kw)
     entry: dict = {"slug": slug, "keywords": keywords, "url": url}
     if slug in PARAMS:
         entry["params"] = PARAMS[slug]
