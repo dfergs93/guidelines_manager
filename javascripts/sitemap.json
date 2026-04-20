@@ -268,7 +268,17 @@
       "for",
       "Incidental",
       "Pulmonary",
-      "Nodules"
+      "Nodules",
+      "nodule",
+      "pulmonary nodule",
+      "lung nodule",
+      "solid nodule",
+      "subsolid nodule",
+      "ground glass nodule",
+      "part-solid nodule",
+      "incidental nodule",
+      "nodule follow-up",
+      "nodule management"
     ],
     "url": "https://dfergs93.github.io/guidelines_manager/pulmonary/fleischner/",
     "params": [
