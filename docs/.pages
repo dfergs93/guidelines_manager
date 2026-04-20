@@ -1,0 +1,9 @@
+nav:
+    - Home: index.md
+    - Fleischner: pulmonary/fleischner.md
+    - Lung-RADS: pulmonary/lung_rads.md
+    - Bosniak: genitourinary/bosniak.md
+    - LI-RADS: hepatobiliary/li_rads.md
+    - PI-RADS: genitourinary/pi_rads.md
+    - TIRADS: thyroid/tirads.md
+    - BI-RADS: breast/bi_rads.md
