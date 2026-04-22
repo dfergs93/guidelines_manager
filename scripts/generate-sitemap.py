@@ -64,6 +64,19 @@ PARAMS: dict[str, list[str]] = {
     "tirads":                   ["composition_pts", "echogenicity_pts", "shape_pts", "margin_pts", "echogenic_foci_pts", "size_cm"],
 }
 
+# Valid values for categorical params. Drives exact-value constraints in ORCA's extract_params prompt.
+# Source of truth: guideline_calculators.js (the calculator's if/elif branches).
+PARAM_VALUES: dict[str, dict[str, list[str]]] = {
+    "fleischner": {
+        "nodule_type":  ["solid", "ground-glass", "part-solid"],
+        "patient_risk": ["low", "high"],
+        "multiplicity": ["single", "multiple"],
+    },
+    "lung-rads": {
+        "nodule_type": ["solid", "ground-glass", "part-solid"],
+    },
+}
+
 entries = []
 for md_file in sorted(DOCS_DIR.rglob("*.md")):
     if md_file.stem == "index":
@@ -89,6 +102,8 @@ for md_file in sorted(DOCS_DIR.rglob("*.md")):
     entry: dict = {"slug": slug, "keywords": keywords, "url": url}
     if slug in PARAMS:
         entry["params"] = PARAMS[slug]
+    if slug in PARAM_VALUES:
+        entry["param_values"] = PARAM_VALUES[slug]
     entries.append(entry)
 
 OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
