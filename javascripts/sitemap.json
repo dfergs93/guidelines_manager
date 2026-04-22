@@ -286,7 +286,22 @@
       "nodule_type",
       "patient_risk",
       "multiplicity"
-    ]
+    ],
+    "param_values": {
+      "nodule_type": [
+        "solid",
+        "ground-glass",
+        "part-solid"
+      ],
+      "patient_risk": [
+        "low",
+        "high"
+      ],
+      "multiplicity": [
+        "single",
+        "multiple"
+      ]
+    }
   },
   {
     "slug": "lung-rads",
@@ -308,7 +323,14 @@
       "solid_component_mm",
       "is_new",
       "has_suspicious_features"
-    ]
+    ],
+    "param_values": {
+      "nodule_type": [
+        "solid",
+        "ground-glass",
+        "part-solid"
+      ]
+    }
   },
   {
     "slug": "splenic-lesions-car-2025",
