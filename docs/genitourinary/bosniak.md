@@ -4,71 +4,16 @@ title: Bosniak Renal Cyst Classification
 
 # Bosniak Classification of Renal Cystic Masses
 
+!!! danger "Do not use this page for patient management (notice, 25 November 2026)"
+    This page says it follows Bosniak v2019, but most of it, its calculator included, follows the earlier classification, and a check against the published documents found errors in its classes and follow-up. For example, irregular walls were put in class IV instead of III, and the IIF follow-up leaves out the 12-month scan. The calculator has been switched off. Until this page is rewritten, use [Bosniak v2019](https://pmc.ncbi.nlm.nih.gov/articles/PMC6677285/) directly.
+
 ??? info "Reference Information"
     **Full Citation:** Silverman SG, Pedrosa I, Ellis JH, et al. Bosniak Classification of Cystic Renal Masses, Version 2019: An Update Proposal and Needs Assessment. *Radiology*. 2019;292(2):475–488.
     **Version:** v2019 Update
     **Modality:** CT and MRI
-    **Last Institutional Review:** January 2024
-    **Modifications:** None — following published v2019 criteria
 
 !!! info "About the Bosniak Classification"
     The Bosniak classification categorises incidentally detected renal cystic masses by their imaging features to predict malignancy risk. Version 2019 refined criteria to improve reproducibility using both CT and MRI.
-
----
-
-### Bosniak Calculator
-
-<div class="calc-layout">
-<div class="calculator-form">
-  <form id="bosniak-form">
-    <div class="calc-field">
-      <label for="calc-enhancement">Enhancement</label>
-      <select id="calc-enhancement" required>
-        <option value="none">None — no enhancement</option>
-        <option value="perceived">Perceived — equivocal / &lt;20 HU change</option>
-        <option value="measurable">Measurable — definite ≥20 HU change</option>
-      </select>
-    </div>
-    <div class="calc-field">
-      <label for="calc-wall_septa">Wall / Septa Morphology</label>
-      <select id="calc-wall_septa" required>
-        <option value="thin_smooth">Thin smooth (hairline, &lt;2 mm)</option>
-        <option value="smooth_thick">Smooth thickened (≥4 mm, regular)</option>
-        <option value="irregular_thick">Irregular / nodular / thick irregular</option>
-      </select>
-    </div>
-    <div class="calc-field">
-      <label for="calc-septa_count">Number of Septa (non-enhancing lesions)</label>
-      <select id="calc-septa_count" required>
-        <option value="none">None</option>
-        <option value="1_to_3">1–3 septa</option>
-        <option value="4_plus">4 or more septa</option>
-      </select>
-    </div>
-    <div class="calc-field">
-      <label for="calc-calcification">Calcification</label>
-      <select id="calc-calcification" required>
-        <option value="none">None</option>
-        <option value="fine">Fine / thin</option>
-        <option value="thick_nodular">Thick / nodular / irregular</option>
-      </select>
-    </div>
-    <div class="calc-field">
-      <label for="calc-high_attenuation_non_enhancing">Non-enhancing High Attenuation (&gt;20 HU on unenhanced CT)</label>
-      <select id="calc-high_attenuation_non_enhancing">
-        <option value="no">No</option>
-        <option value="yes">Yes — homogeneous high-density non-enhancing cyst</option>
-      </select>
-    </div>
-    <div class="calc-field">
-      <label for="calc-size_cm">Lesion Size (cm) — required for high-attenuation cysts</label>
-      <input type="number" id="calc-size_cm" step="0.1" placeholder="e.g., 2.5">
-    </div>
-    <button type="submit" id="bosniak-form-btn" class="calc-btn">Calculate Bosniak Category</button>
-  </form>
-</div>
-<div id="bosniak-results" class="calc-results-container" style="display: none;"></div>
-</div>
 
 ---
 

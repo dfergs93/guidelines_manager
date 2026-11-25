@@ -4,84 +4,18 @@ title: LI-RADS v2018
 
 # LI-RADS — Liver Imaging Reporting and Data System
 
+!!! danger "Do not use this page for patient management (notice, 25 November 2026)"
+    A check against LI-RADS CT/MRI v2018 found errors in this page's calculator, category table and ancillary features. For example, a 10–19 mm observation with arterial phase hyperenhancement and an enhancing capsule as its only other major feature came out LR-5 ("proceed with HCC treatment") where v2018 gives LR-4. The calculator has been switched off. Until this page is rewritten, use the [ACR's LI-RADS v2018 documents](https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/LI-RADS) directly.
+
 ??? info "Reference Information"
     **Full Citation:** American College of Radiology. CT/MRI LI-RADS v2018. ACR LI-RADS® Working Group. 2018.
     **Version:** v2018 (CT/MRI)
-    **Last Institutional Review:** January 2024
-    **Modifications:** None — following published algorithm exactly
     **Applicability:** Patients at risk for HCC: cirrhosis, chronic HBV infection, or personal history of HCC
 
 !!! warning "At-Risk Patients Only"
     LI-RADS applies **only** to patients at risk for hepatocellular carcinoma (HCC):
     cirrhosis (any cause), chronic hepatitis B virus (HBV) infection, or prior HCC.
     For observations in non-at-risk patients, standard reporting categories apply.
-
----
-
-### LI-RADS Calculator
-
-<div class="calc-layout">
-<div class="calculator-form">
-  <form id="lirads-form">
-    <div class="calc-field">
-      <label for="calc-benign_features">Observation Type</label>
-      <select id="calc-benign_features">
-        <option value="none">No definite/probable benign features — apply major criteria</option>
-        <option value="definitely_benign">Definitely benign — cyst, haemangioma, vascular anomaly (LR-1)</option>
-        <option value="probably_benign">Probably benign — no malignant features (LR-2)</option>
-      </select>
-    </div>
-    <div class="calc-field">
-      <label for="calc-size_mm">Observation Size (mm)</label>
-      <input type="number" id="calc-size_mm" step="0.1" placeholder="e.g., 18">
-    </div>
-    <div class="calc-field">
-      <label for="calc-aphe">Non-rim Arterial Phase Hyperenhancement (APHE)</label>
-      <select id="calc-aphe" required>
-        <option value="no">No / Absent / Rim APHE</option>
-        <option value="yes">Yes — Non-rim APHE present</option>
-      </select>
-    </div>
-    <div class="calc-field">
-      <label for="calc-washout">Non-peripheral Washout Appearance</label>
-      <select id="calc-washout" required>
-        <option value="no">No</option>
-        <option value="yes">Yes</option>
-      </select>
-    </div>
-    <div class="calc-field">
-      <label for="calc-enhancing_capsule">Enhancing Capsule Appearance</label>
-      <select id="calc-enhancing_capsule" required>
-        <option value="no">No</option>
-        <option value="yes">Yes</option>
-      </select>
-    </div>
-    <div class="calc-field">
-      <label for="calc-threshold_growth">Threshold Growth (≥50% increase ≤6 months)</label>
-      <select id="calc-threshold_growth" required>
-        <option value="no">No / Unknown</option>
-        <option value="yes">Yes</option>
-      </select>
-    </div>
-    <div class="calc-field">
-      <label for="calc-lrm_features">LR-M Features (targetoid, infiltrative, non-HCC malignancy)</label>
-      <select id="calc-lrm_features">
-        <option value="no">No</option>
-        <option value="yes">Yes — features suggest non-HCC malignancy</option>
-      </select>
-    </div>
-    <div class="calc-field">
-      <label for="calc-tumor_in_vein">Definite Tumor in Vein (LR-TIV)</label>
-      <select id="calc-tumor_in_vein">
-        <option value="no">No</option>
-        <option value="yes">Yes — definite tumor thrombus</option>
-      </select>
-    </div>
-    <button type="submit" id="lirads-form-btn" class="calc-btn">Calculate LI-RADS Category</button>
-  </form>
-</div>
-<div id="lirads-results" class="calc-results-container" style="display: none;"></div>
-</div>
 
 ---
 
@@ -176,18 +110,9 @@ Features that suggest non-HCC malignancy and should prompt LR-M categorisation:
 
 ---
 
-### BCLC Staging & Treatment Reference
+### BCLC Staging & Treatment
 
-!!! info "Treatment depends on BCLC Stage"
-    LI-RADS categorises the observation — **treatment selection uses BCLC staging**, which incorporates tumour burden, liver function (Child-Pugh), and performance status.
-
-| BCLC Stage | Tumour | Liver Function | Treatment Options |
-|------------|--------|----------------|-------------------|
-| **0 (Very early)** | Single ≤2 cm | Child-Pugh A | Resection or ablation |
-| **A (Early)** | 1–3 nodules ≤3 cm or single any size | Child-Pugh A–B | Resection, transplant, or ablation |
-| **B (Intermediate)** | Multinodular, no vascular invasion | Child-Pugh A–B | TACE |
-| **C (Advanced)** | Vascular invasion or extrahepatic spread | Child-Pugh A–B | Systemic therapy (atezolizumab + bevacizumab) |
-| **D (Terminal)** | Any | Child-Pugh C | Best supportive care |
+LI-RADS categorises the observation; treatment is chosen with the BCLC staging and treatment strategy: [2022 update](https://doi.org/10.1016/j.jhep.2021.11.018), since updated again in [2026](https://doi.org/10.1016/j.jhep.2025.10.020).
 
 ---
 

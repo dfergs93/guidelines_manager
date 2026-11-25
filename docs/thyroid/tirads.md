@@ -7,8 +7,6 @@ title: TIRADS Guidelines
 ??? info "Reference Information"
     **Full Citation:** Tessler FN, Middleton WD, Grant EG, et al. ACR Thyroid Imaging, Reporting and Data System (TI-RADS): White Paper of the ACR TI-RADS Committee. *J Am Coll Radiol*. 2017;14(5):587-595.  
     **Version:** ACR TI-RADS 2017  
-    **Last Institutional Review:** January 2024  
-    **Modifications:** None - following published guidelines exactly  
 
 ---
 

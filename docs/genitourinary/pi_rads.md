@@ -9,8 +9,6 @@ title: PI-RADS v2.1
     **Version:** 2.1 (2019)
     **Publisher:** American College of Radiology (ACR) / European Society of Urogenital Radiology (ESUR)
     **Application:** Multiparametric MRI (mpMRI) of the prostate
-    **Last Institutional Review:** January 2024
-    **Modifications:** None
 
 !!! info "Purpose"
     PI-RADS v2.1 standardizes mpMRI assessment for clinically significant prostate cancer (csPCa), defined as Gleason score ≥ 7 (Grade Group ≥ 2) or tumor volume ≥ 0.5 cc.

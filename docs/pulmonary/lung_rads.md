@@ -4,13 +4,16 @@ title: Lung-RADS v1.1
 
 # Lung-RADS™ v1.1 - Lung Cancer Screening Reporting
 
+!!! danger "Do not use this page for patient management (notice, 25 November 2026)"
+    This page follows Lung-RADS v1.1 (2019), which the ACR replaced with [Lung-RADS v2022](https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/Lung-RADS) in November 2022. A check against the published documents found errors in its categories and follow-up, and its calculator graded new nodules wrongly (a new 10 mm ground-glass nodule came out 4B instead of 2), so the calculator has been switched off.
+
+    Screening CTs in the BC Cancer Lung Screening Program are reported with the program's [BC Lung Screening Protocol v2.0 (January 2026)](https://www.bccancer.bc.ca/screening/Documents/Lung-Screening-Standards-Protocols.pdf). This page will be rewritten from it.
+
 ??? info "Reference Information"
     **Full Name:** Lung CT Screening Reporting & Data System  
     **Version:** 1.1 (2019)  
     **Publisher:** American College of Radiology (ACR)  
     **Application:** Annual low-dose CT lung cancer screening  
-    **Last Institutional Review:** January 2024  
-    **Modifications:** None
 
 ---
 
@@ -24,49 +27,6 @@ title: Lung-RADS v1.1
     | **Lung-RADS 4A** | Suspicious | 3-month follow-up CT | 5-15% |
     | **Lung-RADS 4B** | Very suspicious | 3-month PET/CT or tissue sampling | >15% |
     | **Lung-RADS 4X** | Category 3 or 4 + additional findings | See category 3 or 4 management | Variable |
-
-## Lung-RADS Calculator
-
-<div class="calc-layout">
-<div class="calculator-form">
-  <form id="lungrads-form">
-    <div class="calc-field">
-      <label for="calc-nodule_type">Nodule Type</label>
-      <select id="calc-nodule_type" required>
-        <option value="solid">Solid</option>
-        <option value="part-solid">Part-Solid</option>
-        <option value="ground-glass">Ground-Glass (Non-Solid)</option>
-      </select>
-    </div>
-    <div class="calc-field">
-      <label for="calc-size_mm">Total Nodule Diameter (mm)</label>
-      <input type="number" id="calc-size_mm" step="0.1" min="0" required placeholder="e.g., 8">
-    </div>
-    <div class="calc-field">
-      <label for="calc-solid_component_mm">Solid Component Diameter (mm) <small>— Part-solid only; leave blank if none</small></label>
-      <input type="number" id="calc-solid_component_mm" step="0.1" min="0" placeholder="e.g., 6">
-    </div>
-    <div class="calc-field">
-      <label for="calc-is_new">New nodule on this exam? <small>(not present on prior CT)</small></label>
-      <select id="calc-is_new" required>
-        <option value="no">No — Baseline or previously seen</option>
-        <option value="yes">Yes — New nodule</option>
-      </select>
-    </div>
-    <div class="calc-field">
-      <label for="calc-has_suspicious_features">Additional suspicious features? <small>(spiculation, lymphadenopathy, endobronchial lesion)</small></label>
-      <select id="calc-has_suspicious_features" required>
-        <option value="no">No</option>
-        <option value="yes">Yes — Apply 4X modifier</option>
-      </select>
-    </div>
-    <button type="submit" id="lungrads-form-btn" class="calc-btn">Calculate Lung-RADS</button>
-  </form>
-</div>
-<div id="lungrads-results" class="calc-results-container" style="display: none;"></div>
-</div>
-
----
 
 ## Detailed Classification
 

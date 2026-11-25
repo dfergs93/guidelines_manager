@@ -9,8 +9,6 @@ title: ACR BI-RADS
     **Version:** 5th Edition (2013)
     **Publisher:** American College of Radiology (ACR)
     **Application:** Mammography, Breast Ultrasound, Breast MRI
-    **Last Institutional Review:** January 2024
-    **Modifications:** None
 
 ---
 

@@ -18,8 +18,6 @@ keywords:
 ??? info "Reference Information"
     **Full Citation:** MacMahon H, Naidich DP, Goo JM, et al. Guidelines for Management of Incidental Pulmonary Nodules Detected on CT Images: From the Fleischner Society 2017. *Radiology*. 2017;284(1):228-243.  
     **Version:** 2017 Update  
-    **Last Institutional Review:** January 2024  
-    **Modifications:** None - following published guidelines exactly  
 
 ---
 

@@ -27,7 +27,7 @@ hide:
 
     ---
 
-    **LI-RADS v2023**
+    **LI-RADS CT/MRI v2018**
     Liver imaging & HCC
 
     [:octicons-arrow-right-24: View](hepatobiliary/li_rads.md)
@@ -95,7 +95,7 @@ hide:
 
 | Category | Guideline | Topic | Link |
 |----------|-----------|-------|------|
-| :material-stomach: Hepatobiliary | **LI-RADS v2023** | Liver Imaging & HCC | [View](hepatobiliary/li_rads.md) |
+| :material-stomach: Hepatobiliary | **LI-RADS CT/MRI v2018** | Liver Imaging & HCC | [View](hepatobiliary/li_rads.md) |
 | :material-pill: Adrenal | **Adrenal Nodule ACR 2017** | Incidental Adrenal Nodule Management | [View](adrenal/adrenal_nodule_acr_2017.md) |
 | :material-gender-male: Genitourinary | **PI-RADS v2.1** | Prostate mpMRI Reporting | [View](genitourinary/pi_rads.md) |
 | :material-gender-male: Genitourinary | **Bosniak v2019** | Renal Cystic Mass Classification | [View](genitourinary/bosniak.md) |

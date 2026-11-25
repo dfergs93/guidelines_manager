@@ -9,8 +9,6 @@ title: ACR Contrast Safety
     **Version:** 2023 (v11)
     **Publisher:** American College of Radiology (ACR) Committee on Drugs and Contrast Media
     **Application:** All contrast-enhanced CT, MRI, and fluoroscopic studies
-    **Last Institutional Review:** January 2024
-    **Modifications:** None
 
 !!! danger "Emergency Reference"
     For acute contrast reactions: see [Acute Reaction Treatment](#acute-contrast-reaction-treatment) below.
