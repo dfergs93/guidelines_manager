@@ -8,12 +8,7 @@
       "(ACR",
       "2017)"
     ],
-    "url": "https://dfergs93.github.io/guidelines_manager/adrenal/adrenal_nodule_acr_2017/",
-    "params": [
-      "washout_unenhanced_hu",
-      "washout_venous_hu",
-      "washout_delayed_hu"
-    ]
+    "url": "https://dfergs93.github.io/guidelines_manager/adrenal/adrenal_nodule_acr_2017/"
   },
   {
     "slug": "bi-rads",
@@ -75,15 +70,7 @@
       "Cystic",
       "Masses"
     ],
-    "url": "https://dfergs93.github.io/guidelines_manager/genitourinary/bosniak/",
-    "params": [
-      "enhancement",
-      "wall_septa",
-      "septa_count",
-      "calcification",
-      "high_attenuation_non_enhancing",
-      "size_cm"
-    ]
+    "url": "https://dfergs93.github.io/guidelines_manager/genitourinary/bosniak/"
   },
   {
     "slug": "pi-rads",
@@ -185,17 +172,7 @@
       "Data",
       "System"
     ],
-    "url": "https://dfergs93.github.io/guidelines_manager/hepatobiliary/li_rads/",
-    "params": [
-      "size_mm",
-      "aphe",
-      "washout",
-      "enhancing_capsule",
-      "threshold_growth",
-      "lrm_features",
-      "tumor_in_vein",
-      "benign_features"
-    ]
+    "url": "https://dfergs93.github.io/guidelines_manager/hepatobiliary/li_rads/"
   },
   {
     "slug": "msk-findings-car-2023",
@@ -316,21 +293,7 @@
       "Screening",
       "Reporting"
     ],
-    "url": "https://dfergs93.github.io/guidelines_manager/pulmonary/lung_rads/",
-    "params": [
-      "nodule_type",
-      "size_mm",
-      "solid_component_mm",
-      "is_new",
-      "has_suspicious_features"
-    ],
-    "param_values": {
-      "nodule_type": [
-        "solid",
-        "ground-glass",
-        "part-solid"
-      ]
-    }
+    "url": "https://dfergs93.github.io/guidelines_manager/pulmonary/lung_rads/"
   },
   {
     "slug": "splenic-lesions-car-2025",

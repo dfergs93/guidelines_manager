@@ -628,72 +628,20 @@
 
 
 <h1 id="bosniak-classification-of-renal-cystic-masses">Bosniak Classification of Renal Cystic Masses</h1>
+<div class="admonition danger">
+<p class="admonition-title">Do not use this page for patient management (notice, 25 November 2026)</p>
+<p>This page says it follows Bosniak v2019, but most of it, its calculator included, follows the earlier classification, and a check against the published documents found errors in its classes and follow-up. For example, irregular walls were put in class IV instead of III, and the IIF follow-up leaves out the 12-month scan. The calculator has been switched off. Until this page is rewritten, use <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6677285/">Bosniak v2019</a> directly.</p>
+</div>
 <details class="info">
 <summary>Reference Information</summary>
 <p><strong>Full Citation:</strong> Silverman SG, Pedrosa I, Ellis JH, et al. Bosniak Classification of Cystic Renal Masses, Version 2019: An Update Proposal and Needs Assessment. <em>Radiology</em>. 2019;292(2):475–488.
 <strong>Version:</strong> v2019 Update
-<strong>Modality:</strong> CT and MRI
-<strong>Last Institutional Review:</strong> January 2024
-<strong>Modifications:</strong> None — following published v2019 criteria</p>
+<strong>Modality:</strong> CT and MRI</p>
 </details>
 <div class="admonition info">
 <p class="admonition-title">About the Bosniak Classification</p>
 <p>The Bosniak classification categorises incidentally detected renal cystic masses by their imaging features to predict malignancy risk. Version 2019 refined criteria to improve reproducibility using both CT and MRI.</p>
 </div>
-<hr />
-<h3 id="bosniak-calculator">Bosniak Calculator</h3>
-<div class="calc-layout">
-<div class="calculator-form">
-  <form id="bosniak-form">
-    <div class="calc-field">
-      <label for="calc-enhancement">Enhancement</label>
-      <select id="calc-enhancement" required>
-        <option value="none">None — no enhancement</option>
-        <option value="perceived">Perceived — equivocal / &lt;20 HU change</option>
-        <option value="measurable">Measurable — definite ≥20 HU change</option>
-      </select>
-    </div>
-    <div class="calc-field">
-      <label for="calc-wall_septa">Wall / Septa Morphology</label>
-      <select id="calc-wall_septa" required>
-        <option value="thin_smooth">Thin smooth (hairline, &lt;2 mm)</option>
-        <option value="smooth_thick">Smooth thickened (≥4 mm, regular)</option>
-        <option value="irregular_thick">Irregular / nodular / thick irregular</option>
-      </select>
-    </div>
-    <div class="calc-field">
-      <label for="calc-septa_count">Number of Septa (non-enhancing lesions)</label>
-      <select id="calc-septa_count" required>
-        <option value="none">None</option>
-        <option value="1_to_3">1–3 septa</option>
-        <option value="4_plus">4 or more septa</option>
-      </select>
-    </div>
-    <div class="calc-field">
-      <label for="calc-calcification">Calcification</label>
-      <select id="calc-calcification" required>
-        <option value="none">None</option>
-        <option value="fine">Fine / thin</option>
-        <option value="thick_nodular">Thick / nodular / irregular</option>
-      </select>
-    </div>
-    <div class="calc-field">
-      <label for="calc-high_attenuation_non_enhancing">Non-enhancing High Attenuation (&gt;20 HU on unenhanced CT)</label>
-      <select id="calc-high_attenuation_non_enhancing">
-        <option value="no">No</option>
-        <option value="yes">Yes — homogeneous high-density non-enhancing cyst</option>
-      </select>
-    </div>
-    <div class="calc-field">
-      <label for="calc-size_cm">Lesion Size (cm) — required for high-attenuation cysts</label>
-      <input type="number" id="calc-size_cm" step="0.1" placeholder="e.g., 2.5">
-    </div>
-    <button type="submit" id="bosniak-form-btn" class="calc-btn">Calculate Bosniak Category</button>
-  </form>
-</div>
-<div id="bosniak-results" class="calc-results-container" style="display: none;"></div>
-</div>
-
 <hr />
 <h3 id="bosniak-category-summary">Bosniak Category Summary</h3>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Categories I–II (Benign)</label><label for="__tabbed_1_2">Category IIF (Follow-up)</label><label for="__tabbed_1_3">Categories III–IV (Surgical)</label></div>
@@ -912,7 +860,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 26, 2026 05:33:45 UTC">March 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 25, 2026 19:41:04 UTC">November 25, 2026</span>
   </span>
 
     
