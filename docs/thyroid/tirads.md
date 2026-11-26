@@ -4,69 +4,22 @@ title: TIRADS Guidelines
 
 # ACR TI-RADS: Thyroid Imaging Reporting and Data System
 
+!!! danger "Do not use this page for patient management (notice, 26 November 2026)"
+    A check against the ACR TI-RADS white paper (2017) found errors that could change management, in its calculator and in the text below. For example:
+
+    - TR5 nodules are followed every year for up to 5 years (not at 1, 2, 3 and 5 years), and FNA of a 5–9 mm TR5 nodule may be appropriate by shared decision.
+    - A mixed cystic and solid nodule scores 1 point whether it is mostly cystic or mostly solid; the page gives a nodule over 50% solid 2 points, which can move it from TR3 to TR4.
+    - The points for every type of echogenic focus present are added; the calculator allowed only one, so a nodule with both macrocalcifications and punctate foci could score TR4 instead of TR5. A spongiform nodule scores 0 whatever else is seen.
+    - Taller-than-wide means height greater than width; equal height and width is wider-than-tall (0 points).
+    - Growth also counts as a 50% or greater increase in volume, and follow-up scans are at least 1 year apart.
+    - TI-RADS is for adults, and it does not exclude patients with a past thyroid cancer.
+    - The malignancy risks below come from no source read; the white paper gives TR1–TR2 ≤ 2%, TR3 5%, TR4 5–20% and TR5 ≥ 20%.
+
+    The calculator has been switched off. Until this page is rewritten, use the [ACR TI-RADS white paper](https://doi.org/10.1016/j.jacr.2017.01.046) directly.
+
 ??? info "Reference Information"
     **Full Citation:** Tessler FN, Middleton WD, Grant EG, et al. ACR Thyroid Imaging, Reporting and Data System (TI-RADS): White Paper of the ACR TI-RADS Committee. *J Am Coll Radiol*. 2017;14(5):587-595.  
     **Version:** ACR TI-RADS 2017  
-
----
-
-### TI-RADS Calculator
-
-<div class="calc-layout">
-<div class="calculator-form">
-  <form id="tirads-form">
-    <div class="calc-field">
-      <label for="calc-composition_pts">Composition</label>
-      <select id="calc-composition_pts" required>
-        <option value="0">Cystic or almost entirely cystic — 0 pts</option>
-        <option value="0">Spongiform (aggregation of microcysts &gt;50%) — 0 pts</option>
-        <option value="1">Mixed cystic and solid — 1 pt</option>
-        <option value="2">Solid or almost entirely solid — 2 pts</option>
-      </select>
-    </div>
-    <div class="calc-field">
-      <label for="calc-echogenicity_pts">Echogenicity</label>
-      <select id="calc-echogenicity_pts" required>
-        <option value="0">Anechoic — 0 pts</option>
-        <option value="1">Hyperechoic or isoechoic — 1 pt</option>
-        <option value="2">Hypoechoic — 2 pts</option>
-        <option value="3">Very hypoechoic (darker than strap muscles) — 3 pts</option>
-      </select>
-    </div>
-    <div class="calc-field">
-      <label for="calc-shape_pts">Shape</label>
-      <select id="calc-shape_pts" required>
-        <option value="0">Wider-than-tall — 0 pts</option>
-        <option value="3">Taller-than-wide (A-P ≥ transverse on transverse view) — 3 pts</option>
-      </select>
-    </div>
-    <div class="calc-field">
-      <label for="calc-margin_pts">Margin</label>
-      <select id="calc-margin_pts" required>
-        <option value="0">Smooth — 0 pts</option>
-        <option value="0">Ill-defined — 0 pts</option>
-        <option value="2">Lobulated or irregular — 2 pts</option>
-        <option value="3">Extra-thyroidal extension — 3 pts</option>
-      </select>
-    </div>
-    <div class="calc-field">
-      <label for="calc-echogenic_foci_pts">Echogenic Foci</label>
-      <select id="calc-echogenic_foci_pts" required>
-        <option value="0">None or large comet-tail artifacts — 0 pts</option>
-        <option value="1">Macrocalcifications — 1 pt</option>
-        <option value="2">Peripheral (rim) calcifications — 2 pts</option>
-        <option value="3">Punctate echogenic foci — 3 pts</option>
-      </select>
-    </div>
-    <div class="calc-field">
-      <label for="calc-size_cm">Maximum Nodule Diameter (cm)</label>
-      <input type="number" id="calc-size_cm" step="0.1" min="0" required placeholder="e.g., 1.8">
-    </div>
-    <button type="submit" id="tirads-form-btn" class="calc-btn">Calculate TI-RADS</button>
-  </form>
-</div>
-<div id="tirads-results" class="calc-results-container" style="display: none;"></div>
-</div>
 
 ---
 

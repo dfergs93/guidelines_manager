@@ -4,6 +4,11 @@ title: PI-RADS v2.1
 
 # PI-RADS v2.1 — Prostate MRI Reporting & Data System
 
+!!! danger "Do not use this page for patient management (notice, 26 November 2026)"
+    A check against PI-RADS v2.1 found errors that could change management, in its calculators and in the text below. For example, in the transition zone a T2W score of 3 becomes PI-RADS 4 only with a DWI score of 5 (not 4), and a T2W score of 2 becomes PI-RADS 3 with a DWI score of 4 or 5; the page and its calculator scored both wrongly. PI-RADS makes no management recommendation beyond this: biopsy should be considered for PI-RADS 4 or 5, but not for 1 or 2, and for PI-RADS 3 it depends on factors other than the MRI. The PSA density bands below come from no published source; CAR's Prostate MRI White Paper notes that PSA density thresholds of about 0.1–0.15 have been suggested for biopsy of PI-RADS 3 lesions. Both calculators have been switched off.
+
+    Until this page is rewritten, use [PI-RADS v2.1](https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/PI-RADS) directly.
+
 ??? info "Reference Information"
     **Full Name:** Prostate Imaging Reporting and Data System
     **Version:** 2.1 (2019)
@@ -12,53 +17,6 @@ title: PI-RADS v2.1
 
 !!! info "Purpose"
     PI-RADS v2.1 standardizes mpMRI assessment for clinically significant prostate cancer (csPCa), defined as Gleason score ≥ 7 (Grade Group ≥ 2) or tumor volume ≥ 0.5 cc.
-
----
-
-## PI-RADS Calculator
-
-<div class="calc-layout">
-<div class="calculator-form">
-  <form id="pirads-form">
-    <div class="calc-field">
-      <label for="calc-zone">Lesion Zone</label>
-      <select id="calc-zone" required>
-        <option value="peripheral">Peripheral Zone (PZ) — DWI dominant</option>
-        <option value="transition">Transition Zone (TZ) — T2WI dominant</option>
-      </select>
-    </div>
-    <div class="calc-field">
-      <label for="calc-dwi_score">DWI Score (1–5) <small>— Primary for PZ; secondary for TZ</small></label>
-      <select id="calc-dwi_score" required>
-        <option value="1">1 — No abnormality</option>
-        <option value="2">2 — Indistinct hypointensity on ADC</option>
-        <option value="3">3 — Focal mild/moderate hypointensity; &lt;1.5 cm</option>
-        <option value="4">4 — Focal marked hypointensity; &lt;1.5 cm</option>
-        <option value="5">5 — As 4 but ≥1.5 cm or definite EPE</option>
-      </select>
-    </div>
-    <div class="calc-field">
-      <label for="calc-t2wi_score">T2WI Score (1–5) <small>— Primary for TZ; not used for PZ scoring</small></label>
-      <select id="calc-t2wi_score" required>
-        <option value="1">1 — Normal TZ or round well-defined BPH nodule</option>
-        <option value="2">2 — Circumscribed hypointense, well-defined margins</option>
-        <option value="3">3 — Heterogeneous, obscured margins</option>
-        <option value="4">4 — Lenticular/non-circumscribed homogeneous; &lt;1.5 cm</option>
-        <option value="5">5 — As 4 but ≥1.5 cm or definite EPE</option>
-      </select>
-    </div>
-    <div class="calc-field">
-      <label for="calc-dce_positive">DCE Positive? <small>— PZ only: focal early enhancement vs. adjacent tissue</small></label>
-      <select id="calc-dce_positive" required>
-        <option value="no">No (or not applicable)</option>
-        <option value="yes">Yes — Focal early enhancement</option>
-      </select>
-    </div>
-    <button type="submit" id="pirads-form-btn" class="calc-btn">Calculate PI-RADS</button>
-  </form>
-</div>
-<div id="pirads-results" class="calc-results-container" style="display: none;"></div>
-</div>
 
 ---
 
@@ -197,25 +155,6 @@ $$\text{PSAD} = \frac{\text{PSA (ng/mL)}}{\text{Prostate Volume (cc)}}$$
 !!! tip "Prostate Volume Measurement"
     Use ellipsoid formula: **V = 0.52 × AP × TR × CC** (all in cm)
 
-### PSA Density Calculator
-
-<div class="calc-layout">
-<div class="calculator-form">
-  <form id="psa-density-form">
-    <div class="calc-field">
-      <label for="calc-psa">PSA (ng/mL)</label>
-      <input type="number" id="calc-psa" step="0.01" min="0" required placeholder="e.g., 5.2">
-    </div>
-    <div class="calc-field">
-      <label for="calc-prostate_volume_cc">Prostate Volume (cc) <small>— V = 0.52 × AP × TR × CC</small></label>
-      <input type="number" id="calc-prostate_volume_cc" step="0.1" min="0" required placeholder="e.g., 35.0">
-    </div>
-    <button type="submit" id="psa-density-form-btn" class="calc-btn">Calculate PSA Density</button>
-  </form>
-</div>
-<div id="psa-density-results" class="calc-results-container" style="display: none;"></div>
-</div>
-
 ---
 
 ## Technical Requirements for mpMRI
@@ -298,7 +237,6 @@ $$\text{PSAD} = \frac{\text{PSA (ng/mL)}}{\text{Prostate Volume (cc)}}$$
 
 | Date | Version | Changes |
 |------|---------|---------|
-| 2024-01-15 | Internal | Initial implementation at institution |
 | 2019 | v2.1 | Updated DWI scoring and DCE role; replaced v2.0 |
 | 2015 | v2.0 | Major revision from v1.0 |
 
@@ -310,6 +248,3 @@ $$\text{PSAD} = \frac{\text{PSA (ng/mL)}}{\text{Prostate Volume (cc)}}$$
 2. Turkbey B, Rosenkrantz AB, Haider MA, et al. Prostate Imaging Reporting and Data System Version 2.1: 2019 Update of Prostate Imaging Reporting and Data System Version 2. Eur Urol. 2019;76(3):340-351.
 3. Weinreb JC, Barentsz JO, Choyke PL, et al. PI-RADS Prostate Imaging – Reporting and Data System: 2015, Version 2. Eur Urol. 2016;69(1):16-40.
 
----
-
-*Last updated: 2024-01-15 | Maintained by: Radiology QI Committee | Contact: radiology_qi@institution.edu*

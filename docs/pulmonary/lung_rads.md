@@ -303,7 +303,6 @@ Reserved for incidental CTs in patients with known cancer.
 
 | Date | Version | Changes |
 |------|---------|---------|
-| 2024-01-15 | Internal | Initial implementation at institution |
 | 2019 | v1.1 | ACR Lung-RADS 1.1 released |
 | 2014 | v1.0 | Original ACR Lung-RADS published |
 
@@ -315,6 +314,3 @@ Reserved for incidental CTs in patients with known cancer.
 2. National Lung Screening Trial Research Team. Reduced lung-cancer mortality with low-dose computed tomographic screening. N Engl J Med. 2011;365(5):395-409.
 3. US Preventive Services Task Force. Screening for Lung Cancer: US Preventive Services Task Force Recommendation Statement. JAMA. 2021;325(10):962-970.
 
----
-
-*Last updated: 2024-01-15 | Maintained by: Radiology QI Committee | Contact: radiology_qi@institution.edu*

@@ -47,9 +47,8 @@
   {
     "slug": "contrast-safety",
     "keywords": [
-      "ACR Contrast Safety",
-      "ACR Contrast Safety \u2014 Iodinated & Gadolinium Contrast Agents",
-      "ACR",
+      "Contrast Safety",
+      "Contrast Safety \u2014 Iodinated & Gadolinium Contrast Agents",
       "Contrast",
       "Safety",
       "Iodinated",
@@ -85,13 +84,7 @@
       "Data",
       "System"
     ],
-    "url": "https://dfergs93.github.io/guidelines_manager/genitourinary/pi_rads/",
-    "params": [
-      "zone",
-      "dwi_score",
-      "t2wi_score",
-      "dce_positive"
-    ]
+    "url": "https://dfergs93.github.io/guidelines_manager/genitourinary/pi_rads/"
   },
   {
     "slug": "renal-lesion-acr-2017",
@@ -302,14 +295,6 @@
       "Data",
       "System"
     ],
-    "url": "https://dfergs93.github.io/guidelines_manager/thyroid/tirads/",
-    "params": [
-      "composition_pts",
-      "echogenicity_pts",
-      "shape_pts",
-      "margin_pts",
-      "echogenic_foci_pts",
-      "size_cm"
-    ]
+    "url": "https://dfergs93.github.io/guidelines_manager/thyroid/tirads/"
   }
 ]

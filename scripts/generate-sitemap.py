@@ -54,10 +54,7 @@ def extract_titles(md_file):
 
 # URL params accepted by each guideline's calculator for pre-fill via query string.
 # Keyed by slug (matches the slug generated below). Source of truth: guideline_calculators.js.
-PARAMS: dict[str, list[str]] = {
-    "pi-rads":                  ["zone", "dwi_score", "t2wi_score", "dce_positive"],
-    "tirads":                   ["composition_pts", "echogenicity_pts", "shape_pts", "margin_pts", "echogenic_foci_pts", "size_cm"],
-}
+PARAMS: dict[str, list[str]] = {}
 
 # Valid values for categorical params. Drives exact-value constraints in ORCA's extract_params prompt.
 # Source of truth: guideline_calculators.js (the calculator's if/elif branches).

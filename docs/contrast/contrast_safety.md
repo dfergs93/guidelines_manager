@@ -1,8 +1,21 @@
 ---
-title: ACR Contrast Safety
+title: Contrast Safety
 ---
 
-# ACR Contrast Safety — Iodinated & Gadolinium Contrast Agents
+# Contrast Safety — Iodinated & Gadolinium Contrast Agents
+
+!!! danger "Parts of this page are wrong: do not use them for patient management (notice, 26 November 2026)"
+    A check against the published guidance found errors that could change management. The acute reaction treatment section has been corrected to the ACR's adult doses; the rest of the page has not, and should not be used for patient management until it is rewritten. In particular:
+
+    - **Prior contrast reaction:** Canadian guidance (CAR/CSACI 2025) advises switching to a different contrast agent, with no steroid premedication; asthma alone is not a reason to premedicate. The steroid regimens below are the ACR's, and their timings are wrong.
+    - **Kidney function:** CAR 2022 advises no hydration at an eGFR above 30. At 30 or below with IV contrast, CAR makes no recommendation and leaves hydration to each institution (local practice: IV hydration is not routinely given). The risk bands and hydration protocol below are out of date.
+    - **Metformin:** CAR 2022: continue it at an eGFR above 30. At 30 or below, or with acute kidney injury, hold it at the time of contrast and restart no sooner than 48 hours, and only if creatinine has risen less than 25% from baseline and the clinical team has reassessed it.
+    - **Gadolinium:** the agent groups below are wrong. In the ACR's grouping, Group II (gadobenate, gadobutrol, gadoterate, gadoteridol, gadopiclenol, gadoxetate) is the group to use at an eGFR below 30 and on dialysis; Group I agents are contraindicated there; no agent is in Group III. Canadian guidance on gadolinium in kidney disease (CAR 2018, updated 2019) is still to be checked.
+    - **Thyroid:** a history of hyperthyroidism is no reason to restrict contrast or to consult endocrinology, but iodinated contrast should be avoided in acute thyroid storm. Before radioactive iodine, the wait after iodinated contrast is ideally 3–4 weeks (hyperthyroidism) or 6 weeks (hypothyroidism).
+    - **Pregnancy:** iodinated contrast given in pregnancy has no effect on neonatal thyroid function; no extra newborn test is needed.
+    - **Extravasation:** the ACR gives no volume thresholds. Get an urgent surgical opinion for severe or progressive pain or swelling, poor capillary refill, altered sensation, worsening range of motion, or blistering or ulceration.
+
+    Sources: [CAR/CSACI 2025](https://car.ca/wp-content/uploads/2025/05/CAR_CSACI-Practice-Guidance-for-Contrast-Media-Hypersensitivity_2025.pdf), [CAR 2022 on contrast-associated acute kidney injury](https://doi.org/10.1177/20543581221097455), and the [ACR Manual on Contrast Media](https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Contrast-Manual) (this page was written from its 2023 edition).
 
 ??? info "Reference Information"
     **Full Name:** ACR Manual on Contrast Media
@@ -23,9 +36,11 @@ title: ACR Contrast Safety
 
     | Severity | Symptoms | Treatment |
     |----------|----------|-----------|
-    | **Mild** | Limited urticaria, nausea/vomiting, pruritus, pallor/diaphoresis | Observation, diphenhydramine if hives are bothersome |
-    | **Moderate** | Diffuse urticaria, mild bronchospasm, facial edema, tachycardia/bradycardia | Diphenhydramine, consider epinephrine if bronchospasm |
-    | **Severe** | Diffuse bronchospasm, laryngeal edema, anaphylactic shock, cardiac arrest | Epinephrine (IM), oxygen, IV fluids, call emergency services |
+    | **Mild** | Limited urticaria or pruritus, limited nausea or vomiting | Observation; an oral antihistamine if symptomatic |
+    | **Moderate** | Diffuse urticaria, facial edema without dyspnea, bronchospasm with mild or no hypoxia | Treat by type (below): e.g. bronchospasm takes an albuterol inhaler first, adding epinephrine if needed |
+    | **Severe** | Facial edema with dyspnea, laryngeal edema with stridor or hypoxia, bronchospasm with significant hypoxia, anaphylactic shock (hypotension with tachycardia), cardiac arrest | Epinephrine (IV 0.1 mg if hypotensive with IV access, otherwise IM 0.3 mg), oxygen, IV fluids, call the emergency response team |
+
+    Severity grades from the ACR Manual on Contrast Media (Table 1); hypotension with bradycardia is a vasovagal reaction.
 
 === "Delayed Reactions (1–72 hours)"
 
@@ -43,19 +58,23 @@ title: ACR Contrast Safety
 ## Acute Contrast Reaction Treatment
 
 !!! danger "Acute Reaction Management Protocol"
+    Adult doses from the ACR Manual on Contrast Media (2024), Table 3; corrected 26 November 2026. For children, use the ACR's weight-based doses (Table 2).
 
-=== "Urticaria (Mild)"
+=== "Urticaria (Hives)"
 
-    1. Observe patient
-    2. If symptomatic: **Diphenhydramine 25–50 mg IV/IM**
-    3. If extensive: consider escalation
+    1. Observe the patient
+    2. Mild (scattered or transient), if symptomatic: **diphenhydramine 25–50 mg PO** or **fexofenadine 180 mg PO** (CAR/CSACI prefer a second-generation antihistamine such as fexofenadine)
+    3. Moderate (more numerous or bothersome): monitor vitals and keep IV access; an oral antihistamine as above, or **diphenhydramine 25–50 mg IM or IV** (IV slowly over 1–2 min)
+    4. Severe (widespread or progressive): monitor vitals and keep IV access; **diphenhydramine 25–50 mg IM or IV** (IV slowly over 1–2 min)
+
+    IM or IV diphenhydramine may cause or worsen hypotension.
 
 === "Bronchospasm"
 
-    1. Oxygen via face mask (6–10 L/min)
-    2. **Albuterol (beta-2 agonist) inhaler** — 2–3 puffs; may repeat
-    3. If no improvement or severe: **Epinephrine 0.3 mg IM** (1:1,000) in anterolateral thigh
-    4. Call emergency services if severe
+    1. Oxygen via face mask (6–10 L/min); keep IV access; pulse oximetry
+    2. **Albuterol (beta-2 agonist) inhaler** — 2 puffs (90 mcg each, 180 mcg); can repeat up to 3 times
+    3. If no improvement or severe: **epinephrine IM 0.3 mg** (0.3 mL of 1 mg/mL, 1:1,000), can repeat every 5–15 min up to 1 mg total; or **epinephrine IV 0.1 mg** (1 mL of 0.1 mg/mL, 1:10,000) slowly, can repeat every few minutes up to 1 mg total
+    4. Call the emergency response team if severe
 
 === "Laryngeal Edema"
 
@@ -66,13 +85,12 @@ title: ACR Contrast Safety
 
 === "Anaphylaxis / Anaphylactic Shock"
 
-    1. Call emergency services (Code Blue)
-    2. **Epinephrine 0.3–0.5 mg IM** (1:1,000) — anterolateral thigh; may repeat every 5–15 min
-    3. Supine position (legs elevated if tolerated)
-    4. Oxygen via face mask (10–15 L/min)
-    5. IV access; **normal saline 1–2 L bolus** for hypotension
-    6. Diphenhydramine 25–50 mg IV (adjunct only, NOT primary treatment)
-    7. If refractory: epinephrine infusion, vasopressors
+    1. Call the emergency response team (Code Blue)
+    2. **Epinephrine IM 0.3 mg** (0.3 mL of 1 mg/mL, 1:1,000) — anterolateral thigh; can repeat every 5–15 min up to 1 mg total; or **epinephrine IV 0.1 mg** (1 mL of 0.1 mg/mL, 1:10,000) slowly into a running infusion, can repeat every few minutes up to 1 mg total. With hypotension and IV access, IV is the preferred route.
+    3. Supine, legs raised at least 60 degrees
+    4. Oxygen via face mask (6–10 L/min)
+    5. IV access; **normal saline or lactated Ringer's 1,000 mL rapidly** for hypotension
+    6. Antihistamines are not a treatment for shock: IV diphenhydramine may worsen hypotension
 
 === "Vasovagal Reaction"
 
@@ -84,6 +102,8 @@ title: ACR Contrast Safety
 ---
 
 ## Premedication for High-Risk Patients
+
+!!! danger "Out of date: see the notice at the top of this page"
 
 ### Indications for Premedication
 
@@ -127,6 +147,8 @@ title: ACR Contrast Safety
 
 ## Contrast and Renal Function (ICM)
 
+!!! danger "Out of date: see the notice at the top of this page"
+
 ### Contrast-Induced Acute Kidney Injury (CI-AKI)
 
 !!! info "Risk Stratification for CI-AKI"
@@ -154,6 +176,8 @@ title: ACR Contrast Safety
 
 ## Metformin Guidelines
 
+!!! danger "Out of date: see the notice at the top of this page"
+
 !!! warning "Metformin and Iodinated Contrast"
 
     Risk of lactic acidosis is low but can be serious. Current ACR guidance:
@@ -167,6 +191,8 @@ title: ACR Contrast Safety
 ---
 
 ## Gadolinium-Based Contrast Agents (GBCA)
+
+!!! danger "Out of date: see the notice at the top of this page"
 
 ### Agent Risk Classification
 
@@ -213,6 +239,8 @@ title: ACR Contrast Safety
 
 === "Iodinated Contrast in Pregnancy"
 
+    !!! danger "Out of date: see the notice at the top of this page"
+
     !!! info "ICM in Pregnancy"
         - Iodinated contrast crosses the placenta; neonatal thyroid function may be transiently suppressed
         - **Use only when clinically necessary**
@@ -227,6 +255,8 @@ title: ACR Contrast Safety
 
 ## Contrast Extravasation
 
+!!! danger "Out of date: see the notice at the top of this page"
+
 !!! warning "Extravasation Management"
 
     | Severity | Volume | Presentation | Management |
@@ -239,6 +269,8 @@ title: ACR Contrast Safety
 ---
 
 ## Thyroid and Iodinated Contrast
+
+!!! danger "Out of date: see the notice at the top of this page"
 
 !!! warning "Iodinated Contrast and Thyroid Disease"
 
@@ -264,6 +296,8 @@ title: ACR Contrast Safety
 ---
 
 ## Common Pitfalls
+
+!!! danger "Out of date: see the notice at the top of this page"
 
 !!! warning "Avoid These Mistakes"
 
@@ -307,6 +341,3 @@ title: ACR Contrast Safety
 3. Thomsen HS, Marckmann P, Logager VB. Update on nephrogenic systemic fibrosis. Magn Reson Imaging Clin N Am. 2008;16(4):551-560.
 4. McDonald JS, McDonald RJ, Comin J, et al. Frequency of acute kidney injury following intravenous contrast medium administration. Radiology. 2013;267(1):119-128.
 
----
-
-*Last updated: 2024-01-15 | Maintained by: Radiology QI Committee | Contact: radiology_qi@institution.edu*
