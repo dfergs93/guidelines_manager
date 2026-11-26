@@ -20,6 +20,8 @@ keywords:
 
     The guideline does not apply to patients under 35, to patients with known cancer or immunosuppression, or to lung cancer screening CTs. Until this page is rewritten, use the [guideline](https://doi.org/10.1148/radiol.2017161659) directly.
 
+    The rebuilt calculator is on the front page: <https://dfergs93.github.io/>
+
 ??? info "Reference Information"
     **Full Citation:** MacMahon H, Naidich DP, Goo JM, et al. Guidelines for Management of Incidental Pulmonary Nodules Detected on CT Images: From the Fleischner Society 2017. *Radiology*. 2017;284(1):228-243.  
     **Version:** 2017 Update  
