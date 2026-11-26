@@ -257,28 +257,7 @@
       "nodule follow-up",
       "nodule management"
     ],
-    "url": "https://dfergs93.github.io/guidelines_manager/pulmonary/fleischner/",
-    "params": [
-      "size_mm",
-      "nodule_type",
-      "patient_risk",
-      "multiplicity"
-    ],
-    "param_values": {
-      "nodule_type": [
-        "solid",
-        "ground-glass",
-        "part-solid"
-      ],
-      "patient_risk": [
-        "low",
-        "high"
-      ],
-      "multiplicity": [
-        "single",
-        "multiple"
-      ]
-    }
+    "url": "https://dfergs93.github.io/guidelines_manager/pulmonary/fleischner/"
   },
   {
     "slug": "lung-rads",
