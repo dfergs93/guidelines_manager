@@ -15,48 +15,14 @@ keywords:
 
 # Fleischner Society Guidelines for Incidental Pulmonary Nodules
 
+!!! danger "Do not use this page for patient management (notice, 25 November 2026)"
+    A check against the Fleischner Society 2017 guideline this page is based on found errors in its calculator and in the text below. For example, the calculator did not round sizes to the whole millimetre, so a 5.6 mm solid nodule got "no routine follow-up" instead of the 6–8 mm advice, and it had no field for the solid component of a part-solid nodule. The text measures the longest diameter, where the guideline uses the average of the long and short axes. The calculator has been switched off.
+
+    The guideline does not apply to patients under 35, to patients with known cancer or immunosuppression, or to lung cancer screening CTs. Until this page is rewritten, use the [guideline](https://doi.org/10.1148/radiol.2017161659) directly.
+
 ??? info "Reference Information"
     **Full Citation:** MacMahon H, Naidich DP, Goo JM, et al. Guidelines for Management of Incidental Pulmonary Nodules Detected on CT Images: From the Fleischner Society 2017. *Radiology*. 2017;284(1):228-243.  
     **Version:** 2017 Update  
-
----
-
-### Fleischner Calculator
-
-<div class="calc-layout">
-<div class="calculator-form">
-  <form id="fleischner-form">
-    <div class="calc-field">
-      <label for="calc-size_mm">Nodule Size (mm)</label>
-      <input type="number" id="calc-size_mm" step="0.1" required placeholder="e.g., 6.5">
-    </div>
-    <div class="calc-field">
-      <label for="calc-nodule_type">Nodule Type</label>
-      <select id="calc-nodule_type" required>
-        <option value="solid">Solid</option>
-        <option value="part-solid">Part-Solid</option>
-        <option value="ground-glass">Ground-Glass</option>
-      </select>
-    </div>
-    <div class="calc-field">
-      <label for="calc-multiplicity">Multiplicity</label>
-      <select id="calc-multiplicity" required>
-        <option value="single">Single</option>
-        <option value="multiple">Multiple</option>
-      </select>
-    </div>
-    <div class="calc-field">
-      <label for="calc-patient_risk">Patient Risk</label>
-      <select id="calc-patient_risk" required>
-        <option value="low">Low Risk</option>
-        <option value="high">High Risk</option>
-      </select>
-    </div>
-    <button type="submit" id="fleischner-form-btn" class="calc-btn">Calculate Recommendation</button>
-  </form>
-</div>
-<div id="fleischner-results" class="calc-results-container" style="display: none;"></div>
-</div>
 
 ---
 
