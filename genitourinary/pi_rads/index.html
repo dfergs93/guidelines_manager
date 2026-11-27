@@ -628,6 +628,11 @@
 
 
 <h1 id="pi-rads-v21-prostate-mri-reporting-data-system">PI-RADS v2.1 — Prostate MRI Reporting &amp; Data System</h1>
+<div class="admonition danger">
+<p class="admonition-title">Do not use this page for patient management (notice, 26 November 2026)</p>
+<p>A check against PI-RADS v2.1 found errors that could change management, in its calculators and in the text below. For example, in the transition zone a T2W score of 3 becomes PI-RADS 4 only with a DWI score of 5 (not 4), and a T2W score of 2 becomes PI-RADS 3 with a DWI score of 4 or 5; the page and its calculator scored both wrongly. PI-RADS makes no management recommendation beyond this: biopsy should be considered for PI-RADS 4 or 5, but not for 1 or 2, and for PI-RADS 3 it depends on factors other than the MRI. The PSA density bands below come from no published source; CAR's Prostate MRI White Paper notes that PSA density thresholds of about 0.1–0.15 have been suggested for biopsy of PI-RADS 3 lesions. Both calculators have been switched off.</p>
+<p>Until this page is rewritten, use <a href="https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/PI-RADS">PI-RADS v2.1</a> directly.</p>
+</div>
 <details class="info">
 <summary>Reference Information</summary>
 <p><strong>Full Name:</strong> Prostate Imaging Reporting and Data System
@@ -639,51 +644,6 @@
 <p class="admonition-title">Purpose</p>
 <p>PI-RADS v2.1 standardizes mpMRI assessment for clinically significant prostate cancer (csPCa), defined as Gleason score ≥ 7 (Grade Group ≥ 2) or tumor volume ≥ 0.5 cc.</p>
 </div>
-<hr />
-<h2 id="pi-rads-calculator">PI-RADS Calculator</h2>
-<div class="calc-layout">
-<div class="calculator-form">
-  <form id="pirads-form">
-    <div class="calc-field">
-      <label for="calc-zone">Lesion Zone</label>
-      <select id="calc-zone" required>
-        <option value="peripheral">Peripheral Zone (PZ) — DWI dominant</option>
-        <option value="transition">Transition Zone (TZ) — T2WI dominant</option>
-      </select>
-    </div>
-    <div class="calc-field">
-      <label for="calc-dwi_score">DWI Score (1–5) <small>— Primary for PZ; secondary for TZ</small></label>
-      <select id="calc-dwi_score" required>
-        <option value="1">1 — No abnormality</option>
-        <option value="2">2 — Indistinct hypointensity on ADC</option>
-        <option value="3">3 — Focal mild/moderate hypointensity; &lt;1.5 cm</option>
-        <option value="4">4 — Focal marked hypointensity; &lt;1.5 cm</option>
-        <option value="5">5 — As 4 but ≥1.5 cm or definite EPE</option>
-      </select>
-    </div>
-    <div class="calc-field">
-      <label for="calc-t2wi_score">T2WI Score (1–5) <small>— Primary for TZ; not used for PZ scoring</small></label>
-      <select id="calc-t2wi_score" required>
-        <option value="1">1 — Normal TZ or round well-defined BPH nodule</option>
-        <option value="2">2 — Circumscribed hypointense, well-defined margins</option>
-        <option value="3">3 — Heterogeneous, obscured margins</option>
-        <option value="4">4 — Lenticular/non-circumscribed homogeneous; &lt;1.5 cm</option>
-        <option value="5">5 — As 4 but ≥1.5 cm or definite EPE</option>
-      </select>
-    </div>
-    <div class="calc-field">
-      <label for="calc-dce_positive">DCE Positive? <small>— PZ only: focal early enhancement vs. adjacent tissue</small></label>
-      <select id="calc-dce_positive" required>
-        <option value="no">No (or not applicable)</option>
-        <option value="yes">Yes — Focal early enhancement</option>
-      </select>
-    </div>
-    <button type="submit" id="pirads-form-btn" class="calc-btn">Calculate PI-RADS</button>
-  </form>
-</div>
-<div id="pirads-results" class="calc-results-container" style="display: none;"></div>
-</div>
-
 <hr />
 <details class="abstract" open="open">
 <summary>PI-RADS Quick Reference</summary>
@@ -977,24 +937,6 @@ TZ T2WI 3 + DWI ≤3 → <strong>PI-RADS 3</strong></p>
 <p class="admonition-title">Prostate Volume Measurement</p>
 <p>Use ellipsoid formula: <strong>V = 0.52 × AP × TR × CC</strong> (all in cm)</p>
 </div>
-<h3 id="psa-density-calculator">PSA Density Calculator</h3>
-<div class="calc-layout">
-<div class="calculator-form">
-  <form id="psa-density-form">
-    <div class="calc-field">
-      <label for="calc-psa">PSA (ng/mL)</label>
-      <input type="number" id="calc-psa" step="0.01" min="0" required placeholder="e.g., 5.2">
-    </div>
-    <div class="calc-field">
-      <label for="calc-prostate_volume_cc">Prostate Volume (cc) <small>— V = 0.52 × AP × TR × CC</small></label>
-      <input type="number" id="calc-prostate_volume_cc" step="0.1" min="0" required placeholder="e.g., 35.0">
-    </div>
-    <button type="submit" id="psa-density-form-btn" class="calc-btn">Calculate PSA Density</button>
-  </form>
-</div>
-<div id="psa-density-results" class="calc-results-container" style="display: none;"></div>
-</div>
-
 <hr />
 <h2 id="technical-requirements-for-mpmri">Technical Requirements for mpMRI</h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Minimum Standards</label><label for="__tabbed_3_2">Field Strength</label></div>
@@ -1100,11 +1042,6 @@ TZ T2WI 3 + DWI ≤3 → <strong>PI-RADS 3</strong></p>
 </thead>
 <tbody>
 <tr>
-<td>2024-01-15</td>
-<td>Internal</td>
-<td>Initial implementation at institution</td>
-</tr>
-<tr>
 <td>2019</td>
 <td>v2.1</td>
 <td>Updated DWI scoring and DCE role; replaced v2.0</td>
@@ -1123,8 +1060,6 @@ TZ T2WI 3 + DWI ≤3 → <strong>PI-RADS 3</strong></p>
 <li>Turkbey B, Rosenkrantz AB, Haider MA, et al. Prostate Imaging Reporting and Data System Version 2.1: 2019 Update of Prostate Imaging Reporting and Data System Version 2. Eur Urol. 2019;76(3):340-351.</li>
 <li>Weinreb JC, Barentsz JO, Choyke PL, et al. PI-RADS Prostate Imaging – Reporting and Data System: 2015, Version 2. Eur Urol. 2016;69(1):16-40.</li>
 </ol>
-<hr />
-<p><em>Last updated: 2024-01-15 | Maintained by: Radiology QI Committee | Contact: radiology_qi@institution.edu</em></p>
 
 
 
@@ -1145,7 +1080,7 @@ TZ T2WI 3 + DWI ≤3 → <strong>PI-RADS 3</strong></p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 25, 2026 19:41:04 UTC">November 25, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 26, 2026 19:14:53 UTC">November 26, 2026</span>
   </span>
 
     
@@ -1209,8 +1144,6 @@ TZ T2WI 3 + DWI ≤3 → <strong>PI-RADS 3</strong></p>
         <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
-        <script src="../../javascripts/guidelines_search.js"></script>
       
         <script src="../../javascripts/guideline_calculators.js"></script>
       
