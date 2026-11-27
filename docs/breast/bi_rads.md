@@ -4,6 +4,19 @@ title: ACR BI-RADS
 
 # ACR BI-RADS — Breast Imaging Reporting & Data System
 
+!!! danger "Parts of this page are wrong: do not use them for patient management (notice, 26 November 2026)"
+    This page follows the 5th edition (2013), which BI-RADS v2025 replaced in late 2025. A check against the ACR's summary of the v2025 changes and Radiology Assistant's v2025 summaries found errors that could change management:
+
+    - **Category 3 follow-up:** imaging at 6, 12 and 24 months, not 6 months and then yearly for two years. Biopsy instead is reasonable for clinical reasons, at the patient's preference, or when follow-up would be difficult (CAR 2026).
+    - **Category 3 on mammography:** a solitary, circumscribed, non-calcified solid mass; a focal asymmetry without an ultrasound correlate; or a solitary group of round calcifications, each only after a full diagnostic workup.
+    - **Clustered microcysts on ultrasound:** typically category 2; category 4 if the margin is indistinct or there is a solid component. They are not a category 3 finding.
+    - **Solitary dilated duct:** without suspicious features in a patient without symptoms it can be assessed as benign. On a baseline exam, with symptoms or with suspicious features, it needs further imaging and possibly biopsy.
+    - **Suspicious calcifications:** amorphous, coarse heterogeneous and fine pleomorphic are typically 4B; fine linear or fine-linear branching 4C. No single feature makes a finding category 5: that takes a combination of suspicious features.
+    - **Ultrasound features:** a mixed solid and cystic mass usually needs biopsy of its solid part; posterior enhancement is not reassuring in a solid mass; no vascular pattern is benign or specific.
+    - **MRI sections:** not checked against v2025, which could not be obtained. v2025 removed "focus" from the MRI lexicon.
+
+    Sources: [ACR BI-RADS v2025](https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/Bi-Rads) (the ACR's summary of changes), Radiology Assistant's v2025 summaries for [mammography](https://radiologyassistant.nl/breast/bi-rads/bi-rads-for-mammography-and-ultrasound-2013-1-1) and [ultrasound](https://radiologyassistant.nl/breast/bi-rads/BI-RADS-v2025-Ultrasound), and [CAR 2026 on breast intervention and biopsy](https://doi.org/10.1177/08465371261451254).
+
 ??? info "Reference Information"
     **Full Name:** Breast Imaging Reporting and Data System
     **Version:** 5th Edition (2013)
@@ -29,6 +42,9 @@ title: ACR BI-RADS
 ---
 
 ## Detailed Classification
+
+!!! danger "Out of date: see the notice at the top of this page"
+
 
 <div class="grid cards" markdown>
 
@@ -149,6 +165,9 @@ title: ACR BI-RADS
 
 ## Mammography: Descriptor Lexicon
 
+!!! danger "Out of date: see the notice at the top of this page"
+
+
 === "Masses"
 
     | Feature | Benign Descriptors | Suspicious Descriptors |
@@ -186,6 +205,9 @@ title: ACR BI-RADS
 
 ## Ultrasound: Descriptor Lexicon
 
+!!! danger "Out of date: see the notice at the top of this page"
+
+
 | Feature | Benign | Suspicious |
 |---------|--------|-----------|
 | **Shape** | Oval, round | Irregular |
@@ -201,6 +223,9 @@ title: ACR BI-RADS
 ---
 
 ## Breast MRI: BI-RADS Assessment
+
+!!! warning "Not checked against BI-RADS v2025: see the notice at the top of this page"
+
 
 === "Kinetic Curves"
 
@@ -227,6 +252,9 @@ title: ACR BI-RADS
 ---
 
 ## Background Parenchymal Enhancement (BPE)
+
+!!! warning "Not checked against BI-RADS v2025: see the notice at the top of this page"
+
 
 !!! info "MRI — Background Parenchymal Enhancement Categories"
     | Category | Description |
